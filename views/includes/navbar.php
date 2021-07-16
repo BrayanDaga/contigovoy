@@ -7,7 +7,7 @@
 &#x2630;</button> <a class="navbar-brand"
         href="/">
 
-                <img src="<?=IMAGES?>/logo.png" alt="logo" class="logo">
+                <img src="<?=IMAGES?>/logo.png" class="img-fluid" alt="logo" class="logo">
 
             </a>
            

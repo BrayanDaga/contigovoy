@@ -1,6 +1,6 @@
 <?php
-
-	 require_once APP . "models/RouteView.php";
+namespace App\Controllers;
+use App\Models\RouteView;
 
 	 class ViewController extends RouteView{
 
@@ -10,7 +10,7 @@
 	 	}
 
 	 	/*---------- Controlador obtener vistas ----------*/
-	 	public function obtener_vistas_controlador($modulo){
+	 	public static function  obtener_vistas_controlador($modulo){
 	 		if(isset($_GET['views'])){
 	 			$ruta=explode("/", $_GET['views']);
 

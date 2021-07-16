@@ -1,4 +1,5 @@
 <?php 
+namespace App\Models;
 	class RouteView{
 		/*---------- Modelo obtener vistas ----------*/
 		protected static function obtener_views_modelo($vistas,$modulo){
