@@ -1,5 +1,5 @@
 <?php 
-define('URL',  $_ENV['APP_URL'].'/' );
+define('URL',  $_ENV ? $_ENV['APP_URL'].'/' : 'localhost/' );
 define('DS'       , DIRECTORY_SEPARATOR);
 define('ROOT'     , getcwd().DS);
 define('APP'      , ROOT.'app'.DS);
