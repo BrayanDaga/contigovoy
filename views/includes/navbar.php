@@ -1,6 +1,6 @@
 <!-- Logo occupies 2 navbars -->
 <nav class="navbar navbar-light bg-light navbar-expand-md">
-    <div class="container">
+    <div class="container-fluid">
 
         <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span>
             &#x2630;</button> <a class="navbar-brand" href="/">
@@ -33,9 +33,9 @@
                 <li class="nav navbar-nav dropdown <?= $_SERVER['REQUEST_URI']==='/parati'  ? 'active' : '' ?>">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/parati" role="button" aria-haspopup="true" aria-expanded="false">Para ti</a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="/parati#lenguaje">Mateiral Didáctico</a>
-                        <a class="dropdown-item" href="/parati#emocional">Test</a>
-                        <a class="dropdown-item" href="/parati#aprendisaje">Blog</a>
+                        <a class="dropdown-item" href="/parati#material">Mateiral Didáctico</a>
+                        <a class="dropdown-item" href="/parati#test">Test</a>
+                        <a class="dropdown-item" href="/parati#blog">Blog</a>
                         <a class="dropdown-item" href="/parati#otros">Otros</a>
                     </div>
                 </li>
