@@ -9,13 +9,14 @@ session_start();
 </head>
 <body >
     
-    <?php include_once INCLUDES .'navbar.php'; 
+    <?php 
         if(isset($_GET['views'])){
             $pagina=explode("/", $_GET['views']);
         }else{
             $pagina=[];
         }
             $vistas= ViewController::obtener_vistas_controlador("web");
+            include_once INCLUDES .'navbar.php'; 
             if($vistas=="404"){
                 require_once VIEWS . "contents/web-404.php";
             }else{
