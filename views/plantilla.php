@@ -9,7 +9,7 @@ session_start();
 </head>
 <body >
     
-    <?php include_once INCLUDES .'navbar.php';  
+    <?php include_once INCLUDES .'navbar.php'; 
         if(isset($_GET['views'])){
             $pagina=explode("/", $_GET['views']);
         }else{
