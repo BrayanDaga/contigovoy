@@ -1,11 +1,9 @@
 <?php 
-
+require_once __DIR__ .'/vendor/autoload.php';
+use Dotenv\Dotenv;
 use App\Controllers\ViewController;
-
-
-require_once "core/config.php";
-require_once 'vendor/autoload.php';
-
+$dotenv = Dotenv::createImmutable(__DIR__);
+$dotenv->safeLoad();
+require_once __DIR__ ."/core/config.php";
 $plantilla = new ViewController();
 $plantilla->obtener_plantilla_controlador();
-
