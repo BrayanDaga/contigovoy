@@ -1,0 +1,22 @@
+*{
+
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+
+}
+.iconos .a{
+    width: 80%;
+}
+.iconos{
+    display: flex;
+    justify-content:space-around;
+    margin:20px 0  ;
+}
+.iconos a{
+    color: #000;
+    font-size: 30px;
+}
+.iconos a:hover{
+    color: rgb(59, 59, 154);
+}

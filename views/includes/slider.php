@@ -10,6 +10,12 @@
                       <div class="carousel-item active">
                         <img src="https://picsum.photos/800/250" class="d-block w-100" alt="https://picsum.photos/800/250">
                         <div class="carousel-caption d-none d-md-block">
+                          <div class="form">
+                            <input type="text">
+                            <input type="text">
+                            <input type="text">
+                            <input type="text">
+                          </div>
                           <h5>First slide label</h5>
                           <p>Some representative placeholder content for the first slide.</p>
                         </div>
