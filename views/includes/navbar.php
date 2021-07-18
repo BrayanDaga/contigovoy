@@ -1,5 +1,5 @@
 <!-- Logo occupies 2 navbars -->
-<nav class="navbar navbar-light bg-white navbar-expand-md">
+<nav class="navbar navbar-light bg-white navbar-expand-md ">
     <div class="container-fluid">
 
         <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span>
