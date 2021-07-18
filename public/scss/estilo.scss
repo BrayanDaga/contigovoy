@@ -6,30 +6,26 @@
   }
 #servicios{
    
-/* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-    p{ font-size: 1.4rem; }
-    h2{ font-size: 2.4rem; }
+    p{ font-size: 1.2rem; }
+    h2{ font-size: 2.2rem; }
   }
   
-  /* Small devices (portrait tablets and large phones, 600px and up) */
   @media only screen and (min-width: 600px) {
-    p{ font-size: 1.6rem; }
-    h2{ font-size: 2.6rem; }
+    p{ font-size: 1.4rem; }
+    h2{ font-size: 2.4rem; }
 }
   
-  /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
-    .example {background: blue;}
+    p{ font-size: 1.6rem; }
+    h2{ font-size: 2.6rem; }
   } 
   
-  /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
     p{ font-size: 1.8rem; }
     h2{ font-size: 2.8rem; }
   } 
   
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1200px) {
     p{ font-size: 2rem; }
     h2{ font-size: 3rem; }

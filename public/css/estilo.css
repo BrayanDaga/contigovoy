@@ -4,15 +4,16 @@
   --greenGradient:  radial-gradient(circle, rgba(21,147,21,1) 53%, rgba(139,235,139,1) 100%);
 }
 
-#servicios {
-  /* Extra small devices (phones, 600px and down) */
-  /* Small devices (portrait tablets and large phones, 600px and up) */
-  /* Medium devices (landscape tablets, 768px and up) */
-  /* Large devices (laptops/desktops, 992px and up) */
-  /* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (max-width: 600px) {
+  #servicios p {
+    font-size: 1.2rem;
+  }
+  #servicios h2 {
+    font-size: 2.2rem;
+  }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (min-width: 600px) {
   #servicios p {
     font-size: 1.4rem;
   }
@@ -21,18 +22,12 @@
   }
 }
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 768px) {
   #servicios p {
     font-size: 1.6rem;
   }
   #servicios h2 {
     font-size: 2.6rem;
-  }
-}
-
-@media only screen and (min-width: 768px) {
-  #servicios .example {
-    background: blue;
   }
 }
 
