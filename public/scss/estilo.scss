@@ -1,0 +1,50 @@
+
+:root {
+    --orangeGradient : radial-gradient(circle, rgba(255,165,0,1) 53%, rgba(246,225,115,1)100%);
+    --purpleGradient : radial-gradient(circle, rgba(112,68,179,1) 53%, rgba(158,123,209,0.7875525210084033) 100%);
+    --greenGradient :  radial-gradient(circle, rgba(21,147,21,1) 53%, rgba(139,235,139,1) 100%);
+  }
+.carousel-indicators li{
+    background: #000;
+    border-radius: 50%;
+}
+.carousel-indicators active{
+    background: #fff;
+}
+#servicios{
+   
+@media only screen and (max-width: 600px) {
+    p{ font-size: 1.2rem; }
+    h2{ font-size: 2.2rem; }
+  }
+  
+  @media only screen and (min-width: 600px) {
+    p{ font-size: 1.4rem; }
+    h2{ font-size: 2.4rem; }
+}
+  
+  @media only screen and (min-width: 768px) {
+    p{ font-size: 1.6rem; }
+    h2{ font-size: 2.6rem; }
+  } 
+  
+  @media only screen and (min-width: 992px) {
+    p{ font-size: 1.8rem; }
+    h2{ font-size: 2.8rem; }
+  } 
+  
+  @media only screen and (min-width: 1200px) {
+    p{ font-size: 2rem; }
+    h2{ font-size: 3rem; }
+}
+
+    #lenguaje, #aprendizaje{
+        background: var(--orangeGradient);
+    }
+    #emocional, #test{
+        background: var(--purpleGradient); 
+    }
+    #psicoterapia{
+        background: var(--greenGradient);
+    }
+}

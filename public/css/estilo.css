@@ -1,0 +1,72 @@
+:root {
+  --orangeGradient: radial-gradient(circle, rgba(255,165,0,1) 53%, rgba(246,225,115,1)100%);
+  --purpleGradient: radial-gradient(circle, rgba(112,68,179,1) 53%, rgba(158,123,209,0.7875525210084033) 100%);
+  --greenGradient:  radial-gradient(circle, rgba(21,147,21,1) 53%, rgba(139,235,139,1) 100%);
+}
+
+.carousel-indicators li {
+  background: #000;
+  border-radius: 50%;
+}
+
+.carousel-indicators active {
+  background: #fff;
+}
+
+@media only screen and (max-width: 600px) {
+  #servicios p {
+    font-size: 1.2rem;
+  }
+  #servicios h2 {
+    font-size: 2.2rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #servicios p {
+    font-size: 1.4rem;
+  }
+  #servicios h2 {
+    font-size: 2.4rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #servicios p {
+    font-size: 1.6rem;
+  }
+  #servicios h2 {
+    font-size: 2.6rem;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #servicios p {
+    font-size: 1.8rem;
+  }
+  #servicios h2 {
+    font-size: 2.8rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #servicios p {
+    font-size: 2rem;
+  }
+  #servicios h2 {
+    font-size: 3rem;
+  }
+}
+
+#servicios #lenguaje, #servicios #aprendizaje {
+  background: var(--orangeGradient);
+}
+
+#servicios #emocional, #servicios #test {
+  background: var(--purpleGradient);
+}
+
+#servicios #psicoterapia {
+  background: var(--greenGradient);
+}
+/*# sourceMappingURL=estilo.css.map */
