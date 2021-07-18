@@ -4,6 +4,13 @@
     --purpleGradient : radial-gradient(circle, rgba(112,68,179,1) 53%, rgba(158,123,209,0.7875525210084033) 100%);
     --greenGradient :  radial-gradient(circle, rgba(21,147,21,1) 53%, rgba(139,235,139,1) 100%);
   }
+.carousel-indicators li{
+    background: #000;
+    border-radius: 50%;
+}
+.carousel-indicators active{
+    background: #fff;
+}
 #servicios{
    
 @media only screen and (max-width: 600px) {
