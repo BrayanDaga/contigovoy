@@ -1,12 +1,68 @@
-#servicios #lenguaje, #servicios #aprendizaje {
-  background: radial-gradient(circle, orange 53%, #f6e173 100%);
+:root {
+  --orangeGradient: radial-gradient(circle, rgba(255,165,0,1) 53%, rgba(246,225,115,1)100%);
+  --purpleGradient: radial-gradient(circle, rgba(112,68,179,1) 53%, rgba(158,123,209,0.7875525210084033) 100%);
+  --greenGradient:  radial-gradient(circle, rgba(21,147,21,1) 53%, rgba(139,235,139,1) 100%);
 }
 
-#servicios #emocional {
-  background: radial-gradient(circle, #7044b3 53%, rgba(158, 123, 209, 0.787553) 100%);
+#servicios {
+  /* Extra small devices (phones, 600px and down) */
+  /* Small devices (portrait tablets and large phones, 600px and up) */
+  /* Medium devices (landscape tablets, 768px and up) */
+  /* Large devices (laptops/desktops, 992px and up) */
+  /* Extra large devices (large laptops and desktops, 1200px and up) */
+}
+
+@media only screen and (max-width: 600px) {
+  #servicios p {
+    font-size: 1.4rem;
+  }
+  #servicios h2 {
+    font-size: 2.4rem;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #servicios p {
+    font-size: 1.6rem;
+  }
+  #servicios h2 {
+    font-size: 2.6rem;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  #servicios .example {
+    background: blue;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  #servicios p {
+    font-size: 1.8rem;
+  }
+  #servicios h2 {
+    font-size: 2.8rem;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  #servicios p {
+    font-size: 2rem;
+  }
+  #servicios h2 {
+    font-size: 3rem;
+  }
+}
+
+#servicios #lenguaje, #servicios #aprendizaje {
+  background: var(--orangeGradient);
+}
+
+#servicios #emocional, #servicios #test {
+  background: var(--purpleGradient);
 }
 
 #servicios #psicoterapia {
-  background: radial-gradient(circle, #159315 53%, #8beb8b 100%);
+  background: var(--greenGradient);
 }
 /*# sourceMappingURL=estilo.css.map */
