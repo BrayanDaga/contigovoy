@@ -29,11 +29,11 @@
                 <li class="nav navbar-nav dropdown <?= $_SERVER['REQUEST_URI']==='/servicios'  ? 'active' : '' ?>">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/servicios" role="button" aria-haspopup="true" aria-expanded="false">Servicios&nbsp;<i class="fas fa-list"></i></a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="/contigovoy/servicios#lenguaje">Terapia de lenguaje</a>
-                        <a class="dropdown-item" href="/contigovoy/servicios#emocional">Terapia Emocional</a>
-                        <a class="dropdown-item" href="/contigovoy/servicios#aprendisaje">Terapia de Aprendizaje</a>
-                        <a class="dropdown-item" href="/contigovoy/servicios#psicoterapia">Psicoterapia</a>
-                        <a class="dropdown-item" href="/contigovoy/servicios#otros">Otros</a>
+                        <a class="dropdown-item" href="/servicios#lenguaje">Terapia de lenguaje</a>
+                        <a class="dropdown-item" href="/servicios#emocional">Terapia Emocional</a>
+                        <a class="dropdown-item" href="/servicios#aprendisaje">Terapia de Aprendizaje</a>
+                        <a class="dropdown-item" href="/servicios#psicoterapia">Psicoterapia</a>
+                        <a class="dropdown-item" href="/servicios#otros">Otros</a>
                     </div>
                 </li>
                 <li class="nav-item <?= $_SERVER['REQUEST_URI']==='/conocenos'  ? 'active' : '' ?>"><a href="/conocenos" class="nav-link">Conocenos&nbsp;<i class="fas fa-user"></i></a>
