@@ -4,19 +4,19 @@
     <hr>
     <div class="row">
         <div class="col-12">
-            <section class="my-3" id="lenguaje">
+            <section class="m-3" id="lenguaje">
                 <img src="<?= IMAGES ?>/lenguaje.webp" class="img-fluid" width="100%">
             </section>
-            <section class="my-3" id="emocional">
+            <section class="m-3" id="emocional">
                 <img src="<?= IMAGES ?>/emocional.webp" class="img-fluid" width="100%">
             </section>
-            <section class="my-3" id="aprendizaje">
+            <section class="m-3" id="aprendizaje">
                 <img src="<?= IMAGES ?>/aprendizaje.webp" class="img-fluid" width="100%">
             </section>
-            <section class="my-3" id="test">
+            <section class="m-3" id="test">
                 <img src="<?= IMAGES ?>/test.webp" class="img-fluid" width="100%">
             </section>
-            <section class="my-3" id="psicoterapia">
+            <section class="m-3" id="psicoterapia">
                 <img src="<?= IMAGES ?>/psicoterapia.webp" class="img-fluid" width="100%">
             </section>
 
