@@ -1,0 +1,14 @@
+.orange{
+    background-color: rgb(239, 150, 55);
+    border-radius: 20px;
+    border: 2px solid #000;
+    color: #fff;
+
+}
+.text p{
+    margin: auto;
+    width: 80%;
+}
+.i img{
+    width: 80%;
+}

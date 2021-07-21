@@ -1,0 +1,25 @@
+.slide {
+    height: auto;
+}
+.carousel-control-next-icon {
+    width: 0;
+
+    height: 0;
+    border-left: 60px solid #15ff0997;
+    border-top: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+   
+}
+.carousel-control-prev-icon {
+    width: 0;
+    height: 0;
+    border-right: 60px solid #15ff0997;
+    border-top:30px solid transparent;
+    border-bottom: 30px solid transparent;
+}
+.cont{
+    margin-top: 40px;
+}
+.f img{
+    width: 100%;
+}

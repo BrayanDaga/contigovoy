@@ -15,3 +15,6 @@
 <link rel="stylesheet" href="<?=CSS;?>iconos.css" >
         <link rel="stylesheet" href="<?=CSS;?>formulario.css" >
 <link rel="stylesheet" href="<?=CSS;?>style.css">
+
+<link rel="stylesheet" href="<?=CSS;?>slider.css">
+<link rel="stylesheet" href="<?=CSS;?>modalidad.css">

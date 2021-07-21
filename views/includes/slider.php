@@ -10,8 +10,8 @@
                 
                       <div class="carousel-item active">
                      
-                        <img src="https://picsum.photos/800/250" class="d-block w-100" alt="https://picsum.photos/800/250">
-                    
+                        <img src="<?= IMAGES ?>/img1.webp" class="d-block w-100" alt="contigo">
+              
                         <div class="carousel-caption d-none d-md-block form1">
                        
             
@@ -31,18 +31,25 @@
                         </div>
                       </div>
                       <div class="carousel-item">
-                        <img src="https://picsum.photos/800/250" class="d-block w-100" alt="https://picsum.photos/800/250">
-                        <div class="carousel-caption d-none d-md-block">
+                      <img src="<?= IMAGES ?>/img2.webp" class="d-block w-100" alt="terapia">
+                          <!-- <div class="carousel-caption d-none d-md-block">
                           <h5>Second slide label</h5>
                           <p>Some representative placeholder content for the second slide.</p>
-                        </div>
+                        </div>-->
                       </div>
                       <div class="carousel-item">
-                        <img src="https://picsum.photos/800/250" class="d-block w-100" alt="https://picsum.photos/800/250">
-                        <div class="carousel-caption d-none d-md-block">
-                          <h5>Third slide label</h5>
+                      <img src="<?= IMAGES ?>/img3.webp" class="d-block w-100" alt="didactico">
+                          <!-- <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
                           <p>Some representative placeholder content for the third slide.</p>
-                        </div>
+                        </div>-->
+                      </div>
+                      <div class="carousel-item">
+                      <img src="<?= IMAGES ?>/img4.webp" class="d-block w-100" alt="material">
+                          <!-- <div class="carousel-caption d-none d-md-block">
+                        <h5>Third slide label</h5>
+                          <p>Some representative placeholder content for the third slide.</p>
+                        </div>-->
                       </div>
                     </div>
                     <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
