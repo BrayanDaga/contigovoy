@@ -31,7 +31,7 @@
                     <div class="dropdown-menu">
                         <a class="dropdown-item" href="/servicios#lenguaje">Terapia de lenguaje</a>
                         <a class="dropdown-item" href="/servicios#emocional">Terapia Emocional</a>
-                        <a class="dropdown-item" href="/servicios#aprendisaje">Terapia de Aprendizaje</a>
+                        <a class="dropdown-item" href="/servicios#aprendizaje">Terapia de Aprendizaje</a>
                         <a class="dropdown-item" href="/servicios#psicoterapia">Psicoterapia</a>
                         <a class="dropdown-item" href="/servicios#otros">Otros</a>
                     </div>
