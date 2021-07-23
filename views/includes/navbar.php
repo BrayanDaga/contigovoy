@@ -38,7 +38,7 @@
                 </li>
                 <li class="nav-item <?= $_SERVER['REQUEST_URI']==='/conocenos'  ? 'active' : '' ?> li"><a href="/conocenos" class="nav-link">CONOCENOS&nbsp;<i class="fas fa-user"></i></a>
                 </li>
-                <li class="nav-item <?= $_SERVER['REQUEST_URI']==='/modalidad'  ? 'active' : '' ?> li"><a href="/contigovoy/modalidad" class="nav-link">MODALIDAD DE TRABAJO&nbsp;<i class="fas fa-chart-network"></i></a>
+                <li class="nav-item <?= $_SERVER['REQUEST_URI']==='/modalidad'  ? 'active' : '' ?> li"><a href="/modalidad" class="nav-link">MODALIDAD DE TRABAJO&nbsp;<i class="fas fa-chart-network"></i></a>
                 </li>
                 <li class="nav-item <?= $_SERVER['REQUEST_URI']==='/contactanos'  ? 'active' : '' ?> li"><a href="/contactanos" class="nav-link">CONTACTANOS&nbsp;<i class="far fa-comment-dots"></i></a>
                 </li>
