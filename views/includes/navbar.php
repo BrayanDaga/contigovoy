@@ -9,7 +9,7 @@
         <div><a href="https://www.instagram.com/contigovoyperu/"><i class="fab fa-instagram-square"></i></a></div>
         <div><a href="https://www.facebook.com/Contigo-voy-108528551483244"><i class="fab fa-facebook-square"></i></a></div>
     </div>
-<nav class="navbar navbar-light bg-light navbar-expand-md">
+<nav class="navbar navbar-light bg-white navbar-expand-md">
 
     <div class="container-fluid">
 
@@ -51,11 +51,11 @@
                 </li>
             </ul>
        
-            <ul class="nav navbar-nav ml-auto">
+            <!-- <ul class="nav navbar-nav ml-auto">
 
                 <li class="nav-item"><a href="#" class="nav-link">Login</a>
                 </li>
-            </ul>
+            </ul> -->
         </div>
     </div>
 </nav>
