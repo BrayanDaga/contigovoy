@@ -45,8 +45,8 @@
                 <li class="nav navbar-nav dropdown <?= $_SERVER['REQUEST_URI']==='/parati'  ? 'active' : '' ?> li">
                     <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="/parati" role="button" aria-haspopup="true" aria-expanded="false">PARAT TI&nbsp;<i class="fas fa-hand-point-down"></i></a>
                     <div class="dropdown-menu">
-                        <a class="dropdown-item" href="/parati#material">Material Didáctico</a>
-                        <a class="dropdown-item" href="/parati#blog">Blog</a>
+                        <a class="dropdown-item" href="/material">Material Didáctico</a>
+                        <a class="dropdown-item" href="/blog">Blog</a>
                     </div>
                 </li>
             </ul>
