@@ -1,7 +1,6 @@
 <?php
 use App\Controllers\ViewController;
 use App\Controllers\LoginController;
-session_start();
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -57,7 +56,7 @@ session_start();
                     </section>
                 </main>  -->
     <?php
-                include "./vistas/inc/log_out_admin.php";
+                // include "./vistas/inc/log_out_admin.php";
             }
         }else{
 

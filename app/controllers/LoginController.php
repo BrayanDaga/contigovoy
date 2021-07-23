@@ -2,17 +2,18 @@
 
 namespace App\Controllers;
 
+use PDO;
 use App\Models\MainModel;
 
 class LoginController extends MainModel
 {
     public function iniciar_sesion_administrador_controlador(){
 
-        $usuario=mainModel::limpiar_cadena($_POST['dashboard_usuario']);
-        $clave=mainModel::limpiar_cadena($_POST['dashboard_clave']);
+        $usuario=mainModel::limpiar_cadena($_POST['username']);
+        $password=mainModel::limpiar_cadena($_POST['password']);
 
         /*-- Comprobando campos vacios - Checking empty fields --*/
-        if($usuario=="" || $clave==""){
+        if($usuario=="" || $password==""){
             echo'<script>
                 Swal.fire({
                   title: "Ocurrió un error inesperado",
@@ -37,7 +38,7 @@ class LoginController extends MainModel
             </script>';
             exit();
         }
-        if(mainModel::verificar_datos("[a-zA-Z0-9$@.-]{7,100}",$clave)){
+        if(mainModel::verificar_datos("[a-zA-Z0-9$@.-]{7,100}",$password)){
             echo'<script>
                 Swal.fire({
                   title: "Ocurrió un error inesperado",
@@ -52,38 +53,32 @@ class LoginController extends MainModel
         //encriptar clave
 
         /*-- Verificando datos de la cuenta - Verifying account details --*/
-        $datos_cuenta=mainModel::datos_tabla("Normal","usuario WHERE usuario_usuario='$usuario' AND 	usuario_clave='$clave' AND usuario_cuenta_estado='Activa'","*",0);
-
-        if($datos_cuenta->rowCount()==1){
-
-            $row=$datos_cuenta->fetch();
-
-            $datos_cuenta->closeCursor();
-            $datos_cuenta=mainModel::desconectar($datos_cuenta);
-
-            $_SESSION['id_sto']=$row['usuario_id'];
-            $_SESSION['nombre_sto']=$row['usuario_nombre'];
-            $_SESSION['apellido_sto']=$row['usuario_apellido'];
-            $_SESSION['genero_sto']=$row['usuario_genero'];
-            $_SESSION['usuario_sto']=$row['usuario_usuario'];
-            $_SESSION['cargo_sto']=$row['usuario_cargo'];
-            $_SESSION['foto_sto']=$row['usuario_foto'];
-
-            // if(headers_sent()){
-            //     echo "<script> window.location.href='".SERVERURL.DASHBOARD."/home/'; </script>";
-            // }else{
-            //     return header("Location: ".SERVERURL.DASHBOARD."/home/");
-            // }
-
-        }else{
-            echo'<script>
-                Swal.fire({
-                  title: "Datos incorrectos",
-                  text: "El nombre de usuario o contraseña no son correctos.",
-                  icon: "error",
-                  confirmButtonText: "Aceptar"
-                });
-            </script>';
+        $datos_cuenta=mainModel::datos_tabla("Normal","users WHERE username='$usuario' ","*",0);
+        
+        while($row = $datos_cuenta->fetch(PDO::FETCH_ASSOC)){
+          
+            if(password_verify($password, $row['password'])){
+    $_SESSION['auth_user'] = $row;
+                $datos_cuenta->closeCursor();
+                $row=mainModel::desconectar($row);
+        
+                if(headers_sent()){
+                    echo "<script> window.location.href='".$_ENV['APP_URL']."admin/home/'; </script>";
+               }else{
+                    return header("Location: ".$_ENV['APP_URL']."admin/home/");
+                }
+                    
+            }else{
+                echo'<script>
+                    Swal.fire({
+                      title: "Datos incorrectos",
+                      text: "El nombre de usuario o contraseña no son correctos.",
+                      icon: "error",
+                      confirmButtonText: "Aceptar"
+                    });
+                </script>';
+            }
+    
         }
     } /*-- Fin controlador - End controller --*/
 
