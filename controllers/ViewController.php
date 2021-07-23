@@ -1,6 +1,8 @@
 <?php
-namespace App\Controllers;
-use App\Models\RouteView;
+// namespace App\Controllers;
+// use App\Models\RouteView;
+// require_once  APP."models/RouterView.php";
+require_once "./models/RouteView.php";
 
 	 class ViewController extends RouteView{
 

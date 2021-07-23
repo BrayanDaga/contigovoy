@@ -15,8 +15,7 @@
 
         <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span>
             &#x2630;</button> <a class="navbar-brand" href="/">
-
-            <img src="<?= IMAGES ?>/logo.png" class="img-fluid" alt="logo" class="logo">
+            <img src="<?= IMAGES ?>/logo.webp" class="img-fluid" alt="logo" class="logo">
 
         </a>
 
