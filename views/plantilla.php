@@ -4,7 +4,6 @@
 // require_once APP. 'controllers/ViewController.php';
 require_once "./controllers/ViewController.php";
 
-session_start();
 ?>
 <!DOCTYPE html>
 <html lang="es">
