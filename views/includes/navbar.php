@@ -1,5 +1,5 @@
 <!-- Logo occupies 2 navbars -->
-<div class="iconos">
+<!-- <div class="iconos">
     <div class="a"></div>
         <div><a href="#"><i class="fab fa-invision"></i></a></div>
         <div><a href="#"><i class="fab fa-tiktok"></i></a></div>
@@ -7,8 +7,8 @@
         <div><a href="#"><i class="fas fa-envelope"></i></a></div>
         <div><a href="https://www.instagram.com/contigovoyperu/"><i class="fab fa-instagram-square"></i></a></div>
         <div><a href="https://www.facebook.com/Contigo-voy-108528551483244"><i class="fab fa-facebook-square"></i></a></div>
-    </div>
-<nav class="navbar navbar-primary bg-white navbar-expand-md">
+    </div> -->
+<nav class="navbar navbar-purple bg-white navbar-expand-md">
 
     <div class="container-fluid">
 
