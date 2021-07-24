@@ -8,7 +8,7 @@
                 <img data-lazysrc="<?= IMAGES ?>/lenguaje.webp" class="img-fluid" width="100%">
             </section>
             <section class="m-3" id="emocional">
-                <img data-lazysrc=    class="img-fluid" width="100%">
+                <img data-lazysrc="<?= IMAGES ?>/emocional.webp"   class="img-fluid" width="100%">
             </section>
             <section class="m-3" id="aprendizaje">
                 <img data-lazysrc="<?= IMAGES ?>/aprendizaje.webp" class="img-fluid" width="100%">
