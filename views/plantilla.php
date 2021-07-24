@@ -1,6 +1,10 @@
 <?php
-use App\Controllers\ViewController;
-use App\Controllers\LoginController;
+// use App\Controllers\ViewController;
+// use App\Controllers\LoginController;
+// require_once APP. 'controllers/ViewController.php';
+require_once "./controllers/ViewController.php";
+
+session_start();
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -18,7 +22,7 @@ use App\Controllers\LoginController;
 
         /*---------- Instancia controlador login ----------*/
         // require_once "./controladores/loginControlador.php";
-        $ins_login = new LoginController();
+        // $ins_login = new LoginController();
         $ins_vistas = new ViewController();
 
         $vistas= ViewController::obtener_vistas_controlador("web");

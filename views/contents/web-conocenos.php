@@ -16,7 +16,7 @@
                             <div class="col-md-4">
                                 <div class="card">
                                     <div class="card-body">
-                                        <img src="https://i.pravatar.cc/300" class="img-fluid">
+                                        <img src="https://i.pravatar.cc/300" class="img-fluid islider">
                                     </div>
                                     <div class="card-header">
                                         <h3>Wendy Aylas Martínez</h3>
@@ -30,7 +30,7 @@
                             <div class="col-md-4">
                                 <div class="card">
                                     <div class="card-body">
-                                        <img src="https://i.pravatar.cc/300" class="img-fluid">
+                                        <img src="https://i.pravatar.cc/300" class="img-fluid islider">
                                     </div>
                                     <div class="card-header">
                                         <h2>Ana Vizcarra Sajami</h2>
@@ -45,7 +45,7 @@
                             <div class="col-md-4">
                                 <div class="card">
                                     <div class="card-body">
-                                        <img src="https://i.pravatar.cc/300" class="img-fluid">
+                                        <img src="https://i.pravatar.cc/300" class="img-fluid islider">
                                     </div>
                                     <div class="card-header">
                                         <h2>Persona 3</h2>
@@ -64,7 +64,7 @@
                             <div class="col-md-4">
                                 <div class="card">
                                     <div class="card-body">
-                                        <img src="https://i.pravatar.cc/300" class="img-fluid">
+                                        <img src="https://i.pravatar.cc/300" class="img-fluid islider">
                                     </div>
                                     <div class="card-header">
                                         <h3>Persona 4</h3>
@@ -78,7 +78,7 @@
                             <div class="col-md-4">
                                 <div class="card">
                                     <div class="card-body">
-                                        <img src="https://i.pravatar.cc/300" class="img-fluid">
+                                        <img src="https://i.pravatar.cc/300" class="img-fluid islider">
                                     </div>
                                     <div class="card-header">
                                         <h2>Persona 5</h2>
@@ -93,7 +93,7 @@
                             <div class="col-md-4">
                                 <div class="card">
                                     <div class="card-body">
-                                        <img src="https://i.pravatar.cc/300" class="img-fluid">
+                                        <img src="https://i.pravatar.cc/300" class="img-fluid islider">
                                     </div>
                                     <div class="card-header">
                                         <h2>Persona 6</h2>
@@ -112,7 +112,7 @@
                             <div class="col-md-4">
                                 <div class="card">
                                     <div class="card-body">
-                                        <img src="https://i.pravatar.cc/300" class="img-fluid">
+                                        <img src="https://i.pravatar.cc/300" class="img-fluid islider">
                                     </div>
                                     <div class="card-header">
                                         <h3>Persona 7</h3>
@@ -125,7 +125,7 @@
                             <div class="col-md-4">
                                 <div class="card">
                                     <div class="card-body">
-                                        <img src="https://i.pravatar.cc/300" class="img-fluid">
+                                        <img src="https://i.pravatar.cc/300" class="img-fluid islider">
                                     </div>
                                     <div class="card-header">
                                         <h2>Persona 8</h2>
@@ -138,7 +138,7 @@
                             <div class="col-md-4">
                                 <div class="card">
                                     <div class="card-body">
-                                        <img src="https://i.pravatar.cc/300" class="img-fluid">
+                                        <img src="https://i.pravatar.cc/300" class="img-fluid islider">
                                     </div>
                                     <div class="card-header">
                                         <h2>Persona 9</h2>
