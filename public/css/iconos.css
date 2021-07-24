@@ -1,10 +1,3 @@
-*{
-
-margin: 0;
-padding: 0;
-box-sizing: border-box;
-
-}
 .carousel-indicators li {
     height: 30px;
     background-color: #f99f19;
