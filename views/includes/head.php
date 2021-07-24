@@ -2,6 +2,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <!--meta-responsive-->
 <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0, user-scalable=yes">
+<link rel="shortcut icon" type="image/jpg" href="<?= IMAGES ?>/logo.ico"/>
 
 <title>Contigo Voy</title>
 <!-- Latest compiled and minified CSS -->
@@ -12,7 +13,6 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns"
         crossorigin="anonymous"></script>
-
 <link rel="stylesheet" href="<?= CSS; ?>iconos.css">
 <link rel="stylesheet" href="<?= CSS; ?>formulario.css">
 

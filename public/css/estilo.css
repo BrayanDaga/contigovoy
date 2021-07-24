@@ -4,19 +4,6 @@
   --greenGradient:  radial-gradient(circle, rgba(21,147,21,1) 53%, rgba(139,235,139,1) 100%);
 }
 
-.carousel-indicators li {
-  background: #000;
-  border-radius: 50%;
-}
-
-.carousel-indicators active {
-  background: #fff;
-}
-
-.navbar-primary {
-  color: #9a7ab9;
-}
-
 .navbar .brand, .navbar .nav > li > a {
   font-weight: 800;
 }
