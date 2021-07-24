@@ -2,20 +2,15 @@
     height: auto;
 }
 .carousel-control-next-icon {
-    width: 0;
-
-    height: 0;
-    border-left: 60px solid #15ff0997;
-    border-top: 30px solid transparent;
-    border-bottom: 30px solid transparent;
+    border-left: 1.3rem solid #15ff0997;
+    border-top: 1.3rem solid transparent;
+    border-bottom: 1.3rem solid transparent;
    
 }
 .carousel-control-prev-icon {
-    width: 0;
-    height: 0;
-    border-right: 60px solid #15ff0997;
-    border-top:30px solid transparent;
-    border-bottom: 30px solid transparent;
+    border-right: 1.3rem solid #15ff0997;
+    border-top: 1.3rem solid transparent;
+    border-bottom: 1.3rem solid transparent;
 }
 .cont{
     margin-top: 40px;
