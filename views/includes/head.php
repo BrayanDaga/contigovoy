@@ -15,6 +15,7 @@
         crossorigin="anonymous"></script>
 
 <link rel="stylesheet" href="<?= CSS; ?>iconos.css">
+<link rel="stylesheet" href="<?= CSS; ?>estilo.css">
 <link rel="stylesheet" href="<?= CSS; ?>formulario.css">
 
 <link rel="stylesheet" href="<?= CSS; ?>slider.css">

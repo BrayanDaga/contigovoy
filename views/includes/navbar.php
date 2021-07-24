@@ -1,5 +1,4 @@
 <!-- Logo occupies 2 navbars -->
-
 <div class="iconos">
     <div class="a"></div>
         <div><a href="#"><i class="fab fa-invision"></i></a></div>
@@ -9,14 +8,14 @@
         <div><a href="https://www.instagram.com/contigovoyperu/"><i class="fab fa-instagram-square"></i></a></div>
         <div><a href="https://www.facebook.com/Contigo-voy-108528551483244"><i class="fab fa-facebook-square"></i></a></div>
     </div>
-<nav class="navbar navbar-light bg-white navbar-expand-md">
+<nav class="navbar navbar-primary bg-white navbar-expand-md">
 
     <div class="container-fluid">
 
         <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span>
-            &#x2630;</button> <a class="navbar-brand" href="/">
-            <img src="<?= IMAGES ?>/logo.webp" class="img-fluid" alt="logo" class="logo">
-
+            &#x2630;</button> 
+        <a class="navbar-brand" href="/">
+            <img src="<?= IMAGES ?>/logo.webp"  height="70" alt="">
         </a>
 
    
@@ -49,12 +48,45 @@
                     </div>
                 </li>
             </ul>
+        <ul class="navbar-nav ml-auto d-flex flex-row my-nav-icons">
+          <li class="nav-item m-0">
+            <a class="nav-link waves-effect waves-light icon-item">
+              <i class="fab fa-invision"></i>
+            </a>
+          </li>
+          <li class="nav-item mr-1">
+            <a class="nav-link waves-effect waves-light icon-item">
+              <i class="fab fa-tiktok"></i>
+            </a>
+          </li>
+          <li class="nav-item mr-1">
+            <a class="nav-link waves-effect waves-light icon-item">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+          <li class="nav-item mr-1">
+            <a class="nav-link waves-effect waves-light icon-item">
+              <i class="fas fa-envelope"></i>
+            </a>
+          </li>
+          <li class="nav-item mr-1">
+            <a class="nav-link waves-effect waves-light icon-item" href="https://www.instagram.com/contigovoyperu/" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li class="nav-item mr-1">
+            <a class="nav-link waves-effect waves-light icon-item" href="https://www.instagram.com/contigovoyperu/" target="_blank">
+              <i class="fab fa-facebook"></i>
+            </a>
+          </li>
+          
+        </ul>
        
             <!-- <ul class="nav navbar-nav ml-auto">
 
                 <li class="nav-item"><a href="#" class="nav-link">Login</a>
                 </li>
-            </ul> -->
+            </ul>  -->
         </div>
     </div>
 </nav>

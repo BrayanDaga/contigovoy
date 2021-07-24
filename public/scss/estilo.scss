@@ -11,6 +11,24 @@
 .carousel-indicators active{
     background: #fff;
 }
+
+.navbar .brand, .navbar .nav > li > a {
+  color: rgb(154,122,185);
+  font-weight: 800;
+  &:hover {
+    color:black;
+}
+}
+ .my-nav-icons{
+  a{
+    font-size: 1.5em;
+  }
+  a:hover{
+    color: black;
+  }
+ }
+
+
 #servicios{
    
 @media only screen and (max-width: 600px) {
