@@ -3,7 +3,6 @@
 // use App\Controllers\LoginController;
 // require_once APP. 'controllers/ViewController.php';
 require_once "./controllers/ViewController.php";
-
 ?>
 <!DOCTYPE html>
 <html lang="es">
