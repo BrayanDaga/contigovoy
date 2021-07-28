@@ -1,4 +1,5 @@
 <?php
+
 use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
@@ -7,25 +8,26 @@ use PHPMailer\PHPMailer\PHPMailer;
 class EmailController
 {
 
-    public function enviarEmailValidando(){
-            $Nombre  = $_POST['nombre'];
-            $Email   = $_POST['email'];
-            $Telefono= (int) $_POST['telefono'];
-            $Mensaje = $_POST['mensaje'];
-        
-            if ($Nombre=='' 
-            || $Email=='' || 
-            $Telefono=='' || 
-            !is_numeric($Telefono) ||
-             strlen($Telefono)!=9  || 
-             $Mensaje==''){ 
-                echo "<script>
-                    alert('Todos los campos no han sido rellenados o datos erroneos.');location.href ='javascript:history.back()';</script>";
-        
-            }else{
-                $this->usarPhpMailer($Nombre, $Email, $Telefono, $Mensaje);
-            }
+    public function enviarEmailValidando()
+    {
+        $Nombre  = $_POST['nombre'];
+        $Email   = $_POST['email'];
+        $Telefono = (int) $_POST['telefono'];
+        $Mensaje = $_POST['mensaje'];
 
+        if (
+            $Nombre == ''
+            || $Email == '' ||
+            $Telefono == '' ||
+            !is_numeric($Telefono) ||
+            strlen($Telefono) != 9  ||
+            $Mensaje == ''
+        ) {
+            echo "<script>
+                    alert('Todos los campos no han sido rellenados o datos erroneos.');location.href ='javascript:history.back()';</script>";
+        } else {
+            $this->usarPhpMailer($Nombre, $Email, $Telefono, $Mensaje);
+        }
     }
 
 
@@ -40,7 +42,7 @@ class EmailController
         try {
 
             //Configuración del servidor
-            if($_ENV['APP_ENV'] == 'local'){
+            if ($_ENV['APP_ENV'] == 'local') {
                 $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Habilitar la salida de depuración detallada
             }
             $mail->isSMTP();                                            //Enviar usando SMTP
@@ -75,7 +77,12 @@ class EmailController
             $mail->AltBody = 'This is the body in plain text for non-HTML mail clients';
 
             $mail->send();
-            echo 'Message has been sent';
+            echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>
+            <strong>Mensaje Enviado!</strong> Formulario enviado exitosamente,le responderemos lo mas pronto posible
+            <button type='button' class='close' data-dismiss='alert' aria-label='Close'>
+                <span aria-hidden='true'>&times;</span>
+            </button>
+          </div>";
         } catch (Exception $e) {
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
         }

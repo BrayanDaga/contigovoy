@@ -3,7 +3,7 @@
         <div class="col-md-7 izquierda">
             <p>Muchas gracias por tu visita, nos encantaría que nos <br> dejes en tus consultas, dudas o sugerencias sobre nuestro <br> servicio y te responderemos lo más pronto posible. </p>
 
-            <form class="formulario1" action="/" method="post">
+            <form class="formulario1" action="/contactanos" method="post">
                 <input type="text" name="action"  value="enviarEmail" style="display:none;"/>
                 <input type="text" placeholder="Nombres" name="nombre" />
                 <input type="email" placeholder="Correo" name="email" />
