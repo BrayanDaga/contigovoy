@@ -10853,7 +10853,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .navbar .brand, .navbar .nav > li > a {
-  font-weight: 800;
+  font-weight: 600;
 }
 
 .navbar .brand:hover, .navbar .nav > li > a:hover {
