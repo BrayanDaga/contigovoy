@@ -40,7 +40,7 @@ class EmailController
         try {
 
             //Configuración del servidor
-            if($_ENV['APP_DEBUG']){
+            if($_ENV['APP_ENV'] == 'local'){
                 $mail->SMTPDebug = SMTP::DEBUG_SERVER;                      //Habilitar la salida de depuración detallada
             }
             $mail->isSMTP();                                            //Enviar usando SMTP
