@@ -178,13 +178,13 @@
 </div>
 <div class="container-fluid cont">
 <div  class="f">
-        <img data-lazysrc="<?= IMAGES ?>/mision.webp"  alt="">
+        <img src="<?= IMAGES ?>/mision.png"  alt="">
     <!--<div class="col-md-6"><h1>MISIÓN</h1> <p>Brindar atención psicológica, enfocado en el tratamiento psicoterapéutico a niños, adolescentes y adultos, con desórdenes emocionales y/o conductuales; así como la intervención temprana en problemas de lenguaje y/o aprendizaje en niños, Con el fin de dotar de herramientas para mejorar su calidad de vida.</p></div>
     <div class="col-md-6"></div>-->
     </div>
      
     <div  class="f">
-    <img data-lazysrc="<?= IMAGES ?>/vision.webp"  alt="">
+    <img src="<?= IMAGES ?>/vision.png"  alt="">
    <!-- <div class="col-md-6"><h1>VISIÓN</h1> <p>Ser reconocidos cmo institución líder en el sector peruano enfocada en la salud mental,con prestigio a nivel nacional e internacional</p></div>
     <div class="col-md-6"></div>-->
     </div>

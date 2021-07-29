@@ -5,19 +5,19 @@
     <div class="row">
         <div class="col-12">
             <section class="m-3" id="lenguaje">
-                <img data-lazysrc="<?= IMAGES ?>/lenguaje.webp" class="img-fluid" width="100%">
+                <img src="<?= IMAGES ?>/lenguaje.png" class="img-fluid" width="100%">
             </section>
             <section class="m-3" id="emocional">
-                <img data-lazysrc="<?= IMAGES ?>/emocional.webp"   class="img-fluid" width="100%">
+                <img src="<?= IMAGES ?>/emocional.png"   class="img-fluid" width="100%">
             </section>
             <section class="m-3" id="aprendizaje">
-                <img data-lazysrc="<?= IMAGES ?>/aprendizaje.webp" class="img-fluid" width="100%">
+                <img src="<?= IMAGES ?>/aprendizaje.png" class="img-fluid" width="100%">
             </section>
             <section class="m-3" id="test">
-                <img data-lazysrc="<?= IMAGES ?>/test.webp" class="img-fluid" width="100%">
+                <img src="<?= IMAGES ?>/test.png" class="img-fluid" width="100%">
             </section>
             <section class="m-3" id="psicoterapia">
-                <img data-lazysrc="<?= IMAGES ?>/psicoterapia.webp" class="img-fluid" width="100%">
+                <img src="<?= IMAGES ?>/psicoterapia.png" class="img-fluid" width="100%">
             </section>
 
             <!-- Por si alguna vez desean utilizar este tipo de section -->
