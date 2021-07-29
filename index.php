@@ -11,14 +11,15 @@ require_once __DIR__ ."/core/config.php";
 
 // use App\Controllers\ViewController;
 require_once ROOT."controllers/ViewController.php";
+if (isset($_POST['action'])) {
+    if ($_POST['action'] == 'enviarEmail') {
+        require_once ROOT."controllers/EmailController.php";
+        $emailSend = new EmailController();
+        $emailSend->enviarEmailValidando();
+    }
+   
+}
 $plantilla = new ViewController();
 $plantilla->obtener_plantilla_controlador();
 
-    if (isset($_POST['action'])) {
-        if ($_POST['action'] == 'enviarEmail') {
-            require_once ROOT."controllers/EmailController.php";
-            $emailSend = new EmailController();
-            $emailSend->enviarEmailValidando();
-        }
-       
-    }
+
