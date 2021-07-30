@@ -15,12 +15,12 @@
 
 
 
-        <form class="formulario">
-          <h1>APRENDE CON</h1>
+          <form class="formulario" action="/" method="post">
+          <input type="text" name="action"  value="enviarEmail" style="display:none;"/>          <h1>APRENDE CON</h1>
           <h3>nosotros de la mejor forma</h3>
           <p>Dejanos tus datos para ponernos en contacto contigo y asi recibir más informacion y conocernos más</p>
-          <input type="text" placeholder="Correo electronico" /> <br /><br />
-          <input type="text" placeholder="Núnmero de contacto" /> <br /><br />
+          <input type="email" placeholder="Correo electronico" name="email"/> <br /><br />
+          <input type="text" placeholder="Núnmero de contacto" name="telefono"/> <br /><br />
 
           <input class="sumit" type="submit" value="Enviar">
         </form>
