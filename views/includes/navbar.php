@@ -49,33 +49,29 @@
                 </li>
             </ul>
         <ul class="navbar-nav ml-auto d-flex flex-row my-nav-icons">
-          <li class="nav-item m-0">
-            <a class="nav-link waves-effect waves-light icon-item">
-              <i class="fab fa-invision"></i>
+          <li class="nav-item mr-1">
+            <a href="https://www.linkedin.com/company/centro-voy/about/"  target="_blank" class="nav-link waves-effect waves-light icon-item">
+            <i class="fab fa-linkedin"></i>
             </a>
           </li>
+         
           <li class="nav-item mr-1">
-            <a class="nav-link waves-effect waves-light icon-item">
-              <i class="fab fa-tiktok"></i>
-            </a>
-          </li>
-          <li class="nav-item mr-1">
-            <a class="nav-link waves-effect waves-light icon-item">
+            <a href="https://www.youtube.com/channel/UCeQo5xI5_rcgdspexoxfL5w" target="_blank" class="nav-link waves-effect waves-light icon-item">
               <i class="fab fa-youtube"></i>
             </a>
           </li>
           <li class="nav-item mr-1">
-            <a class="nav-link waves-effect waves-light icon-item">
-              <i class="fas fa-envelope"></i>
+            <a href="mailto:contigovoyperu@gmail.com" target="_blank" class="nav-link waves-effect waves-light icon-item">
+              <i class="fas fa-envelope" title="contigovoyperu@gmail.com"></i>
             </a>
           </li>
           <li class="nav-item mr-1">
-            <a class="nav-link waves-effect waves-light icon-item" href="https://www.instagram.com/contigovoyperu/" target="_blank">
+            <a href="https://www.instagram.com/centrocontigovoy/" target="_blank" class="nav-link waves-effect waves-light icon-item"">
               <i class="fab fa-instagram"></i>
             </a>
           </li>
           <li class="nav-item mr-1">
-            <a class="nav-link waves-effect waves-light icon-item" href="https://www.instagram.com/contigovoyperu/" target="_blank">
+            <a href="https://www.facebook.com/ContigoVoy-104115145278579/" target="_blank" class="nav-link waves-effect waves-light icon-item" >
               <i class="fab fa-facebook"></i>
             </a>
           </li>
