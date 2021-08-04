@@ -1,0 +1,15 @@
+@media only screen and (max-width: 768px) {
+    .divlogo {
+      .col-md-4 {
+        display: none;
+      }
+  
+      .col-md-8 {
+        background-image: url("../images/logoback.webp");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-size: 200px;
+      }
+    }
+}

@@ -2,7 +2,15 @@
 $primary: #9F6FE5;
 $danger: #ef9637;
 $enable-gradient: true;
-
+@import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Fredoka+One&display=swap');
 @import "bootstrap/bootstrap.scss";
 @import "_navbar.scss";
 @import "_slider.scss";
+@import "_conocenos.scss";
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Fredoka One';
+  }
+p, span, a ,li{
+    font-family: 'Comfortaa';
+}

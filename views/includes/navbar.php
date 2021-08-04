@@ -9,18 +9,16 @@
     <!--container-flex-bootstrap-->
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav ">
-        <li class="nav-item <?= $_SERVER['REQUEST_URI'] === '/'  ? 'active' : '' ?> li"><a href="/" class="nav-link  px-2">INICIO<i class="fas fa-home"></i></a>
+        <li class="nav-item <?= $_SERVER['REQUEST_URI'] === '/'  ? 'active' : '' ?> li"><a href="/" class="nav-link  px-2">INICIO <i class="fas fa-home"></i></a>
         </li>
-        <li class="nav-item <?= $_SERVER['REQUEST_URI'] === '/servicios'  ? 'active' : '' ?> li"><a href="/servicios" class="nav-link  px-2">SERVICISOS<i class="fas fa-list"></i></a>
+        <li class="nav-item <?= $_SERVER['REQUEST_URI'] === '/servicios'  ? 'active' : '' ?> li"><a href="/servicios" class="nav-link  px-2">SERVICISOS <i class="fas fa-list"></i></a>
         </li>
-        <li class="nav-item <?= $_SERVER['REQUEST_URI'] === '/conocenos'  ? 'active' : '' ?> li"><a href="/conocenos" class="nav-link  px-2">CONOCENOS<i class="fas fa-user"></i></a>
+        <li class="nav-item <?= $_SERVER['REQUEST_URI'] === '/conocenos'  ? 'active' : '' ?> li"><a href="/conocenos" class="nav-link  px-2">CONOCENOS <i class="fas fa-user"></i></a>
         </li>
-        <li class="nav-item <?= $_SERVER['REQUEST_URI'] === '/modalidad'  ? 'active' : '' ?> li"><a href="/modalidad" class="nav-link  px-2">MODALIDAD DE TRABAJO<i class="fas fa-chart-network"></i></a>
-        </li>
-        <li class="nav-item <?= $_SERVER['REQUEST_URI'] === '/contactanos'  ? 'active' : '' ?> li"><a href="/contactanos" class="nav-link  px-2">CONTACTANOS<i class="far fa-comment-dots"></i></a>
+        <li class="nav-item <?= $_SERVER['REQUEST_URI'] === '/reservacita'  ? 'active' : '' ?> li"><a href="/reservacita" class="nav-link  px-2">RESERVA TU CITA <i class="far fa-comment-dots"></i></a>
         </li>
         <li class="nav navbar-nav dropdown <?= $_SERVER['REQUEST_URI'] === '/material'  ? 'active' : ($_SERVER['REQUEST_URI'] === '/blog' ? 'active' : '') ?> li">
-          <a class="nav-link dropdown-toggle px-2" data-toggle="dropdown" href="/" role="button" aria-haspopup="true" aria-expanded="false">PARAT TI<i class="fas fa-hand-point-down"></i></a>
+          <a class="nav-link dropdown-toggle px-2" data-toggle="dropdown" href="/" role="button" aria-haspopup="true" aria-expanded="false">PARAT TI <i class="fas fa-hand-point-down"></i></a>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="/material">Material Didáctico</a>
             <a class="dropdown-item" href="/blog">Blog</a>
