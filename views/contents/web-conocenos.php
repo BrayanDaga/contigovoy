@@ -45,7 +45,7 @@
                 <p>Ser reconocidos como institución líder en el sector peruano enfocada en la salud mental, con prestigio a nivel nacional e internacional.</p>
             </div>
             <div class="col-md-4 px-3">
-            <img src="<?= IMAGES ?>/logo.png" class="img-fluid" width="70%">
+            <img src="<?= IMAGES ?>/logo1.webp" class="img-fluid" width="70%">
             </div>
         </div>
         </div>
