@@ -15,7 +15,7 @@
                     </p>
                 </div>
                 <div class="col-md-5 i">
-                    <img src="<?= IMAGES ?>/psico.webp" alt="">
+                    <img src="<?= IMAGES ?>/psico.png" alt="">
                 </div>
             </div>
  

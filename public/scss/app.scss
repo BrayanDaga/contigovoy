@@ -4,4 +4,5 @@ $danger: #ef9637;
 $enable-gradient: true;
 
 @import "bootstrap/bootstrap.scss";
-@import "estilo.scss";
+@import "_navbar.scss";
+@import "_slider.scss";

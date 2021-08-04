@@ -1,0 +1,19 @@
+.carousel-control-next-icon {
+    border-left: 1rem solid $orange;
+    border-top: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+  }
+  
+  .carousel-control-prev-icon {
+    border-right: 1rem solid $orange;
+    border-top: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+  }
+
+  .carousel-indicators li{
+    background: #f99f19;
+    border-radius: 50%;
+}
+.carousel-indicators active{
+    background: #fff;
+}
