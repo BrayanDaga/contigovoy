@@ -11,9 +11,9 @@
       <ul class="nav navbar-nav ">
         <li class="nav-item <?= $_SERVER['REQUEST_URI'] === '/'  ? 'active' : '' ?> li"><a href="/" class="nav-link  px-2">INICIO <i class="fas fa-home"></i></a>
         </li>
-        <li class="nav-item <?= $_SERVER['REQUEST_URI'] === '/servicios'  ? 'active' : '' ?> li"><a href="/servicios" class="nav-link  px-2">SERVICISOS <i class="fas fa-list"></i></a>
+        <li class="nav-item <?= $_SERVER['REQUEST_URI'] === '/servicios'  ? 'active' : '' ?> li"><a href="/servicios" class="nav-link  px-2">SERVICIOS <i class="fas fa-list"></i></a>
         </li>
-        <li class="nav-item <?= $_SERVER['REQUEST_URI'] === '/conocenos'  ? 'active' : '' ?> li"><a href="/conocenos" class="nav-link  px-2">CONOCENOS <i class="fas fa-user"></i></a>
+        <li class="nav-item <?= $_SERVER['REQUEST_URI'] === '/conocenos'  ? 'active' : '' ?> li"><a href="/conocenos" class="nav-link  px-2">CONÓCENOS <i class="fas fa-user"></i></a>
         </li>
         <li class="nav-item <?= $_SERVER['REQUEST_URI'] === '/reservacita'  ? 'active' : '' ?> li"><a href="/reservacita" class="nav-link  px-2">RESERVA TU CITA <i class="far fa-comment-dots"></i></a>
         </li>
