@@ -14,9 +14,9 @@
        <div class="container">
            <div class="row">
                <div class="col-md-12">
-                   <div class="text-center  text-white  mx-2">
-                       <h2>Beneficios del tratamiento psicológico</h2>
-                       <p>Las personas que asisten a terapia, van con una serie de dificultades que no pueden afrontar solos, habiendo realizado sus propios intentos, los cuales han fracasado. Probablemente este fracaso se deba a que necesitan la ayuda de un experto, que con sus herramientas y experiencia profesional, dé pautas para que haya una buena intervención. A medida que transcurre cada sesión, tanto el terapeuta como la persona que solicita la ayuda, se darán cuenta si dicha intervención amerita un tratamiento psicológico o solo consejería.</p>
+                   <div class=" text-white  mx-2">
+                       <h2 class="text-center">Beneficios del tratamiento psicológico</h2>
+                       <p class="text-justify-content ">Las personas que asisten a terapia, van con una serie de dificultades que no pueden afrontar solos, habiendo realizado sus propios intentos, los cuales han fracasado. Probablemente este fracaso se deba a que necesitan la ayuda de un experto, que con sus herramientas y experiencia profesional, dé pautas para que haya una buena intervención. A medida que transcurre cada sesión, tanto el terapeuta como la persona que solicita la ayuda, se darán cuenta si dicha intervención amerita un tratamiento psicológico o solo consejería.</p>
                    </div>
                </div>
            </div>

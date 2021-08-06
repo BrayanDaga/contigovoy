@@ -3,21 +3,16 @@
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
     <li data-target="#myCarousel" data-slide-to="1"></li>
     <li data-target="#myCarousel" data-slide-to="2"></li>
-    <li data-target="#myCarousel" data-slide-to="3"></li>
   </ol>
-  <div class="carousel-inner">
-
-    <div class="carousel-item active" data-interval="3000">
-      <img src="<?= IMAGES ?>/img1.webp" class="d-block w-100" alt="contigo">
+  <div class="carousel-inner" >
+    <div class="carousel-item active" data-interval="5000">
+      <a href="/reservacita"><img src="<?= IMAGES ?>/1.gif" class="d-block w-100" alt="contigo"></a>
     </div>
-    <div class="carousel-item" data-interval="3000">
-      <img src="<?= IMAGES ?>/img2.webp" class="d-block w-100" alt="terapia">   
+    <div class="carousel-item" data-interval="5000">
+    <a href="/reservacita"><img src="<?= IMAGES ?>/2.gif" class="d-block w-100" alt="contigo"></a>
     </div>
-    <div class="carousel-item" data-interval="3000">
-      <img src="<?= IMAGES ?>/img3.webp" class="d-block w-100" alt="didactico">
-    </div>
-    <div class="carousel-item" data-interval="3000">
-      <img src="<?= IMAGES ?>/img4.webp" class="d-block w-100" alt="material">
+    <div class="carousel-item" data-interval="5000">
+    <a href="/reservacita"><img src="<?= IMAGES ?>/3.gif" class="d-block w-100" alt="contigo"></a>
     </div>
   </div>
   <a class="carousel-control-prev" href="#myCarousel" role="button" data-slide="prev">
