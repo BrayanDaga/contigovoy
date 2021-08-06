@@ -338,7 +338,7 @@ vertical-align: middle;
                                 </ul>
                             </div>
                             <div class="tab-pane" role="tabpanel" id="step2">
-                                <h4 class="text-center">Step 2</h4>
+                                <h4 class="text-center">Fecha y hora de la cita</h4>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
@@ -383,7 +383,7 @@ vertical-align: middle;
                                 </ul>
                             </div>
                             <div class="tab-pane" role="tabpanel" id="step3">
-                                <h4 class="text-center">Step 3</h4>
+                                <h4 class="text-center">Médico y datos del paciente</h4>
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
