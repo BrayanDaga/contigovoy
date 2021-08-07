@@ -12,3 +12,5 @@
         integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
         <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.9.0/main.min.js"></script>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.9.0/main.min.css">
+
+<meta name="description" content="Contigo Voy,Psicologia clinica,Psicologia Perú,Terapia de Lenguaje,Terapia Emocional, Terapia de aprendizadje, Psicoterapia">
