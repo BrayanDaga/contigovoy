@@ -7,7 +7,7 @@
                 <div class="row justify-content-around">
                     <div class="card col-md-4 col-sm-6">
                         <div class="card-body">
-                            <img src="https://i.pravatar.cc/300" class="img-fluid islider">
+                            <img src="<?=IMAGES;?>Wendy.jpg" class="img-fluid">
                         </div>
                         <div class="card-header">
                             <h3>Wendy Aylas Martínez</h3>
@@ -19,7 +19,7 @@
                     </div>
                     <div class="card col-md-4  col-sm-6">
                         <div class="card-body">
-                            <img src="https://i.pravatar.cc/300" class="img-fluid islider">
+                            <img src="<?=IMAGES;?>Ana.jpg"  class="img-fluid">
                         </div>
                         <div class="card-header">
                             <h2>Ana Vizcarra Sajami</h2>

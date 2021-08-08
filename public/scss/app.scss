@@ -7,10 +7,11 @@ $enable-gradient: true;
 @import "_navbar.scss";
 @import "_slider.scss";
 @import "_conocenos.scss";
+@import "_reservatucita.scss";
 
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Fredoka One';
   }
-p, span, a ,li{
+p, span, a ,li, input, textarea, button, span, label{
     font-family: 'Comfortaa';
 }
