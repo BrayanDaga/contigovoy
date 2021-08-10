@@ -37,38 +37,35 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Selecciona una especialidad</label>
-                                            <select class="form-control">
-                                                <option value="">Sesión de psicoterapia individual</option>
-                                                <option value="">Sesión de terapia de pareja</option>
-                                                <option value="">Sesión de terapia familiar</option>
-                                                <option value="">Psicopedagógica evaluación integral</option>
-                                                <option value="">Terapia de lenguaje</option>
-                                                <option value="">Terapia de Aprendizaje</option>
-                                                <option value="">Psicoterapia.</option>
+                                            <select class="form-control" name="especialidad" id="especialidad">
+                                                <option value="Sesión de psicoterapia individual">Sesión de psicoterapia individual</option>
+                                                <option value="Sesión de terapia de pareja">Sesión de terapia de pareja</option>
+                                                <option value="Sesión de terapia familiar">Sesión de terapia familiar</option>
+                                                <option value="Psicopedagógica evaluación integral">Psicopedagógica evaluación integral</option>
+                                                <option value="Terapia de lenguaje">Terapia de lenguaje</option>
+                                                <option value="Terapia de Aprendizaje">Terapia de Aprendizaje</option>
+                                                <option value="Psicoterapia">Psicoterapia.</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Selecciona el tipo de consulta</label>
-                                            <select class="form-control">
-                                                <option value="">Primera consulta</option>
-                                                <option value="">Consulta de seguimiento</option>
+                                            <select class="form-control" name="consulta" id="consulta">
+                                                <option value="Primera consulta">Primera consulta</option>
+                                                <option value="Consulta de seguimiento">Consulta de seguimiento</option>
                                             </select>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Si no tuviera ninguno asignado selecciona Cualquier médico</label>
-                                            <select class="form-control">
-                                                <option value="">Ana Vizcarra Sajami</option>
-                                                <option value="">Wendy Aylas Martínez</option>
+                                            <select class="form-control" name="psicologa">
+                                                <option value="Ana Vizcarra Sajami">Ana Vizcarra Sajami</option>
+                                                <option value="WWendy Aylas Martínez">Wendy Aylas Martínez</option>
                                             </select>
                                         </div>
                                     </div>
-
-                                 
-
 
                                 </div>
                                 <ul class="list-inline pull-right">
@@ -81,7 +78,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Seleccione la fecha</label>
-                                            <input type="date"  class="form-control">
+                                            <input type="date" name="fecha" id="fecha" class="form-control">
                                         </div>
                                     </div>
 
@@ -93,20 +90,20 @@
 
                                         <div class="form-group">
                                         <label class="radio-inline mr-2 p-2 bg-success" >
-                                            <input type="radio" name="myField" value="normal" /> 14:00
+                                            <input type="radio" name="hora" id="hora" value="normal" /> 14:00
                                         </label>
 
                                         <label class="radio-inline mr-2 p-2 bg-success" >
-                                            <input type="radio" name="myField" value="high" /> 15:00
+                                            <input type="radio" name="hora" id="hora" value="high" /> 15:00
                                         </label>
                                         <label class="radio-inline mr-2 p-2" style="background-color: orangered;">
-                                            <input type="radio" name="myField" value="high" /> 19:00
+                                            <input type="radio" name="hora" id="hora" value="high" /> 19:00
                                         </label>
                                         <label class="radio-inline mr-2 p-2 bg-danger" >
-                                            <input type="radio" name="myField" value="high" /> 20:00
+                                            <input type="radio" name="hora" id="hora" value="high" /> 20:00
                                         </label>
                                         <label class="radio-inline mr-2 p-2 bg-danger" >
-                                            <input type="radio" name="myField" value="high" /> 21:00
+                                            <input type="radio" name="hora" id="hora" value="high" /> 21:00
                                         </label>
                                         </div>
                                        
@@ -126,73 +123,73 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Psicologo</label>
-                                            <input class="form-control" type="text" name="name" placeholder="">
+                                            <input class="form-control" type="text"  id="selecPsicologo"  readonly>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Tipo de terapia</label>
-                                            <input class="form-control" type="text" name="name" placeholder="">
+                                            <input class="form-control" type="text" name="terapia" id="terapia" placeholder="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Tipo de documento</label>
-                                            <input class="form-control" type="text" name="name" placeholder="">
+                                            <input class="form-control" type="text" name="tipdoc" id="tipdoc" placeholder="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>N° de documento</label>
-                                            <input class="form-control" type="text" name="name" placeholder="">
+                                            <input class="form-control" type="text" name="nrodoc" name="nrodoc"  placeholder="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Apellido paterno</label>
-                                            <input class="form-control" type="text" name="name" placeholder="">
+                                            <input class="form-control" type="text" name="paterno" id="paterno" placeholder="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Apellido materno</label>
-                                            <input class="form-control" type="text" name="name" placeholder="">
+                                            <input class="form-control" type="text" name="materno" id="materno" placeholder="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Nombres</label>
-                                            <input class="form-control" type="text" name="name" placeholder="">
+                                            <input class="form-control" type="text" name="nombres" placeholder="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Correo Electroncio</label>
-                                            <input class="form-control" type="email" name="name" placeholder="">
+                                            <input class="form-control" type="email" name="correo" id="correo" placeholder="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Celular</label>
-                                            <input class="form-control" type="text" name="name" placeholder="">
+                                            <input class="form-control" type="text" name="celular" id="celular" placeholder="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Tutor(Menor de edad)</label>
-                                            <input class="form-control" type="text" name="name" placeholder="">
+                                            <input class="form-control" type="text" name="tutor" id="tutor" placeholder="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Fecha de nacimiento</label>
-                                            <input class="form-control" type="text" name="name" placeholder="">
+                                            <input class="form-control" type="text" name="fechaNac" id="fechaNac" placeholder="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Edad</label>
-                                            <input class="form-control" type="text" name="name" placeholder="">
+                                            <input class="form-control" type="number" name="edad" id="edad" placeholder="">
                                         </div>
                                     </div>
                                 </div>
