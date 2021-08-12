@@ -10,4 +10,5 @@ define('INCLUDES' , VIEWS.'includes'.DS);
 
 define('CSS'      , URL.'public/css/');
 define('IMAGES'      , URL.'public/images/');
+define('VIDEOS'      , URL.'public/videos/');
 define('JS'       , URL.'public/js/');

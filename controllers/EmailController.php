@@ -7,49 +7,34 @@ use PHPMailer\PHPMailer\PHPMailer;
 //Deben estar en la parte superior de su secuencia de comandos, no dentro de una función.
 class EmailController
 {
-    public $Nombre ;
-    public $Email;
-    public int $Telefono;
-    public $Mensaje;
-    
-    public function __construct($Nombre = null, $Email, $Telefono, $Mensaje = null)
+    public $nombres ;
+    public $correo;
+    public  $celular;
+    public  $psicologa;
+    public  $fechaCita;
+    public  $horaCita;
+    public  $edad;
+    public  $especialidad;
+    public  $consulta;
+    public  $tipdoc;
+    public  $nrodoc;
+    public  $tutor;
+
+    public function __construct($dataSend)
     {
-        $this->Nombre  = $Nombre;
-        $this->Email   = $Email;
-        $this->Telefono = $Telefono;
-        $this->Mensaje = $Mensaje;
+        $this->nombres = $dataSend['nombres'] . ' '. $dataSend['paterno'] . ' ' . $dataSend['materno'];
+        $this->correo = $dataSend['correo'];
+        $this->celular = $dataSend['celular'];
+        $this->psicologa = $dataSend['psicologa'];
+        $this->fechaCita = $dataSend['fechaCita'];
+        $this->horaCita = $dataSend['horaCita'];
+        $this->edad = $dataSend['edad'];
+        $this->especialidad = $dataSend['especialidad'];
+        $this->consulta = $dataSend['consulta'];
+        $this->tipdoc = $dataSend['tipdoc'];
+        $this->nrodoc = $dataSend['nrodoc'];
+        $this->tutor = $dataSend['tutor'];
     }
-
-
-    public function enviarEmailValidando()
-    {
-        if ($_SERVER['REQUEST_URI']==='/') {
-            if ($this->Email == '' || $this->Telefono == '' ||  !is_numeric($this->Telefono) ||  strlen($this->Telefono) != 9    ) {
-                echo "<script>
-                alert('Todos los campos no han sido rellenados o datos erroneos.');location.href ='javascript:history.back()';</script>";
-            }
-            else {
-                $this->usarPhpMailer();
-            }
-        }
-        elseif($_SERVER['REQUEST_URI']==='/contactanos'){
-            if (
-                $this->Nombre == ''
-                || $this->Email == '' ||
-                $this->Telefono == '' ||
-                !is_numeric($this->Telefono) ||
-                strlen($this->Telefono) != 9  ||
-                $this->Mensaje == ''
-            ) {
-                echo "<script>
-                        alert('Todos los campos no han sido rellenados o datos erroneos.');location.href ='javascript:history.back()';</script>";
-            } else {
-                $this->usarPhpMailer();
-            }
-        }
-       
-    }
-
 
     public function usarPhpMailer()
     {
@@ -75,7 +60,7 @@ class EmailController
             $mail->Port       = $_ENV['MAIL_PORT'];                                    // Puerto TCP al que conectarse; use 587 si ha configurado `SMTPSecure = PHPMailer :: ENCRYPTION_STARTTLS`
 
             //Destinatario(a)
-            $mail->setFrom($this->Email, $this->Nombre);
+            $mail->setFrom($this->correo , $this->nombres);
             $mail->addAddress($_ENV['MAIL_FROM_ADDRESS'], $_ENV['MAIL_FROM_NAME']);     //Add a recipient
             // $mail->addAddress('ellen@example.com');               //Name is optional
             // $mail->addReplyTo('info@example.com', 'Information');
@@ -90,19 +75,27 @@ class EmailController
             $mail->isHTML(true);                                  //Set email format to HTML
             $mail->Subject = 'Mensaje enviado desde la página';
             
-            if ($this->Nombre != null || $this->Mensaje != null) {
-                $mail->Body = "Nombre: " . $this->Nombre . ".<br>
-                Telefono: " . $this->Telefono . ".<br>
-                Correo: " . $this->Email . ".<br>
-                Mensaje: " . $this->Mensaje . "<br><br>
-                <strong>Responder la Consulta</strong>: Click al boton ''Responder'' para escribir un mensaje a " . $this->Email . ".";            
-            }else {
-                $mail->Body = "Ha recibido un mensaje de la página web de la empresa " . $_ENV['APP_NAME'] . ".<br>
-                Numero de telefono: " . $this->Telefono . ".<br>
-                <strong>Responder la Consulta</strong>: Click al boton ''Responder'' para escribir un mensaje a " . $this->Email . ".";            
-            }
+            
+            $mail->Body = "Ha recibido un mensaje de la página web de la empresa " . $_ENV['APP_NAME'] . ".<br>
+            La persona: ". $this->nombres. " con " . $this->tipdoc . ": ". $this->nrodoc. " solicita una cita el dia " . $this->fechaCita . " a las " . $this->horaCita . " para la psicológa: " . $this->psicologa ."<br>
+            Mas informacion: <br>
+            <strong>Información de contacto:</strong><br>
+                Nombre " . $this->nombres. ".<br>
+                Documento " . $this->nrodoc. ".<br>
+                Celular: " .  $this->celular . ".<br>
+                Correo: " .  $this->correo . ".<br>
+                Tutor: " .  $this->tutor . ".<br>
+                Edad: " .  $this->edad. ".<br>
+            <strong>Informacion de la cita</strong><br>
+                Especialidad: " . $this->especialidad . ".<br>
+                Consulta: " .  $this->consulta . ".<br>
+                Psicológa: " .  $this->psicologa . ".<br>
+                Fecha: " .  $this->fechaCita . ".<br>
+                Hora: " .  $this->horaCita . ".<br><br>
+                <strong>Responder la Consulta</strong>: Click al boton ''Responder'' para escribir un mensaje a " . $this->correo . ".";            
+        
     
-    $mail->AltBody = 'Mensaje desde la web';
+            $mail->AltBody = 'Mensaje desde la web';
 
             $mail->send();
             echo "<div class='alert alert-success alert-dismissible fade show' role='alert'>

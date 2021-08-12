@@ -29,7 +29,7 @@
                         </ul>
                     </div>
 
-                    <form role="form" action="index.html" class="login-box">
+                    <form role="form" action="/reservacita" class="login-box" method="POST">
                         <div class="tab-content" id="main_form">
                             <div class="tab-pane active" role="tabpanel" id="step1">
                                 <h4 class="text-center">Selecciona el tipo de consulta</h4>
@@ -37,7 +37,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Selecciona una especialidad</label>
-                                            <select class="form-control" name="especialidad" id="especialidad">
+                                            <select class="form-control" id="especialidad" name="especialidad">
                                                 <option value="Sesión de psicoterapia individual">Sesión de psicoterapia individual</option>
                                                 <option value="Sesión de terapia de pareja">Sesión de terapia de pareja</option>
                                                 <option value="Sesión de terapia familiar">Sesión de terapia familiar</option>
@@ -60,16 +60,16 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Si no tuviera ninguno asignado selecciona Cualquier médico</label>
-                                            <select class="form-control" name="psicologa">
+                                            <select class="form-control" name="psicologa" id="psicologa">
                                                 <option value="Ana Vizcarra Sajami">Ana Vizcarra Sajami</option>
-                                                <option value="WWendy Aylas Martínez">Wendy Aylas Martínez</option>
+                                                <option value="Wendy Aylas Martínez">Wendy Aylas Martínez</option>
                                             </select>
                                         </div>
                                     </div>
 
                                 </div>
                                 <ul class="list-inline pull-right">
-                                    <li><button type="button" class="default-btn next-step">Siguiente to next step</button></li>
+                                    <li><button type="button" class="default-btn next-step" id="btn1">Siguiente</button></li>
                                 </ul>
                             </div>
                             <div class="tab-pane" role="tabpanel" id="step2">
@@ -78,7 +78,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Seleccione la fecha</label>
-                                            <input type="date" name="fecha" id="fecha" class="form-control">
+                                            <input  required type="date" name="fechacita" id="fechacita" class="form-control">
                                         </div>
                                     </div>
 
@@ -90,20 +90,20 @@
 
                                         <div class="form-group">
                                         <label class="radio-inline mr-2 p-2 bg-success" >
-                                            <input type="radio" name="hora" id="hora" value="normal" /> 14:00
+                                            <input  required type="radio" name="horacita" id="horacita" value="14:00" /> 14:00
                                         </label>
 
                                         <label class="radio-inline mr-2 p-2 bg-success" >
-                                            <input type="radio" name="hora" id="hora" value="high" /> 15:00
+                                            <input  required type="radio" name="horacita" id="horacita" value="15:00" /> 15:00
                                         </label>
                                         <label class="radio-inline mr-2 p-2" style="background-color: orangered;">
-                                            <input type="radio" name="hora" id="hora" value="high" /> 19:00
+                                            <input  required type="radio" name="horacita" id="horacita" value="19:00" /> 19:00
                                         </label>
                                         <label class="radio-inline mr-2 p-2 bg-danger" >
-                                            <input type="radio" name="hora" id="hora" value="high" /> 20:00
+                                            <input  required type="radio" name="horacita" id="horacita" value="20:00" /> 20:00
                                         </label>
                                         <label class="radio-inline mr-2 p-2 bg-danger" >
-                                            <input type="radio" name="hora" id="hora" value="high" /> 21:00
+                                            <input  required type="radio" name="horacita" id="horacita" value="21:00" /> 21:00
                                         </label>
                                         </div>
                                        
@@ -123,78 +123,79 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Psicologo</label>
-                                            <input class="form-control" type="text"  id="selecPsicologo"  readonly>
+                                            <input  required class="form-control" type="text"  id="selectPsicologo"  readonly>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Tipo de terapia</label>
-                                            <input class="form-control" type="text" name="terapia" id="terapia" placeholder="">
+                                            <input class="form-control" type="text" name="terapia" id="terapia" readonly>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Tipo de documento</label>
-                                            <input class="form-control" type="text" name="tipdoc" id="tipdoc" placeholder="">
+                                            <input  required class="form-control" type="text" name="tipdoc" id="tipdoc" placeholder="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>N° de documento</label>
-                                            <input class="form-control" type="text" name="nrodoc" name="nrodoc"  placeholder="">
+                                            <input  required class="form-control" type="text" name="nrodoc" name="nrodoc"  placeholder="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Apellido paterno</label>
-                                            <input class="form-control" type="text" name="paterno" id="paterno" placeholder="">
+                                            <input  required class="form-control" type="text" name="paterno" id="paterno" placeholder="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Apellido materno</label>
-                                            <input class="form-control" type="text" name="materno" id="materno" placeholder="">
+                                            <input  required class="form-control" type="text" name="materno" id="materno" placeholder="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Nombres</label>
-                                            <input class="form-control" type="text" name="nombres" placeholder="">
+                                            <input  required class="form-control" type="text" name="nombres" placeholder="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Correo Electroncio</label>
-                                            <input class="form-control" type="email" name="correo" id="correo" placeholder="">
+                                            <input  required class="form-control" type="email" name="correo" id="correo" placeholder="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Celular</label>
-                                            <input class="form-control" type="text" name="celular" id="celular" placeholder="">
+                                            <input  required class="form-control" type="text" name="celular" id="celular" placeholder="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Tutor(Menor de edad)</label>
-                                            <input class="form-control" type="text" name="tutor" id="tutor" placeholder="">
+                                            <input  required class="form-control" type="text" name="tutor" id="tutor" placeholder="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Fecha de nacimiento</label>
-                                            <input class="form-control" type="text" name="fechaNac" id="fechaNac" placeholder="">
+                                            <input  required class="form-control" type="date" name="fechaNac" id="fechaNac" >
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Edad</label>
-                                            <input class="form-control" type="number" name="edad" id="edad" placeholder="">
+                                            <input  required class="form-control" type="number" name="edad" id="edad" readonly>
                                         </div>
                                     </div>
                                 </div>
                                 <ul class="list-inline pull-right">
                                     <li><button type="button" class="default-btn prev-step">Atras</button></li>
+                                    <input type="text" name="action"  value="enviarEmail" style="display: none;">
                                     <li><button type="submmit" class="default-btn next-step">Finalizar</button></li>
                                 </ul>
                             </div>
@@ -212,6 +213,12 @@
 <script>
     // ------------step-wizard-------------
     $(document).ready(function() {
+        $('#fechaNac').prop('max', function(){
+            return new Date().toJSON().split('T')[0];
+        });
+        $('#fechacita').prop('min', function(){
+            return new Date().toJSON().split('T')[0] ;
+        });
         $('.nav-tabs > li a[title]').tooltip();
 
         //Wizard
@@ -252,4 +259,52 @@
         $('.nav-tabs li.active').removeClass('active');
         $(this).addClass('active');
     });
+
+    // $('#btn1').click(function() { 
+    //     var psicoSelected = $('#psicologa option:selected');
+	// 	var psicoValue = psicoSelected.val();
+    //     $('#selectPsicologo').val(psicoValue);
+    //     var consultaSelected = $('#consulta option:selected');
+	// 	var consultaValue = consultaSelected.val();
+    //     $('#terapia').val(consultaValue);
+
+    // });
+
+    function valIni(){
+        var psicoSelected = $('#psicologa option:selected');
+		var psicoValue = psicoSelected.val();
+        $('#selectPsicologo').val(psicoValue);
+        var especialidadSelected = $('#especialidad option:selected');
+		var especialidadValue = especialidadSelected.val();
+        console.log(especialidadValue);
+        $('#terapia').val(especialidadValue);
+    }
+    valIni();
+    $('#psicologa').change(function () { 
+        var psicoSelected = $('#psicologa option:selected');
+		var psicoValue = psicoSelected.val();
+        $('#selectPsicologo').val(psicoValue);
+    });
+    $('#especialidad').change(function () { 
+        var especialidadSelected = $('#especialidad option:selected');
+		var especialidadValue = especialidadSelected.val();
+        $('#terapia').val(especialidadValue);
+    });
+    $('#fechaNac').change(function () { 
+        var fechaNac = $('#fechaNac').val();
+        var age = calculateAge(fechaNac)
+        $('#edad').val(age);
+    });
+
+    //function calculate age from birt date
+    function calculateAge(dob) {
+        var today = new Date();
+        var birthDate = new Date(dob);
+        var age = today.getFullYear() - birthDate.getFullYear();
+        var m = today.getMonth() - birthDate.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+        return age;
+    }
 </script>
