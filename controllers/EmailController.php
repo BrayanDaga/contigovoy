@@ -92,7 +92,7 @@ class EmailController
                 Psicológa: " .  $this->psicologa . ".<br>
                 Fecha: " .  $this->fechaCita . ".<br>
                 Hora: " .  $this->horaCita . ".<br><br>
-                <strong>Responder la Consulta</strong>: Click al boton ''Responder'' para escribir un mensaje a " . $this->correo . ".";            
+                <strong>Responder la Consulta </strong>: <a href='mailto:". $this->correo ."'></a> ";            
         
     
             $mail->AltBody = 'Mensaje desde la web';
