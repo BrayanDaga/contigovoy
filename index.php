@@ -7,6 +7,7 @@ $dotenv->safeLoad();
 
 $f3 = \Base::instance();
 $f3->set('AUTOLOAD','app/');
+$f3->set('CACHE',TRUE);
 
 $f3->route('GET /',
     function($f3) {
