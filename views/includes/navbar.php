@@ -1,23 +1,22 @@
 <nav class="navbar navbar-primary bg-white navbar-expand-md">
-
   <div class="container-fluid">
     <a class="navbar-brand" href="/">
-      <img src="<?= IMAGES ?>/logo.webp" height="70" alt="">
+    <img src="public/img/logo.webp" height="70" alt="">
     </a>
     <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span>
       &#x2630;</button>
     <!--container-flex-bootstrap-->
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav ">
-        <li class="nav-item <?= $_SERVER['REQUEST_URI'] === '/'  ? 'active' : '' ?> li"><a href="/" class="nav-link  px-2">INICIO <i class="fas fa-home"></i></a>
+        <li class="nav-item {{  @title == 'Home' ? 'active' : '' }} "><a href="/" class="nav-link  px-2">INICIO <i class="fas fa-home"></i></a>
         </li>
-        <li class="nav-item <?= $_SERVER['REQUEST_URI'] === '/servicios'  ? 'active' : '' ?> li"><a href="/servicios" class="nav-link  px-2">SERVICIOS <i class="fas fa-list"></i></a>
+        <li class="nav-item {{  @title == 'Servicios' ? 'active' : '' }} "><a href="/servicios" class="nav-link  px-2">SERVICIOS <i class="fas fa-list"></i></a>
         </li>
-        <li class="nav-item <?= $_SERVER['REQUEST_URI'] === '/conocenos'  ? 'active' : '' ?> li"><a href="/conocenos" class="nav-link  px-2">CONÓCENOS <i class="fas fa-user"></i></a>
+        <li class="nav-item {{  @title == 'Conocenos' ? 'active' : '' }}"><a href="/conocenos" class="nav-link  px-2">CONÓCENOS <i class="fas fa-user"></i></a>
         </li>
-        <li class="nav-item <?= $_SERVER['REQUEST_URI'] === '/reservacita'  ? 'active' : '' ?> li"><a href="/reservacita" class="nav-link  px-2">RESERVA TU CITA <i class="far fa-comment-dots"></i></a>
+        <li class="nav-item {{  @title == 'Reserva tu Cita' ? 'active' : '' }} "><a href="/reservacita" class="nav-link  px-2">RESERVA TU CITA <i class="far fa-comment-dots"></i></a>
         </li>
-        <li class="nav navbar-nav dropdown <?= $_SERVER['REQUEST_URI'] === '/material'  ? 'active' : ($_SERVER['REQUEST_URI'] === '/blog' ? 'active' : '') ?> li">
+        <li class="nav navbar-nav dropdown {{  @title == 'Blog' ? 'active' : (@title == 'Material' ? 'active' : '') }}">
           <a class="nav-link dropdown-toggle px-2" data-toggle="dropdown" href="/" role="button" aria-haspopup="true" aria-expanded="false">PARAT TI <i class="fas fa-hand-point-down"></i></a>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="/material">Material Didáctico</a>
