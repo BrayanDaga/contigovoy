@@ -9740,7 +9740,7 @@ a.text-dark:hover, a.text-dark:focus {
     display: none;
   }
   .divlogo .col-md-8 {
-    background-image: url("../images/logoback.webp");
+    background-image: url("../img/logoback.webp");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -9749,7 +9749,7 @@ a.text-dark:hover, a.text-dark:focus {
 }
 
 .mibgheader {
-  background-image: url("/public/images/banner.jpg");
+  background-image: url("/public/img/banner.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
