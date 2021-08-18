@@ -9,6 +9,24 @@ $f3 = \Base::instance();
 $f3->set('AUTOLOAD','app/');
 $f3->set('CACHE',TRUE);
 
+
+$f3->set('menu',
+	array_merge(
+        array(
+			'Home'=>$f3->get('BASE')
+		),
+			array(
+				// About doesn't appear when we're logged in
+				'Servicios'=>'servicios',
+				'Conocenos'=>'conocenos',
+				'Servicios'=>'servicios',
+				'Reserva tu Cita'=>'reservacita',
+				'Blog'=>'blog',
+				'Material'=>'material',
+			)
+	)
+);
+
 $f3->route('GET /',
     function($f3) {
         $f3->set('title','Home');
@@ -47,8 +65,6 @@ $f3->route('GET /reservacita',
 );
 
 $f3->route('POST /reservacita','controllers\EmailController->usarPhpMailer');
-
-
 
 $f3->route('GET /blog',
     function($f3) {
