@@ -21,7 +21,7 @@
           <a class="nav-link dropdown-toggle px-2" data-toggle="dropdown" href="/" role="button" aria-haspopup="true" aria-expanded="false">PARAT TI <i class="fas fa-hand-point-down"></i></a>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="{{ @menu['Material'] }}">Material Didáctico</a>
-            <a class="dropdown-item" href="{{ @menu['Blof'] }}">Blog</a>
+            <a class="dropdown-item" href="{{ @menu['Blog'] }}">Blog</a>
           </div>
         </li>
       </ul>

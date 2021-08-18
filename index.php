@@ -13,7 +13,7 @@ $f3->set('CACHE',TRUE);
 $f3->set('menu',
 	array_merge(
         array(
-			'Home'=>$f3->get('BASE')
+			'Home'=> $f3->get('BASE') == '' ? '/' : $f3->get('BASE'), 
 		),
 			array(
 				// About doesn't appear when we're logged in
