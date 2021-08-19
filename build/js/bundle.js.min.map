@@ -1,1 +1,1 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"bundle.js","sourcesContent":[]}
+{"version":3,"sources":["prueeba.js"],"names":["console","log"],"mappings":"AAAAA,QAAAC,IAAA","file":"bundle.js","sourcesContent":["console.log(\"hola\")"]}
