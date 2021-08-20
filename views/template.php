@@ -16,7 +16,6 @@
     <script src="build/js/bundle.min.js"></script>
 </head>
 <body>
-    <div id="prueba">hoasdfasd</div>
     <include href="{{ 'views/'.@content }}" />
     <check if="{{ @content=='reservatucita.php' }}">
         <script type="text/javascript" src="public/js/reservacita.js"></script>
