@@ -1,7 +1,7 @@
 <div class="mibgheader">
     <div class="container-fluid">
         <div class="d-flex justify-content-around">
-            <h2 class="h1 m-2 p-5  text-center text-danger font-weight-bold">Reserva tu Cita</h2>
+            <h1 class="h1 m-2 p-5  text-center text-danger font-weight-bold">Reserva tu Cita</h1>
         </div>
 
     </div>
