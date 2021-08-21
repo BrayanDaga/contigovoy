@@ -29,12 +29,12 @@ $f3->set('menu',
 
 $timeCache = 10800; // 3 hours
 
-$f3->route('GET /','controllers\ViewController->home',$timeCache); 
-$f3->route('GET /servicios','controllers\ViewController->servicios',$timeCache); 
-$f3->route('GET /conocenos','controllers\ViewController->conocenos',$timeCache); 
-$f3->route('GET /reservacita','controllers\ViewController->reservacita',$timeCache); 
-$f3->route('GET /blog','controllers\ViewController->blog',$timeCache); 
-$f3->route('GET /material','controllers\ViewController->material',$timeCache); 
+$f3->route('GET /','controllers\ViewController->home'); 
+$f3->route('GET /servicios','controllers\ViewController->servicios'); 
+$f3->route('GET /conocenos','controllers\ViewController->conocenos'); 
+$f3->route('GET /reservacita','controllers\ViewController->reservacita'); 
+$f3->route('GET /blog','controllers\ViewController->blog'); 
+$f3->route('GET /material','controllers\ViewController->material'); 
 
 $f3->route('POST /reservacita','controllers\EmailController->usarPhpMailer');
 
