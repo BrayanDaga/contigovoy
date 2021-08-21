@@ -82,4 +82,9 @@ $f3->route('GET /material',
     }
 );
 
+$f3->set('ONERROR',function($f3){
+    $f3->set('content','404.html');
+    echo \Template::instance()->render('views/template.php');
+  });
+
 $f3->run();

@@ -5,8 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Type" content="text/html; ISO-8859-1">
+    <meta name="DC.Language" SCHEME="RFC1766" CONTENT="Spanish">
+    <meta name="DESCRIPTION" CONTENT="Contigo voy, centro especializado que brinda servicios de apoyo psicológicos a niños, adolescentes y adultos.">
+    <meta name="KEYWORDS" CONTENT="Psicología,Psicólogas,Lima,Perú,Terapia,centro psicológico,consulta psicológica,autoestima,depresió">
+    <meta name="Resource-type" CONTENT="Homepage">
+    <meta name="DateCreated" CONTENT="Sun, 1 August 2021 00:00:00 GMT+1">
+    <meta name="Revisit-after" CONTENT="7 days">
+    <meta name="robots" content="ALL">
     <title>Contigo Voy | {{ @title }} </title>
-    <link rel="shortcut icon" type="image/jpg" href="public/img/logo.ico" />
+    <link rel="shortcut icon" type="image" href="public/img/logo.ico" />
     <link rel="stylesheet" href="build/css/app.css">
     <link rel="stylesheet" href="public/css/app.min.css">
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
@@ -15,10 +23,12 @@
     <script src="public/js/bundle.js"></script>
     <script src="build/js/bundle.min.js"></script>
 </head>
+
 <body>
     <include href="{{ 'views/'.@content }}" />
     <check if="{{ @content=='reservatucita.php' }}">
         <script type="text/javascript" src="public/js/reservacita.js"></script>
     </check>
 </body>
+
 </html>

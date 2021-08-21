@@ -1,7 +1,7 @@
 <nav class="navbar navbar-primary bg-white navbar-expand-md">
   <div class="container-fluid">
-    <a class="navbar-brand" href="/">
-    <img src="public/img/logo.webp" width="195" height="70" alt="">
+    <a class="navbar-brand" href="{{ @menu['Home'] }}">
+    <img src="public/img/logo.webp" width="195" height="70" alt="contigovoyIcon">
     </a>
     <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span>
       &#x2630;</button>
