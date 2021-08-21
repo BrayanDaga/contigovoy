@@ -1,6 +1,8 @@
 RewriteEngine On
 
 RewriteRule ^(app|dict|ns|tmp)\/|\.ini$ - [R=404]
+RewriteCond %{HTTP_HOST} ^www.contigo-voy.com 
+RewriteCond %{HTTP_HOST} ^contigo-voy.com 
 
 RewriteCond %{REQUEST_FILENAME} !-l
 RewriteCond %{REQUEST_FILENAME} !-f
