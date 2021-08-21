@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
@@ -7,8 +7,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; ISO-8859-1">
     <meta name="DC.Language" SCHEME="RFC1766" CONTENT="Spanish">
-    <meta name="DESCRIPTION" CONTENT="Contigo voy, centro especializado que brinda servicios de apoyo psicológicos a niños, adolescentes y adultos.">
-    <meta name="KEYWORDS" CONTENT="Psicología,Psicólogas,Lima,Perú,Terapia,centro psicológico,consulta psicológica,autoestima,depresió">
+    <meta name="description" CONTENT="Contigo voy, centro especializado que brinda servicios de apoyo psicológicos a niños, adolescentes y adultos.">
+    <meta name="keywords" CONTENT="Psicología,Psicólogas,Lima,Perú,Terapia,centro psicológico,consulta psicológica,autoestima,depresió">
     <meta name="Resource-type" CONTENT="Homepage">
     <meta name="DateCreated" CONTENT="Sun, 1 August 2021 00:00:00 GMT+1">
     <meta name="Revisit-after" CONTENT="7 days">
