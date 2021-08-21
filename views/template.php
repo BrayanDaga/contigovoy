@@ -6,9 +6,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="Content-Type" content="text/html; ISO-8859-1">
-    <meta name="DC.Language" scheme="RFC1766" content="Spanish">
-    <meta name="description" content="Contigo voy,Contigovoy, centro especializado que brinda servicios de apoyo psicológicos a niños, adolescentes y adultos.">
-    <meta name="keywords" content="Psicología,Psicólogas,Lima,Perú,Terapia,centro psicológico,consulta psicológica,autoestima,depresió">
+    <meta name="DC.Language" SCHEME="RFC1766" content="Spanish">
+    <meta name="description" content="Contigo voy, centro especializado que brinda servicios de apoyo psicológicos a niños, adolescentes y adultos.">
+    <meta name="keywords" content="Contigovoy,Psicología,Psicólogas,Lima,Perú,Terapia,centro psicológico,consulta psicológica,autoestima,depresió">
     <meta name="Resource-type" content="Homepage">
     <meta name="DateCreated" content="Sun, 1 August 2021 00:00:00 GMT+1">
     <meta name="Revisit-after" content="7 days">
