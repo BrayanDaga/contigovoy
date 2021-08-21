@@ -1,8 +1,10 @@
 RewriteEngine On
 
 RewriteRule ^(app|dict|ns|tmp)\/|\.ini$ - [R=404]
-RewriteCond %{HTTP_HOST} ^www.contigo-voy.com 
-RewriteCond %{HTTP_HOST} ^contigo-voy.com 
+
+RewriteCond %{HTTPS} !=on
+RewriteRule (.*) https://www.%{HTTP_HOST}/$1 [R=301,L,QSA]
+Header always set Content-Security-Policy "upgrade-insecure-requests;"
 
 RewriteCond %{REQUEST_FILENAME} !-l
 RewriteCond %{REQUEST_FILENAME} !-f
