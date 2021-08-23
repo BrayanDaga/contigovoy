@@ -3,16 +3,19 @@ $primary: #9F6FE5;
 $danger: #ef9637;
 $enable-gradient: true;
 @import url('https://fonts.googleapis.com/css2?family=Comfortaa&family=Fredoka+One&display=swap');
+
+@import "_bootstrap.scss";
 @import "_navbar.scss";
 @import "_slider.scss";
 @import "_conocenos.scss";
 @import "_reservatucita.scss";
 @import "prueba";
+@import "_fontawesome.scss";
 
 h1, h2, h3, h4, h5, h6 {
-    font-family: 'Fredoka One';
-  }
-  
-p, span, a ,li, input, textarea, button, span, label{
-    font-family: 'Comfortaa';
+  font-family: 'Fredoka One';
 }
+
+ p, span, a ,li, input, textarea, button, span, label{
+     font-family: 'Comfortaa';
+ }

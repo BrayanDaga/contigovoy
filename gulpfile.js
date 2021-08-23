@@ -11,19 +11,22 @@ const notify = require('gulp-notify');
 const cache = require('gulp-cache');
 
 const paths = {
-    scss: 'public/scss/app.scss',
+    scss: 'resources/scss/app.scss',
     js: 'public/js/recurso/**/*.js',
 }
 
+
 // css es una función que se puede llamar automaticamente
 function css() {
-    return src(paths.scss)
+    return src([
+        paths.scss
+    ])
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(postcss([autoprefixer(), cssnano()]))
         // .pipe(postcss([autoprefixer()]))
         .pipe(sourcemaps.write('.'))
-        .pipe( dest('./build/css/') );
+        .pipe( dest('./public/css/') );
 }
 
 
