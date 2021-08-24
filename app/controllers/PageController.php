@@ -2,20 +2,16 @@
 
 namespace Controllers;
 
-class ViewController
-{
-    public $f3;
+use Controllers\BaseController;
 
-    public function __construct(\Base $f3)
+class PageController extends BaseController
+{
+
+    public function __construct()
     {
-        $this->f3 = $f3;
+        parent::__construct();
     }
         
-    public function renderTemplate()
-    {
-        echo \Template::instance()->render('views/template.php');
-    }
-
     public function home(): void
     {
         $this->f3->set('title', '');
@@ -29,14 +25,7 @@ class ViewController
         $this->f3->set('content', 'conocenos.htm');
         $this->renderTemplate();
     }
-    public function reservacita(): void
-    {
-        $this->f3->set('title', '| Reserva tu Cita');
-        $this->f3->set('content', 'reservatucita.php');
-        $this->f3->set('message', $_SESSION['message']);
-        $this->renderTemplate();
-        unset($_SESSION['message']);
-    }
+
     public function blog(): void
     {
         $this->f3->set('title', '| Blog');

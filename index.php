@@ -1,5 +1,4 @@
 <?php
-session_start();
 require 'vendor/autoload.php';
 use Dotenv\Dotenv; 
 $dotenv = Dotenv::createImmutable(__DIR__);
@@ -7,8 +6,7 @@ $dotenv->safeLoad();
 
 $f3 = \Base::instance();
 $f3->set('AUTOLOAD','app/');
-$f3->set('CACHE',TRUE);
-
+$f3->CACHE = true;
 
 $f3->set('menu',
 	array_merge(
@@ -23,22 +21,28 @@ $f3->set('menu',
 				'Reserva tu Cita'=>'reservacita',
 				'Blog'=>'blog',
 				'Material'=>'material',
+				'Login'=>'login',
 			)
 	)
 );
 
 $timeCache = 10800; // 3 hours
 
-$f3->route('GET /','controllers\ViewController->home'); 
-$f3->route('GET /servicios','controllers\ViewController->servicios'); 
-$f3->route('GET /conocenos','controllers\ViewController->conocenos'); 
-$f3->route('GET /reservacita','controllers\ViewController->reservacita'); 
-$f3->route('GET /blog','controllers\ViewController->blog'); 
-$f3->route('GET /material','controllers\ViewController->material'); 
+$f3->route('GET /','controllers\PageController->home'); 
+$f3->route('GET /servicios','controllers\PageController->servicios'); 
+$f3->route('GET /conocenos','controllers\PageController->conocenos'); 
+$f3->route('GET /blog','controllers\PageController->blog'); 
+$f3->route('GET /material','controllers\PageController->material'); 
 
-$f3->route('POST /reservacita','controllers\EmailController->usarPhpMailer');
+$f3->map('/reservacita','controllers\CitaController');
 
-
+$f3->route('GET /login',
+    function($f3) {
+		$f3->set('title', 'Login');
+        $f3->set('content', 'login.php');
+        echo \Template::instance()->render('views/template.php');
+    }
+);
 
 $f3->set('ONERROR',function($f3){
     $f3->set('content','404.html');

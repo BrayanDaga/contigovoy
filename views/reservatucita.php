@@ -8,16 +8,18 @@
 </div>
 
 
-<check if="{{ @message !='' }}">
+<check if="{{ @SESSION.message  }}">
     <div class="container">
         <div class="alert alert-success alert-dismissible fade show mt-5" role="alert">
-            {{ @message }}
+            {{ @SESSION.message }}
             <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
             </button>
         </div>
     </div>
 </check>
+
+
 
 
 <section class="signup-step-container">
