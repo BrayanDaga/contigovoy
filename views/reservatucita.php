@@ -8,7 +8,7 @@
 </div>
 
 
-<check if="{{ @SESSION.message  }}">
+<f3:check if="{{ @SESSION.message  }}">
     <div class="container">
         <div class="alert alert-success alert-dismissible fade show mt-5" role="alert">
             {{ @SESSION.message }}
@@ -17,7 +17,7 @@
             </button>
         </div>
     </div>
-</check>
+</f3:check>
 
 
 

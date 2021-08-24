@@ -24,9 +24,9 @@
 
 <body>
     <include href="{{ 'views/'.@content }}" />
-    <check if="{{ @content=='reservatucita.php' }}">
+    <f3:check if="{{ @content=='reservatucita.php' }}">
         <script type="text/javascript" src="public/js/reservacita.js"></script>
-    </check>
+    </f3:check>
 </body>
 
 </html>
