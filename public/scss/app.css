@@ -1,0 +1,240 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&family=Fredoka+One&display=swap");
+.navbar .brand, .navbar .nav > li > a {
+  font-weight: 600;
+}
+
+.navbar .brand:hover, .navbar .nav > li > a:hover {
+  color: black;
+}
+
+.my-nav-icons a {
+  font-size: 1.5em;
+}
+
+.my-nav-icons a:hover {
+  color: black;
+}
+
+.navbar-primary .navbar-nav .active > .nav-link {
+  background: rgba(109, 225, 38, 0.749);
+  color: #000;
+}
+
+.navbar-primary .navbar-nav .nav-link.show, .navbar-primary .navbar-nav .nav-link.active {
+  background: rgba(109, 225, 38, 0.749);
+  color: #000;
+}
+
+.carousel-control-next-icon {
+  border-left: 1rem solid #f19f06;
+  border-top: 1rem solid transparent;
+  border-bottom: 1rem solid transparent;
+}
+
+.carousel-control-prev-icon {
+  border-right: 1rem solid #f19f06;
+  border-top: 1rem solid transparent;
+  border-bottom: 1rem solid transparent;
+}
+
+.carousel-indicators li {
+  background: #f99f19;
+  border-radius: 50%;
+  width: 1em;
+  height: 0.05em;
+}
+
+.carousel-indicators active {
+  background: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+  .divlogo .col-md-4 {
+    display: none;
+  }
+  .divlogo .col-md-8 {
+    background-image: url("../img/logoback.webp");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-size: 200px;
+  }
+}
+
+.mibgheader {
+  background-image: url("/public/img/banner.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.signup-step-container {
+  padding: 150px 0px;
+  padding-bottom: 60px;
+}
+
+.wizard .nav-tabs {
+  position: relative;
+  margin-bottom: 0;
+  border-bottom-color: transparent;
+}
+
+.wizard > div.wizard-inner {
+  position: relative;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.connecting-line {
+  height: 2px;
+  background: #e0e0e0;
+  position: absolute;
+  width: 80%;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+  top: 15px;
+  z-index: 1;
+}
+
+span.round-tab {
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  display: inline-block;
+  border-radius: 50%;
+  background: #fff;
+  z-index: 2;
+  position: absolute;
+  left: 0;
+  text-align: center;
+  font-size: 16px;
+  color: #0e214b;
+  font-weight: 500;
+  border: 1px solid #ddd;
+}
+
+span.round-tab i {
+  color: #555555;
+}
+
+.wizard li.active span.round-tab {
+  background: #0db02b;
+  color: #fff;
+  border-color: #0db02b;
+}
+
+.wizard li.active span.round-tab i {
+  color: #5bc0de;
+}
+
+.wizard .nav-tabs > li {
+  width: 25%;
+}
+
+.wizard .nav-tabs > li.active > a i {
+  color: #0db02b;
+}
+
+.wizard li:after {
+  content: " ";
+  position: absolute;
+  left: 46%;
+  opacity: 0;
+  margin: 0 auto;
+  bottom: 0px;
+  border: 5px solid transparent;
+  border-bottom-color: red;
+  transition: 0.1s ease-in-out;
+}
+
+.wizard .nav-tabs > li a {
+  width: 30px;
+  height: 30px;
+  margin: 20px auto;
+  border-radius: 100%;
+  padding: 0;
+  background-color: transparent;
+  position: relative;
+  top: 0;
+}
+
+.wizard .nav-tabs > li a i {
+  position: absolute;
+  top: -15px;
+  font-style: normal;
+  font-weight: 400;
+  white-space: nowrap;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 12px;
+  font-weight: 700;
+  color: #000;
+}
+
+.wizard .nav-tabs > li a:hover {
+  background: transparent;
+}
+
+.wizard .tab-pane {
+  position: relative;
+  padding-top: 20px;
+}
+
+.wizard h3 {
+  margin-top: 0;
+}
+
+.prev-step {
+  font-size: 13px;
+  padding: 8px 24px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 30px;
+}
+
+.next-step {
+  font-size: 13px;
+  padding: 8px 24px;
+  border: none;
+  border-radius: 4px;
+  margin-top: 30px;
+  background-color: #0db02b;
+}
+
+.step-head {
+  font-size: 20px;
+  text-align: center;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.list-inline li {
+  display: inline-block;
+}
+
+.pull-right {
+  float: right;
+}
+
+@media (max-width: 767px) {
+  .sign-content h3 {
+    font-size: 40px;
+  }
+  .wizard .nav-tabs > li a i {
+    display: none;
+  }
+}
+
+#prueba {
+  background-color: red;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Fredoka One';
+}
+
+p, span, a, li, input, textarea, button, span, label {
+  font-family: 'Comfortaa';
+}
+/*# sourceMappingURL=app.css.map */
