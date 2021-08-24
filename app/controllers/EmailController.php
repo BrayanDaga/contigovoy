@@ -28,8 +28,8 @@ class EmailController
         $this->correo = $_POST['correo'];
         $this->celular = $_POST['celular'];
         $this->psicologa = $_POST['psicologa'];
-        $this->fechaCita = $_POST['fechaCita'];
-        $this->horaCita = $_POST['horaCita'];
+        $this->fechaCita = $_POST['fechacita'];
+        $this->horaCita = $_POST['horacita'];
         $this->edad = $_POST['edad'];
         $this->especialidad = $_POST['especialidad'];
         $this->consulta = $_POST['consulta'];
