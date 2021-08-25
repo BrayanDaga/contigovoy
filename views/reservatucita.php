@@ -99,18 +99,18 @@
                                             <label class="p-2 mr-2 bg-danger rounded text-white"> Virtual</label>
                                         </div>
                                         <div class="d-flex justify-content-around">
-                                            <select class="horario form-select  rounded p-2 "  aria-label="Default select example">
-                                            <option selected>Elige tu horario</option>
-                                            <option class="l-v" value="1">11:00 - 12:00</option>
-                                            <option class="l-v" value="2">12:00 - 13:00</option>
-                                            <option class="l-v" value="3">15:00 - 16:00</option>
-                                            <option class="l-v" value="4">16:00 - 17:00</option>
-                                            <option class="l-v" value="5">17:00 - 18:00</option>
-                                            <option class="l-v" value="6">18:00 - 19:00</option>
-                                            <option class="sábado" value="7">10:00 - 11:00</option>
-                                            <option class="sábado" value="8">11:00 - 12:00</option>
-                                            <option class="sábado" value="9">12:00 - 13:00</option>
-                                            <option class="sábado" value="10">13:00 - 14:00</option>
+                                            <select class="horario form-select  rounded p-2 " id="horacita" name="horacita"  aria-label="Default select example">
+                                            <option selected >Elige tu horario</option>
+                                            <option class="l-v" value="11:00">11:00 - 12:00</option>
+                                            <option class="l-v" value="12:00 ">12:00 - 13:00</option>
+                                            <option class="l-v" value="15:00">15:00 - 16:00</option>
+                                            <option class="l-v" value="16:00">16:00 - 17:00</option>
+                                            <option class="l-v" value="17:00">17:00 - 18:00</option>
+                                            <option class="l-v" value="18:00">18:00 - 19:00</option>
+                                            <option class="sábado" value="10:00">10:00 - 11:00</option>
+                                            <option class="sábado" value="11:00">11:00 - 12:00</option>
+                                            <option class="sábado" value="12:00">12:00 - 13:00</option>
+                                            <option class="sábado" value="13:00">13:00 - 14:00</option>
                                         </select>
                                         </div>                                         
                                     </div>
