@@ -33,6 +33,10 @@
         });
 
         valIni();
+        $('.nav-tabs').on('click', 'li', function() {
+            $('.nav-tabs li.active').removeClass('active');
+            $(this).addClass('active');
+        });
 
     });
 
@@ -43,12 +47,7 @@
     function prevTab(elem) {
         $(elem).prev().find('a[data-toggle="tab"]').click();
     }
-
-
-    $('.nav-tabs').on('click', 'li', function() {
-        $('.nav-tabs li.active').removeClass('active');
-        $(this).addClass('active');
-    });
+   
 
     function valIni(){
         var psicoSelected = $('#psicologa option:selected');
