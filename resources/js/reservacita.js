@@ -56,11 +56,8 @@
         $('#selectPsicologo').val(psicoValue);
         var especialidadSelected = $('#especialidad option:selected');
 		var especialidadValue = especialidadSelected.val();
-<<<<<<< HEAD:public/js/reservacita.js
         // console.log(especialidadValue);
-=======
->>>>>>> master:public/js/recurso/reservacita.js
-        $('#terapia').val(especialidadValue);
+        // $('#terapia').val(especialidadValue);
     }
     $('#psicologa').change(function () { 
         var psicoSelected = $('#psicologa option:selected');

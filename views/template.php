@@ -18,22 +18,12 @@
     <link rel="stylesheet" href="public/css/app.css">
     <include href="views/includes/navbar.php" />
     <script src="public/js/jquery-3.5.1.min.js"></script>
-    <script src="public/js/bundle.js"></script>
-<<<<<<< HEAD
     <script src="public/js/bundle.min.js"></script>
-=======
->>>>>>> master
 </head>
 
 <body>
     <include href="{{ 'views/'.@content }}" />
-<<<<<<< HEAD
-    <f3:check if="{{ @content=='reservatucita.php' }}">
-        <script type="text/javascript" src="public/js/reservacita.js"></script>
-    </f3:check>
-=======
-    <script src="build/js/bundle.js"></script>
->>>>>>> master
+    <script src="public/js/bundle.js"></script>
 </body>
 
 </html>
