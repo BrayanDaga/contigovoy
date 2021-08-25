@@ -50,7 +50,7 @@ $f3->map('/reservacita', 'controllers\CitaController');
 // $f3->route('POST /login', 'controllers\AuthController->auth');
 // $f3->route('GET /logout','controllers\AuthController->logout');
 
-$f3->redirect('GET|HEAD /admin', '/login');
+// $f3->redirect('GET|HEAD /admin', '/login');
 
 
 $f3->set('ONERROR', function ($f3) {
