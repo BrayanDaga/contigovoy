@@ -12,7 +12,7 @@ const cache = require('gulp-cache');
 
 const paths = {
     scss: 'resources/scss/app.scss',
-    js: 'public/js/recurso/**/*.js',
+    js: 'resources/js/**/*.js',
 }
 
 
@@ -37,7 +37,7 @@ function javascript() {
       .pipe(terser())
       .pipe(sourcemaps.write('.'))
       .pipe(rename({ suffix: '.min' }))
-      .pipe(dest('./build/js'))
+      .pipe(dest('./public/js'))
 }
 
 function watchArchivos() {

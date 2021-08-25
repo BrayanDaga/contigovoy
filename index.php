@@ -36,7 +36,7 @@ $f3->set(
 	)
 );
 
-$timeCache = 10800; // 3 hours
+$timeCache = 120; // 2 minutes	
 
 $f3->route('GET /', 'controllers\PageController->home');
 $f3->route('GET /servicios', 'controllers\PageController->servicios');

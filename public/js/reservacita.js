@@ -63,7 +63,7 @@
         $('#selectPsicologo').val(psicoValue);
         var especialidadSelected = $('#especialidad option:selected');
 		var especialidadValue = especialidadSelected.val();
-        console.log(especialidadValue);
+        // console.log(especialidadValue);
         $('#terapia').val(especialidadValue);
     }
     valIni();
@@ -94,3 +94,5 @@
         }
         return age;
     }
+
+   
