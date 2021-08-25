@@ -91,36 +91,30 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label>Seleccione la fecha</label>
+                                            <label>Seleccione la fecha</label> 
                                             <input  required type="date" name="fechacita" id="fechacita" class="form-control">
                                         </div>
                                     </div>
 
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label class="p-2 mr-2 bg-success"> Presencial</label>
-                                            <label class="p-2 mr-2 bg-danger"> Virtual</label>
+                                        <div class="form-group d-flex justify-content-around">
+                                            <label class="p-2 mr-2 bg-danger rounded text-white"> Virtual</label>
                                         </div>
-
-                                        <div class="form-group">
-                                        <label class="radio-inline mr-2 p-2 bg-success" >
-                                            <input  required type="radio" name="horacita" id="horacita" value="14:00" /> 14:00
-                                        </label>
-
-                                        <label class="radio-inline mr-2 p-2 bg-success" >
-                                            <input  required type="radio" name="horacita" id="horacita" value="15:00" /> 15:00
-                                        </label>
-                                        <label class="radio-inline mr-2 p-2" style="background-color: orangered;">
-                                            <input  required type="radio" name="horacita" id="horacita" value="19:00" /> 19:00
-                                        </label>
-                                        <label class="radio-inline mr-2 p-2 bg-danger" >
-                                            <input  required type="radio" name="horacita" id="horacita" value="20:00" /> 20:00
-                                        </label>
-                                        <label class="radio-inline mr-2 p-2 bg-danger" >
-                                            <input  required type="radio" name="horacita" id="horacita" value="21:00" /> 21:00
-                                        </label>
-                                        </div>
-                                       
+                                        <div class="d-flex justify-content-around">
+                                            <select class="horario form-select  rounded p-2 " id="horacita" name="horacita"  aria-label="Default select example">
+                                            <option selected >Elige tu horario</option>
+                                            <option class="l-v" value="11:00">11:00 - 12:00</option>
+                                            <option class="l-v" value="12:00 ">12:00 - 13:00</option>
+                                            <option class="l-v" value="15:00">15:00 - 16:00</option>
+                                            <option class="l-v" value="16:00">16:00 - 17:00</option>
+                                            <option class="l-v" value="17:00">17:00 - 18:00</option>
+                                            <option class="l-v" value="18:00">18:00 - 19:00</option>
+                                            <option class="sábado" value="10:00">10:00 - 11:00</option>
+                                            <option class="sábado" value="11:00">11:00 - 12:00</option>
+                                            <option class="sábado" value="12:00">12:00 - 13:00</option>
+                                            <option class="sábado" value="13:00">13:00 - 14:00</option>
+                                        </select>
+                                        </div>                                         
                                     </div>
                                    
                                 </div>

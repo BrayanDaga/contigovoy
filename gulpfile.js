@@ -36,8 +36,12 @@ function javascript() {
       .pipe(concat('bundle.js')) // final output file name
       .pipe(terser())
       .pipe(sourcemaps.write('.'))
+<<<<<<< HEAD
       .pipe(rename({ suffix: '.min' }))
       .pipe(dest('./public/js'))
+=======
+      .pipe(dest('./build/js'))
+>>>>>>> master
 }
 
 function watchArchivos() {
