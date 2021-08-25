@@ -25,9 +25,6 @@
 
 <body>
     <include href="{{ 'views/'.@content }}" />
-    <check if="{{ @content=='reservatucita.php' }}">
-        <script type="text/javascript" src="public/js/reservacita.js"></script>
-    </check>
     <script src="build/js/bundle.js"></script>
 </body>
 

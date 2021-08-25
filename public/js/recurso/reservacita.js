@@ -31,6 +31,9 @@
             prevTab(active);
 
         });
+
+        valIni();
+
     });
 
     function nextTab(elem) {
@@ -47,26 +50,14 @@
         $(this).addClass('active');
     });
 
-    // $('#btn1').click(function() { 
-    //     var psicoSelected = $('#psicologa option:selected');
-	// 	var psicoValue = psicoSelected.val();
-    //     $('#selectPsicologo').val(psicoValue);
-    //     var consultaSelected = $('#consulta option:selected');
-	// 	var consultaValue = consultaSelected.val();
-    //     $('#terapia').val(consultaValue);
-
-    // });
-
     function valIni(){
         var psicoSelected = $('#psicologa option:selected');
 		var psicoValue = psicoSelected.val();
         $('#selectPsicologo').val(psicoValue);
         var especialidadSelected = $('#especialidad option:selected');
 		var especialidadValue = especialidadSelected.val();
-        console.log(especialidadValue);
         $('#terapia').val(especialidadValue);
     }
-    valIni();
     $('#psicologa').change(function () { 
         var psicoSelected = $('#psicologa option:selected');
 		var psicoValue = psicoSelected.val();
