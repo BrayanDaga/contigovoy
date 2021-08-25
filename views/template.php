@@ -21,7 +21,6 @@
     <include href="views/includes/navbar.php" />
     <script src="public/js/jquery-3.5.1.min.js"></script>
     <script src="public/js/bundle.js"></script>
-    <script src="build/js/bundle.js"></script>
 </head>
 
 <body>
@@ -29,6 +28,7 @@
     <check if="{{ @content=='reservatucita.php' }}">
         <script type="text/javascript" src="public/js/reservacita.js"></script>
     </check>
+    <script src="build/js/bundle.js"></script>
 </body>
 
 </html>

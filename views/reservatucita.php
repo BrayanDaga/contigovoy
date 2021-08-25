@@ -99,7 +99,7 @@
                                             <label class="p-2 mr-2 bg-danger rounded text-white"> Virtual</label>
                                         </div>
                                         <div class="d-flex justify-content-around">
-                                            <select class="form-select  rounded p-2 "  aria-label="Default select example">
+                                            <select class="horario form-select  rounded p-2 "  aria-label="Default select example">
                                             <option selected>Elige tu horario</option>
                                             <option class="l-v" value="1">11:00 - 12:00</option>
                                             <option class="l-v" value="2">12:00 - 13:00</option>
@@ -107,10 +107,10 @@
                                             <option class="l-v" value="4">16:00 - 17:00</option>
                                             <option class="l-v" value="5">17:00 - 18:00</option>
                                             <option class="l-v" value="6">18:00 - 19:00</option>
-                                            <option class="s" value="7">10:00 - 11:00</option>
-                                            <option class="s" value="8">11:00 - 12:00</option>
-                                            <option class="s" value="9">12:00 - 13:00</option>
-                                            <option class="s" value="10">13:00 - 14:00</option>
+                                            <option class="sábado" value="7">10:00 - 11:00</option>
+                                            <option class="sábado" value="8">11:00 - 12:00</option>
+                                            <option class="sábado" value="9">12:00 - 13:00</option>
+                                            <option class="sábado" value="10">13:00 - 14:00</option>
                                         </select>
                                         </div>                                         
                                     </div>
