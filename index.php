@@ -46,14 +46,9 @@ $f3->route('GET /material', 'controllers\PageController->material');
 
 $f3->map('/reservacita', 'controllers\CitaController');
 
-// This is where we display the login page
-$f3->route('GET /login', 'controllers\AuthController->login');
-
-// This route is called when user submits login credentials
-$f3->route('POST /login', 'controllers\AuthController->auth');
-
-// Logout
-$f3->route('GET /logout','controllers\AuthController->logout');
+// $f3->route('GET /login', 'controllers\AuthController->login');
+// $f3->route('POST /login', 'controllers\AuthController->auth');
+// $f3->route('GET /logout','controllers\AuthController->logout');
 
 $f3->redirect('GET|HEAD /admin', '/login');
 
