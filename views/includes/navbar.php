@@ -9,15 +9,15 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav ">
 
-        <li class="nav-item {{  @title == 'Home' ? 'active' : '' }} "><a href="{{ @menu['Home'] }}" class="nav-link  px-2">INICIO <i class="fas fa-home"></i></a>
+        <li class="nav-item {{  @title == '| Home' ? 'active' : '' }} "><a href="{{ @menu['Home'] }}" class="nav-link  px-2">INICIO <i class="fas fa-home"></i></a>
         </li>
-        <li class="nav-item {{  @title == 'Servicios' ? 'active' : '' }} "><a href="{{ @menu['Servicios'] }}" class="nav-link  px-2">SERVICIOS <i class="fas fa-list"></i></a>
+        <li class="nav-item {{  @title == '| Servicios' ? 'active' : '' }} "><a href="{{ @menu['Servicios'] }}" class="nav-link  px-2">SERVICIOS <i class="fas fa-list"></i></a>
         </li>
-        <li class="nav-item {{  @title == 'Conocenos' ? 'active' : '' }}"><a href="{{ @menu['Conocenos'] }}" class="nav-link  px-2">CONÓCENOS <i class="fas fa-user"></i></a>
+        <li class="nav-item {{  @title == '| Conocenos' ? 'active' : '' }}"><a href="{{ @menu['Conocenos'] }}" class="nav-link  px-2">CONÓCENOS <i class="fas fa-user"></i></a>
         </li>
-        <li class="nav-item {{  @title == 'Reserva tu Cita' ? 'active' : '' }} "><a href="{{ @menu['Reserva tu Cita'] }}" class="nav-link  px-2">RESERVA TU CITA <i class="far fa-comment-dots"></i></a>
+        <li class="nav-item {{  @title == '| Reserva tu Cita' ? 'active' : '' }} "><a href="{{ @menu['Reserva tu Cita'] }}" class="nav-link  px-2">RESERVA TU CITA <i class="far fa-comment-dots"></i></a>
         </li>
-        <li class="nav navbar-nav dropdown {{  @title == 'Blog' ? 'active' : (@title == 'Material' ? 'active' : '') }}">
+        <li class="nav navbar-nav dropdown {{  @title == '| Blog' ? 'active' : (@title == '| Material' ? 'active' : '') }}">
           <a class="nav-link dropdown-toggle px-2" data-toggle="dropdown" href="/" role="button" aria-haspopup="true" aria-expanded="false">PARAT TI <i class="fas fa-hand-point-down"></i></a>
           <div class="dropdown-menu">
             <a class="dropdown-item" href="{{ @menu['Material'] }}">Material Didáctico</a>
