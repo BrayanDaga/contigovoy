@@ -7,7 +7,7 @@ $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->safeLoad();
 
 $f3 = \Base::instance();
-$f3->set('AUTOLOAD', 'app/');
+$f3->set('AUTOLOAD', './app/');
 $f3->CACHE = true;
 
 $f3->set(
