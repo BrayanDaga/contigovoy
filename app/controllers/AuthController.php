@@ -1,7 +1,8 @@
 <?php 
-namespace Controllers;
+namespace controllers;
 
-use Controllers\BaseController;
+use controllers\BaseController;
+
 
 class AuthController extends BaseController {
     public function __construct()

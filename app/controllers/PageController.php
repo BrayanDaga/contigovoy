@@ -1,8 +1,9 @@
 <?php
 
-namespace Controllers;
+namespace controllers;
 
-use Controllers\BaseController;
+use controllers\BaseController;
+
 
 class PageController extends BaseController
 {

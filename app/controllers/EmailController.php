@@ -1,8 +1,8 @@
 <?php
-namespace Controllers;
+namespace controllers;
 
 use PHPMailer\PHPMailer\SMTP;
-use Controllers\BaseController;
+use controllers\BaseController;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
 

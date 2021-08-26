@@ -1,7 +1,8 @@
 <?php 
-namespace Controllers;
+namespace controllers;
 
-use Controllers\EmailController;
+use controllers\EmailController;
+
 
 class CitaController extends EmailController{
    
