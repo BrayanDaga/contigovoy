@@ -13,11 +13,9 @@
     <meta name="DateCreated" content="Sun, 1 August 2021 00:00:00 GMT+1">
     <meta name="Revisit-after" content="7 days">
     <meta name="robots" content="ALL">
-    <title>Contigo Voy | {{ @title }} </title>
+    <title>Contigo Voy {{ @title }} </title>
     <link rel="shortcut icon" type="image" href="public/img/logo.ico" />
-    <link rel="stylesheet" href="build/css/app.css">
-    <link rel="stylesheet" href="public/css/app.min.css">
-    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <link rel="stylesheet" href="public/css/app.css">
     <include href="views/includes/navbar.php" />
     <script src="public/js/jquery-3.5.1.min.js"></script>
     <script src="public/js/bundle.js"></script>
@@ -25,7 +23,7 @@
 
 <body>
     <include href="{{ 'views/'.@content }}" />
-    <script src="build/js/bundle.js"></script>
+    <script src="public/js/app.min.js"></script>
 </body>
 
 </html>

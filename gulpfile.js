@@ -11,29 +11,33 @@ const notify = require('gulp-notify');
 const cache = require('gulp-cache');
 
 const paths = {
-    scss: 'public/scss/app.scss',
-    js: 'public/js/recurso/**/*.js',
+    scss: 'resources/scss/app.scss',
+    js: 'resources/js/**/*.js',
 }
+
 
 // css es una función que se puede llamar automaticamente
 function css() {
-    return src(paths.scss)
+    return src([
+        paths.scss
+    ])
         .pipe(sourcemaps.init())
         .pipe(sass())
         .pipe(postcss([autoprefixer(), cssnano()]))
         // .pipe(postcss([autoprefixer()]))
         .pipe(sourcemaps.write('.'))
-        .pipe( dest('./build/css/') );
+        .pipe( dest('./public/css/') );
 }
 
 
 function javascript() {
     return src(paths.js)
       .pipe(sourcemaps.init())
-      .pipe(concat('bundle.js')) // final output file name
+      .pipe(concat('app.js')) // final output file name
       .pipe(terser())
       .pipe(sourcemaps.write('.'))
-      .pipe(dest('./build/js'))
+      .pipe(rename({ suffix: '.min' }))
+      .pipe(dest('./public/js'))
 }
 
 function watchArchivos() {

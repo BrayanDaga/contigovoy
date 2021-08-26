@@ -1,7 +1,7 @@
 <nav class="navbar navbar-primary bg-white navbar-expand-md">
   <div class="container-fluid">
     <a class="navbar-brand" href="{{ @menu['Home'] }}">
-    <img src="public/img/logo.webp" width="195" height="70" alt="contigovoyIcon">
+      <img src="public/img/logo.webp" width="195" height="70" alt="contigovoyIcon">
     </a>
     <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span>
       &#x2630;</button>
@@ -24,6 +24,10 @@
             <a class="dropdown-item" href="{{ @menu['Blog'] }}">Blog</a>
           </div>
         </li>
+        <f3:check if="{{ @SESSION.user  }}">
+          <li class="nav-item "><a href="{{ @menu['Logout'] }}" class="nav-link  px-2">LOGOUT <i class="fas fa-sign-out-alt"></i></a>
+          </li>
+        </f3:check>
       </ul>
       <ul class="navbar-nav ml-auto d-flex flex-row my-nav-icons">
         <li class="nav-item mr-1">

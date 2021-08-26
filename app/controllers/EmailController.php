@@ -2,12 +2,13 @@
 namespace Controllers;
 
 use PHPMailer\PHPMailer\SMTP;
+use Controllers\BaseController;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\PHPMailer;
 
 //Importar clases de PHPMailer en el espacio de nombres global
 //Deben estar en la parte superior de su secuencia de comandos, no dentro de una función.
-class EmailController
+class EmailController extends BaseController
 {
     public $nombres ;
     public $correo;
@@ -24,6 +25,7 @@ class EmailController
 
     public function __construct()
     {
+        parent::__construct();
         $this->nombres = $_POST['nombres'] . ' '. $_POST['paterno'] . ' ' . $_POST['materno'];
         $this->correo = $_POST['correo'];
         $this->celular = $_POST['celular'];
@@ -38,7 +40,7 @@ class EmailController
         $this->tutor = $_POST['tutor'];
     }
 
-    public function usarPhpMailer()
+    public function sendEmail()
     {
         // Cargar el cargador automático de Composer
         // require 'vendor/autoload.php';
@@ -100,13 +102,16 @@ class EmailController
             $mail->AltBody = 'Mensaje desde la web';
 
             $mail->send();
-            // echo "
-            // <script>alert('Mensaje Enviado!  Formulario enviado exitosamente,le responderemos lo mas pronto posible')</script>";
-           
-            $_SESSION['message'] = 'Formulario enviado exitosamente,le responderemos lo mas pronto posible';
+   
+            // $_SESSION['message'] = 'Formulario enviado exitosamente,le responderemos lo mas pronto posible';
 
-          header('Location: '.'/reservacita');
-          exit;
+
+
+            $this->f3->set('SESSION.message','Formulario enviado exitosamente,le responderemos lo mas pronto posible');
+             $this->f3->reroute('/reservacita');     
+
+       
+            
           
         } catch (Exception $e) {
             echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
