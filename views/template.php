@@ -15,6 +15,7 @@
     <meta name="robots" content="ALL">
     <title>Contigo Voy {{ @title }} </title>
     <link rel="shortcut icon" type="image" href="public/img/logo.ico" />
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <link rel="stylesheet" href="public/css/app.css">
     <include href="views/includes/navbar.php" />
     <script src="public/js/jquery-3.5.1.min.js"></script>
