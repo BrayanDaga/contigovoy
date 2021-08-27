@@ -16,7 +16,7 @@
             </div>
             <div class="card-body">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Username"  name="userID" id="userID" value="{{ @POST.userID }}">
+                    <input type="text" class="form-control" placeholder="Username"  name="username" id="username" value="{{ @POST.username }}">
                 </div>
                 <div class="form-group">
                     <input type="password" class="form-control" placeholder="Password" name="password" id="password"required="required">

@@ -10,6 +10,18 @@ $f3 = \Base::instance();
 $f3->set('AUTOLOAD', './app/');
 $f3->CACHE = true;
 
+$db=new DB\SQL(
+    'mysql:host=localhost;port=3306;dbname=contigovoy;charset=utf8',
+    'root',
+    '',
+    [
+        PDO::ATTR_EMULATE_PREPARES => false,
+        PDO::ATTR_STRINGIFY_FETCHES => false,
+    ]
+);
+
+$f3->set('DB', $db);
+
 $f3->set(
 	'menu',
 	array_merge(
@@ -29,8 +41,6 @@ $f3->set(
 				'Logout' => 'logout'
 			) :
 			array(
-				// About doesn't appear when we're logged in
-				'About' => 'about',
 				'Login' => 'login'
 			)
 	)
@@ -46,11 +56,11 @@ $f3->route('GET /material', 'controllers\PageController->material');
 
 $f3->map('/reservacita', 'controllers\CitaController');
 
-// $f3->route('GET /login', 'controllers\AuthController->login');
-// $f3->route('POST /login', 'controllers\AuthController->auth');
-// $f3->route('POST /logout','controllers\AuthController->logout');
+$f3->route('GET /login', 'controllers\AuthController->login');
+$f3->route('POST /login', 'controllers\AuthController->auth');
+$f3->route('POST /logout','controllers\AuthController->logout');
 
-// $f3->redirect('GET|HEAD /admin', '/login');
+$f3->redirect('GET|HEAD /admin', '/login');
 
 
 $f3->set('ONERROR', function ($f3) {

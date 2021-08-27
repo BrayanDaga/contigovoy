@@ -9,7 +9,7 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav ">
 
-        <li class="nav-item {{  @title == '| Home' ? 'active' : '' }} "><a href="{{ @menu['Home'] }}" class="nav-link  px-2">INICIO <i class="fas fa-home"></i></a>
+        <li class="nav-item {{  @title == '' ? 'active' : '' }} "><a href="{{ @menu['Home'] }}" class="nav-link  px-2">INICIO <i class="fas fa-home"></i></a>
         </li>
         <li class="nav-item {{  @title == '| Servicios' ? 'active' : '' }} "><a href="{{ @menu['Servicios'] }}" class="nav-link  px-2">SERVICIOS <i class="fas fa-list"></i></a>
         </li>
@@ -25,8 +25,11 @@
           </div>
         </li>
         <f3:check if="{{ @SESSION.user  }}">
-          <li class="nav-item "><a href="{{ @menu['Logout'] }}" class="nav-link  px-2">LOGOUT <i class="fas fa-sign-out-alt"></i></a>
+          <li class="nav-item "><a href="#" class="nav-link  px-2"  onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">LOGOUT <i class="fas fa-sign-out-alt"></i></a>
           </li>
+          <form id="logout-form" action="{{ @menu['Logout'] }}" method="POST" class="d-none">
+           </form>
         </f3:check>
       </ul>
       <ul class="navbar-nav ml-auto d-flex flex-row my-nav-icons">
