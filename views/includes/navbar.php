@@ -25,11 +25,10 @@
           </div>
         </li>
         <f3:check if="{{ @SESSION.user  }}">
-          <li class="nav-item "><a href="#" class="nav-link  px-2"  onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">LOGOUT <i class="fas fa-sign-out-alt"></i></a>
+          <li class="nav-item "><a href="#" class="nav-link  px-2" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">LOGOUT <i class="fas fa-sign-out-alt"></i></a>
           </li>
           <form id="logout-form" action="{{ @BASE }}/logout" method="POST" class="d-none">
-           </form>
+          </form>
         </f3:check>
       </ul>
       <ul class="navbar-nav ml-auto d-flex flex-row my-nav-icons">
@@ -50,8 +49,8 @@
           </a>
         </li>
         <li class="nav-item mr-1">
-          <a href="https://www.instagram.com/centrocontigovoy/" target="_blank" class="nav-link waves-effect waves-light icon-item"">
-              <i class=" fab fa-instagram"></i>
+          <a href="https://www.instagram.com/centrocontigovoy/" target="_blank" class="nav-link waves-effect waves-light icon-item">
+            <i class=" fab fa-instagram"></i>
           </a>
         </li>
         <li class="nav-item mr-1">
@@ -61,12 +60,6 @@
         </li>
 
       </ul>
-
-      <!-- <ul class="nav navbar-nav ml-auto">
-
-                <li class="nav-item"><a href="#" class="nav-link">Login</a>
-                </li>
-            </ul>  -->
     </div>
   </div>
 </nav>
