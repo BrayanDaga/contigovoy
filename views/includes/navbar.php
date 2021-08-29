@@ -1,5 +1,4 @@
 <nav class="navbar navbar-primary bg-white navbar-expand-md">
-  {{ @BASE }}
   <div class="container-fluid">
     <a class="navbar-brand" href="{{ @BASE  }}">
       <img src="{{@BASE }}/public/img/logo.webp" width="195" height="70" alt="contigovoyIcon">
