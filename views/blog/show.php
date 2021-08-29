@@ -17,13 +17,11 @@
                                 </div>
                             </div>
                             <div>
-                            {{ @blog->body  | raw }}
+                                {{ @blog->body  | raw }}
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>        
+            </section>
         </div>
-    </div>
-    </div>
     </div>

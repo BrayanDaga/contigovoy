@@ -43,7 +43,7 @@
                         </ul>
                     </div>
 
-                    <form role="form"  class="login-box" method="POST">
+                    <form method="POST">
                         <div class="tab-content" id="main_form">
                             <div class="tab-pane active" role="tabpanel" id="step1">
                                 <h4 class="text-center">Selecciona el tipo de consulta</h4>
@@ -149,7 +149,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>N° de documento</label>
-                                            <input  required class="form-control" type="text" name="nrodoc" name="nrodoc"  placeholder="">
+                                            <input  required class="form-control" type="text" id="nrodoc" name="nrodoc"  placeholder="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">

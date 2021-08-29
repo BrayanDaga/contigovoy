@@ -3,11 +3,11 @@
         <h1 class="page-header text-center text-primary font-weight-bold">BLOG</h1>
         <f3:check if="{{ @SESSION.user  }}">
 
-        <div class="row">
-            <div class="col-12">
-            <a href="{{ @BASE }}/blog/create" class="text-center d-block"> <span class="badge badge-secondary">Agergar Nuevo</span></a>   
+            <div class="row">
+                <div class="col-12">
+                    <a href="{{ @BASE }}/blog/create" class="text-center d-block"> <span class="badge badge-secondary">Agergar Nuevo</span></a>
+                </div>
             </div>
-        </div> 
         </f3:check>
         <hr>
         <div data-cy="blogNewsCards" class="m-auto col-lg-10 mt-lg-n10">
@@ -54,30 +54,28 @@
 
             <repeat group="{{ @blogs }}" value="{{ @blog }}">
                 <section class="card mb-5 shadow ">
-                <div class="card-body p-5">
-                    <div class="d-flex align-items-center">
-                        <div class="flex-shrink-0 d-none d-lg-block ">
-                            <img class="img-fluid " src="https://picsum.photos/350/300" alt="undefined">
-                        </div>
-                        <div class="ml-3">
-                            <div class="mb-3">
-                                <h2 class="mb-0"><a href="{{ @BASE }}/blog/{{@blog->slug}}" class="text-danger">{{ @blog->title }}</a></h2>
-                                <div class="small text-muted mb-2">{{ @blog->created_at }}</div>
-                                <div class="mb-3">
-                                    <!-- <a class="badge text-primary text-capitalize">news</a>
-                                    <a class="badge text-primary text-capitalize">forms</a> -->
-                                </div>
+                    <div class="card-body p-5">
+                        <div class="d-flex align-items-center">
+                            <div class="flex-shrink-0 d-none d-lg-block ">
+                                <img class="img-fluid " src="https://picsum.photos/350/300" alt="undefined">
                             </div>
-                            <div>
-                                {{ @blog->excerpt }}
+                            <div class="ml-3">
+                                <div class="mb-3">
+                                    <h2 class="mb-0"><a href="{{ @BASE }}/blog/{{@blog->slug}}" class="text-danger">{{ @blog->title }}</a></h2>
+                                    <div class="small text-muted mb-2">{{ @blog->created_at }}</div>
+                                    <div class="mb-3">
+                                        <!-- <a class="badge text-primary text-capitalize">news</a>
+                                    <a class="badge text-primary text-capitalize">forms</a> -->
+                                    </div>
+                                </div>
+                                <div>
+                                    {{ @blog->excerpt }}
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
 
             </repeat>
         </div>
-    </div>
-    </div>
     </div>

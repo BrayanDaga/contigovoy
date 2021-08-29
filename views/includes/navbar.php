@@ -1,6 +1,6 @@
 <nav class="navbar navbar-primary bg-white navbar-expand-md">
   <div class="container-fluid">
-    <a class="navbar-brand" href="{{ @BASE  }}">
+    <a class="navbar-brand" href="{{ @BASE  }}/">
       <img src="{{@BASE }}/public/img/logo.webp" width="195" height="70" alt="contigovoyIcon">
     </a>
     <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span>
@@ -9,7 +9,7 @@
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav ">
 
-        <li class="nav-item {{  @URI == @BASE . '/' ? 'active' : '' }} "><a href="{{ @BASE  }}" class="nav-link  px-2">INICIO <i class="fas fa-home"></i></a>
+        <li class="nav-item {{  @URI == @BASE . '/' ? 'active' : '' }} "><a href="{{ @BASE  }}/" class="nav-link  px-2">INICIO <i class="fas fa-home"></i></a>
         </li>
         <li class="nav-item {{  @URI == @BASE . '/servicios' ? 'active' : '' }} "><a href="{{  @BASE }}/servicios " class="nav-link  px-2">SERVICIOS <i class="fas fa-list"></i></a>
         </li>
@@ -27,10 +27,13 @@
         <f3:check if="{{ @SESSION.user  }}">
           <li class="nav-item "><a href="#" class="nav-link  px-2" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">LOGOUT <i class="fas fa-sign-out-alt"></i></a>
           </li>
-          <form id="logout-form" action="{{ @BASE }}/logout" method="POST" class="d-none">
-          </form>
+
         </f3:check>
       </ul>
+      <f3:check if="{{ @SESSION.user  }}">
+        <form id="logout-form" action="{{ @BASE }}/logout" method="POST" class="d-none">
+        </form>
+      </f3:check>
       <ul class="navbar-nav ml-auto d-flex flex-row my-nav-icons">
         <li class="nav-item mr-1">
           <a href="https://www.linkedin.com/company/centro-voy/about/" target="_blank" class="nav-link waves-effect waves-light icon-item">

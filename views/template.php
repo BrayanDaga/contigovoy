@@ -11,7 +11,7 @@
     <meta name="Revisit-after" content="7 days">
     <meta name="robots" content="ALL">
     <title>Contigo Voy {{ @title }} </title>
-    <link rel="shortcut icon" type="image" href="{{ @BASE }}/public/img/logo.ico" />
+    <link rel="shortcut icon" href="{{ @BASE }}/public/img/logo.ico" />
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
     <link rel="stylesheet" href="{{ @BASE }}/public/css/app.css">
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -22,7 +22,7 @@
     <include href="views/includes/navbar.php" />
     <include href="{{ 'views/'.@content }}" />
     
-    <scrip src="{{@BASE }}/public/js/app.min.js"></script>
+    <script src="{{@BASE }}/public/js/app.min.js"></script>
     
     <f3:check if="{{ @scripts }}">
         <include href="{{ 'views/scripts/'.@scripts }}" />
