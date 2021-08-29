@@ -11,8 +11,8 @@ $f3->set('AUTOLOAD', './app/');
 $f3->CACHE = true;
 
 $db=new DB\SQL(
-    'mysql:host=localhost;port=3306;dbname=contigovoy;charset=utf8',
-    'root',
+    'mysql:host='.$_ENV['DB_HOST'].';port='.$_ENV['DB_PORT'].';dbname='.$_ENV['DB_DATABASE'].';charset=utf8',
+    $_ENV['DB_USERNAME'],
     '',
     [
         PDO::ATTR_EMULATE_PREPARES => false,
