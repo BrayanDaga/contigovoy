@@ -27,12 +27,7 @@ class PageController extends BaseController
         $this->renderTemplate();
     }
 
-    public function blog(): void
-    {
-        $this->f3->set('title', '| Blog');
-        $this->f3->set('content', 'blog.htm');
-        $this->renderTemplate();
-    }
+   
     public function material(): void
     {
         $this->f3->set('title', '| Material');

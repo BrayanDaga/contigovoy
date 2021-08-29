@@ -17,11 +17,11 @@ class AuthController extends BaseController {
 			function($value) {
 				if (!\F3::exists('message')) {
 					if (empty($value))
-						\F3::set('message','User ID should not be blank');
+						\F3::set('message','El nombre de usuario no debe estar en blanco');
 					elseif (strlen($value)>24)
-						\F3::set('message','User ID is too long');
+						\F3::set('message','El nombre de usuario es muy largo');
 					elseif (strlen($value)<3)
-						\F3::set('message','User ID is too short');
+						\F3::set('message','El nombre de usuario es muy corto');
 				}
 				// Convert form field to lowercase
 				$_POST['username']=strtolower($value);
@@ -35,9 +35,9 @@ class AuthController extends BaseController {
 			function($value) {
 				if (!\F3::exists('message')) {
 					if (empty($value))
-						\F3::set('message','Password must be specified');
+						\F3::set('message','Se debe especificar la contraseña						');
 					elseif (strlen($value)>24)
-						\F3::set('message','Invalid password');
+						\F3::set('message','Contraseña invalida');
 				}
 			}
 		);
@@ -73,7 +73,7 @@ class AuthController extends BaseController {
 				$this->f3->reroute('/');
 			}
 			else
-				$this->f3->set('message','Invalid user ID or password');
+				$this->f3->set('message','usuario o contraseña invalido');
 		}
 		// Display the login page again
 		$this->login();
