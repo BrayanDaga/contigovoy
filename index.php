@@ -13,7 +13,7 @@ $f3->CACHE = true;
 $db=new DB\SQL(
     'mysql:host='.$_ENV['DB_HOST'].';port='.$_ENV['DB_PORT'].';dbname='.$_ENV['DB_DATABASE'].';charset=utf8',
     $_ENV['DB_USERNAME'],
-    '',
+    $_ENV['DB_PASSWORD'],
     [
         PDO::ATTR_EMULATE_PREPARES => false,
         PDO::ATTR_STRINGIFY_FETCHES => false,
