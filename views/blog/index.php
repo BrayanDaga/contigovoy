@@ -69,7 +69,7 @@
                                     </div>
                                 </div>
                                 <div>
-                                    {{ @blog->excerpt }}
+                                    {{ @blog->excerpt | raw }}
                                 </div>
                             </div>
                         </div>

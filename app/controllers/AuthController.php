@@ -35,7 +35,7 @@ class AuthController extends BaseController {
 			function($value) {
 				if (!\F3::exists('message')) {
 					if (empty($value))
-						\F3::set('message','Se debe especificar la contraseña						');
+						\F3::set('message','Se debe especificar la contraseña');
 					elseif (strlen($value)>24)
 						\F3::set('message','Contraseña invalida');
 				}

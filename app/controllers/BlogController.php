@@ -45,37 +45,36 @@ class BlogController extends BaseController
 
 	public function store(): void
 	{
+
 		if ($this->f3->get('SESSION.user')) {
-			$blog = new Blog($this->f3->DB);
-			$blog->title = $_POST['title'];
-			$blog->slug = $_POST['slug'];
-			$blog->body = $_POST['body'];
-			$blog->excerpt =  substr($_POST['body'], 0, 200);
-			$blog->created_at = Carbon::now()->toDateTimeString();
-			$blog->save();
-			$this->f3->reroute('/blog', false);
-		} else {
-			$this->f3->reroute('/login', false);
+			if ( $_POST['title'] == "") {
+				$this->f3->set('message','El titulo no debe estar en blanco');
+			}
+			elseif($_POST['body'] == ""){
+				$this->f3->set('message','El blog no debe estar en blanco');
+			}else{
+				$title = $_POST['title'];
+				
+				$blog = new Blog($this->f3->DB);
+					 $slug = strtr(strtolower($title), " ", "-");
+					 $blog->title = $_POST['title'];
+					 $blog->slug = $slug;
+					 $blog->excerpt = $_POST['excerpt'];
+					 $blog->body = $_POST['body'];
+					 $blog->excerpt =  substr($_POST['body'], 0, 200);
+					 date_default_timezone_set('America/Lima');
+	
+					 $blog->created_at = Carbon::now()->toDateTimeString();
+					 $blog->save();
+					 $this->f3->reroute('/blog', false);
+			}
+		}else {
+				$this->f3->reroute('/login', false);
 		}
+	
+		$this->create();
+
+
 	}
-	// public function index(): void {
-	// 	$iblog = new Blog($this->f3->DB);
-	// 	$blogs = $iblog->find();
-	//     $userTimezone = 'America/Lima';
-	//     $userLanguage = 'es';
-	//     Carbon::setLocale('es');
 
-
-	// 	echo '<pre>';
-	//     echo Carbon::parse('2021-01-27 16:34:42 ','America/Lima')->toFormattedDateString(). "\n";
-	// 	foreach($blogs as $blog) {
-	// 		echo "ID: {$blog->id}\n";
-	// 		echo "Title: {$blog->title}\n";
-	// 		echo "Slug: {$blog->slug}\n";
-	// 		echo "Body: {$blog->body}\n";
-	// 		echo "Created At: ". Carbon::parse( $blog->created_at,'America/Lima')->diffForHumans()   ."\n";
-	// 		echo "--------------------------\n";
-	// 	}
-	// 	echo '</pre>';
-	// }
 }
