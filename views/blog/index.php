@@ -11,6 +11,8 @@
         </f3:check>
         <hr>
         <div data-cy="blogNewsCards" class="m-auto col-lg-10 mt-lg-n10">
+
+        <!-- Section de prueba eliminar cuando ya tengan con base de datos -->
             <section class="card mb-5 shadow ">
                 <div class="card-body p-5">
                     <div class="d-flex align-items-center">
@@ -31,6 +33,9 @@
                     </div>
                 </div>
             </section>
+            <!-- end section -->
+                   
+            <!-- Section de prueba eliminar cuando ya tengan con base de datos -->
             <section class="card mb-5 shadow ">
                 <div class="card-body p-5">
                     <div class="d-flex align-items-center">
@@ -51,35 +56,35 @@
                     </div>
                 </div>
             </section>
+            <!-- end section -->
 
-            <repeat group="{{ @blogs }}" value="{{ @blog }}">
+            <repeat group="{{ @blogs }}" value="{{ @blog }}">  <!-- Hace un bucle igual a foreach  --> 
                 <section class="card mb-5 shadow ">
                     <div class="card-body p-5">
-                        <div class="d-flex align-items-center">
-                            <div class="flex-shrink-0 d-none d-lg-block ">
-                                <img class="img-fluid " src="https://picsum.photos/350/300" alt="undefined">
+                        <div class="row">
+                            <div class="col-4">
+                            <img class="img-fluid " src="{{ @BASE }}/{{ @blog->image }}" alt="undefined">
                             </div>
-                            <div class="ml-3">
-                                <div class="mb-3">
+                            <div class="col-8">
+                                 <div class="mb-3">
                                     <div>
                                         <h2 class="mb-0 d-inline"><a href="{{ @BASE }}/blog/{{@blog->slug}}" class="text-danger">{{ @blog->title }}</a></h2>
-                                        
+
                                         <check if="{{  @SESSION.user}}">
-                                           <a href="{{ @BASE }}/blog/{{@blog->slug}}/edit"> <span class="badge badge-secondary">Editar</span></a>
+                                            <a href="{{ @BASE }}/blog/{{@blog->slug}}/edit"> <span class="badge badge-secondary">Editar</span></a>
+           
+                                            <form id="delete-form" action="{{ @BASE }}/blog/{{ @blog->slug }}/delete" method="POST" class="d-inline" >
+                                            <button type="submit" class="badge badge-danger">Borrar</button>
+                                            </form>
                                         </check>
                                     </div>
-                                    
+
                                     <div class="small text-muted mb-2">{{ @blog->created_at }}</div>
                                     <div class="mb-3">
-                                        <!-- <a class="badge text-primary text-capitalize">news</a>
-                                    <a class="badge text-primary text-capitalize">forms</a> -->
-                                    </div>
-                                </div>
-                                <div>
-                                    {{ @blog->excerpt | raw }}
-                                </div>
+                            {{ @blog->excerpt | raw }} 
                             </div>
                         </div>
+                      
                     </div>
                 </section>
 

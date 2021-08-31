@@ -23,8 +23,8 @@
     <include href="{{ 'views/'.@content }}" />
     
     <script src="{{@BASE }}/public/js/app.min.js"></script>
-    
-    <f3:check if="{{ @scripts }}">
+    <!-- f3:check es igual a if -->
+    <f3:check if="{{ @scripts }}">  <!-- Si hay scripts, los incluyo -->
         <include href="{{ 'views/scripts/'.@scripts }}" />
     </f3:check>
     
