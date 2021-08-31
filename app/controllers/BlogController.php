@@ -45,36 +45,81 @@ class BlogController extends BaseController
 
 	public function store(): void
 	{
-
 		if ($this->f3->get('SESSION.user')) {
-			if ( $_POST['title'] == "") {
-				$this->f3->set('message','El titulo no debe estar en blanco');
-			}
-			elseif($_POST['body'] == ""){
-				$this->f3->set('message','El blog no debe estar en blanco');
-			}else{
+			if ($_POST['title'] == "") {
+				$this->f3->set('message', 'El titulo no debe estar en blanco');
+			} elseif ($_POST['body'] == "") {
+				$this->f3->set('message', 'El blog no debe estar en blanco');
+			} else {
 				$title = $_POST['title'];
-				
+				$body = $_POST['body'];
+				$slug = strtr(strtolower($title), " ", "-");
+				$excerpt = substr($body, 0, 200);
+
 				$blog = new Blog($this->f3->DB);
-					 $slug = strtr(strtolower($title), " ", "-");
-					 $blog->title = $_POST['title'];
-					 $blog->slug = $slug;
-					 $blog->excerpt = $_POST['excerpt'];
-					 $blog->body = $_POST['body'];
-					 $blog->excerpt =  substr($_POST['body'], 0, 200);
-					 date_default_timezone_set('America/Lima');
-	
-					 $blog->created_at = Carbon::now()->toDateTimeString();
-					 $blog->save();
-					 $this->f3->reroute('/blog', false);
+				$blog->title = $title;
+				$blog->body = $body;
+				$blog->slug = $slug;
+				$blog->excerpt =  $excerpt;
+
+				date_default_timezone_set('America/Lima');
+
+				$blog->created_at = Carbon::now()->toDateTimeString();
+				$blog->save();
+				$this->f3->reroute('/blog', false);
 			}
-		}else {
-				$this->f3->reroute('/login', false);
+		} else {
+			$this->f3->reroute('/login', false);
 		}
-	
 		$this->create();
-
-
 	}
 
+	public function edit(): void
+	{
+		if ($this->f3->get('SESSION.user')) {
+			$blog = new Blog($this->f3->DB);
+			$blog->load(['slug=?', $this->f3->get('PARAMS.slug')]);
+			$this->f3->set('blog', $blog);
+			$this->f3->set('title', '| Blog');
+			$this->f3->set('content', 'blog/edit.php');
+			$this->f3->set('scripts', 'blogcreate.php');
+			$this->renderTemplate();
+		} else {
+			$this->f3->reroute('/login');
+		}
+	}
+
+
+	public function update(): void
+	{
+
+		if ($this->f3->get('SESSION.user')) {
+			if ($_POST['title'] == "") {
+				$this->f3->set('message', 'El titulo no debe estar en blanco');
+			} elseif ($_POST['body'] == "") {
+				$this->f3->set('message', 'El blog no debe estar en blanco');
+			} else {
+				$blog = new Blog($this->f3->DB);
+				$blog->load(['slug=?', $this->f3->get('PARAMS.slug')]);
+
+				$title = $_POST['title'];
+				$body = $_POST['body'];
+				$slug = strtr(strtolower($title), " ", "-");
+				$excerpt = substr($body, 0, 200);
+
+				$blog->title = $title;
+				$blog->body = $body;
+				$blog->slug = $slug;
+				$blog->excerpt =  $excerpt;
+				date_default_timezone_set('America/Lima');
+
+				$blog->created_at = Carbon::now()->toDateTimeString();
+				$blog->save();
+				$this->f3->reroute('/blog', false);
+			}
+		} else {
+			$this->f3->reroute('/login', false);
+		}
+		$this->edit();
+	}
 }

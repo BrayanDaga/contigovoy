@@ -61,7 +61,14 @@
                             </div>
                             <div class="ml-3">
                                 <div class="mb-3">
-                                    <h2 class="mb-0"><a href="{{ @BASE }}/blog/{{@blog->slug}}" class="text-danger">{{ @blog->title }}</a></h2>
+                                    <div>
+                                        <h2 class="mb-0 d-inline"><a href="{{ @BASE }}/blog/{{@blog->slug}}" class="text-danger">{{ @blog->title }}</a></h2>
+                                        
+                                        <check if="{{  @SESSION.user}}">
+                                           <a href="{{ @BASE }}/blog/{{@blog->slug}}/edit"> <span class="badge badge-secondary">Editar</span></a>
+                                        </check>
+                                    </div>
+                                    
                                     <div class="small text-muted mb-2">{{ @blog->created_at }}</div>
                                     <div class="mb-3">
                                         <!-- <a class="badge text-primary text-capitalize">news</a>

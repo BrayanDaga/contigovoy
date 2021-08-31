@@ -39,6 +39,8 @@ $f3->route('GET /blog/@slug', 'controllers\BlogController->show');
 $f3->route('GET /blog', 'controllers\BlogController->index');
 $f3->route('GET /blog/create', 'controllers\BlogController->create');
 $f3->route('POST /blog/create', 'controllers\BlogController->store');
+$f3->route('GET /blog/@slug/edit', 'controllers\BlogController->edit');
+$f3->route('POST /blog/@slug/edit', 'controllers\BlogController->update');
 
 
 
