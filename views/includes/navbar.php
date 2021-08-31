@@ -47,7 +47,7 @@
           </a>
         </li>
         <li class="nav-item mr-1">
-          <a href="https://www.instagram.com/centrocontigovoy/" target="_blank" class="nav-link waves-effect waves-light icon-item"">
+          <a href="https://www.instagram.com/centrocontigovoy/" target="_blank" class="nav-link waves-effect waves-light icon-item">
               <i class=" fab fa-instagram"></i>
           </a>
         </li>
