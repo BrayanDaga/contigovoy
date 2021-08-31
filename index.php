@@ -23,6 +23,15 @@ $db=new DB\SQL(
     ]
 );
 
+//Crea un usario para el login
+/*
+El password debe ser encriptado, puedes obtener uno de ejemplo aqui 
+ -Realizado en la consola :  php -a 
+echo password_hash('password',PASSWORD_DEFAULT); //input 
+ $2y$10$rxkNGylxYPQSShqCYCRA..Yr27Xm9DPtT3fkosvwhM.1Z3Oneyk3q  // output
+ y agregalo por el phpmyadmin o otro gestor de base de datos
+  */
+
 $f3->set('DB', $db); //asignar la conexion a la base de datos
 
 $timeCache = 120; // 2 minutes	de cache    
@@ -46,8 +55,7 @@ $f3->route('POST /blog/create', 'controllers\BlogController->store');
 $f3->route('GET /blog/@slug/edit', 'controllers\BlogController->edit');
 $f3->route('POST /blog/@slug/edit', 'controllers\BlogController->update');
 $f3->route('POST /blog/@slug/delete', 'controllers\BlogController->destroy');
-
-
+/******************************* fin rutas *****************************************************/
 
 $f3->redirect('GET|HEAD /admin', '/login');
 
@@ -56,41 +64,5 @@ $f3->set('ONERROR', function ($f3) {
 	$f3->set('content', '404.html');
 	echo \Template::instance()->render('views/template.php');
 });
-
-
-
-$f3->route('GET /upload', function($f3){
-    ?>
-    
-    <p>Pleaseonly upload jpg, get , or png files.</p>
-    <form action="upload" method="post" enctype="multipart/form-data">
-    <input type="text" name="mytext">
-    <input type="file" name="myfile">
-    <input type="submit" value="Upload">
-    </form>
-    
-    <?php
-    });
-    
-    $f3->route('POST /upload', function($f3){
-    
-    
-       
-        $files = Web::instance()->receive(function($file,$formFieldName){
-     
-                if($file['size'] > (2 * 1024 * 1024)) 
-                return true; // allows the file to be moved from php tmp dir to your defined upload dir
-            },true,
-            function($fileBaseName, $formFieldName){
-                $ext = pathinfo($fileBaseName, PATHINFO_EXTENSION);
-                $new_name = time() . '.' . $ext;
-                return $new_name;
-    
-            }
-        );    
-
-        // var_dump($files);
-        echo array_keys($files)[0];
-    });
 
 $f3->run();
