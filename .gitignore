@@ -3,3 +3,9 @@
 .env
 node_modules
 error_log
+Robots.txt
+ror.xml
+sitemap.html
+sitemap.xml
+sitemap.xml.gz
+urllist.txt

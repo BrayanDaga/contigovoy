@@ -1,6 +1,7 @@
 <?php 
 namespace controllers;
 
+use models\User;
 use controllers\BaseController;
 
 
@@ -12,18 +13,18 @@ class AuthController extends BaseController {
 
     	// Validate user ID
 	function checkID() {
-        $this->f3->get('POST.userID',
+        $this->f3->get('POST.username',
 			function($value) {
 				if (!\F3::exists('message')) {
 					if (empty($value))
-						\F3::set('message','User ID should not be blank');
+						\F3::set('message','El nombre de usuario no debe estar en blanco');
 					elseif (strlen($value)>24)
-						\F3::set('message','User ID is too long');
+						\F3::set('message','El nombre de usuario es muy largo');
 					elseif (strlen($value)<3)
-						\F3::set('message','User ID is too short');
+						\F3::set('message','El nombre de usuario es muy corto');
 				}
 				// Convert form field to lowercase
-				$_POST['userID']=strtolower($value);
+				$_POST['username']=strtolower($value);
 			}
 		);
 	}
@@ -34,9 +35,9 @@ class AuthController extends BaseController {
 			function($value) {
 				if (!\F3::exists('message')) {
 					if (empty($value))
-						\F3::set('message','Password must be specified');
+						\F3::set('message','Se debe especificar la contraseña');
 					elseif (strlen($value)>24)
-						\F3::set('message','Invalid password');
+						\F3::set('message','Contraseña invalida');
 				}
 			}
 		);
@@ -58,22 +59,21 @@ class AuthController extends BaseController {
 		// Form field validation
 		$this->checkID();
 		$this->password();
-		if (isset($_SESSION['captcha']))
-			$this->f3->code();
+		$user = new User($this->f3->DB);
+        $user->load(['username=?', $_POST['username']]);
 		if (!$this->f3->exists('message')) {
 			// No input error; check values
-			if (preg_match('/^brayan$/i',$_POST['userID']) &&
-				preg_match('/^brayan$/i',$_POST['password'])) {
+			if (password_verify($_POST['password'], $user->password)) {
 				// User ID is admin, password is admin - set session variable
 				// Fat-Free auto-starts a session when you use F3::set() or
 				// F3::get(). F3::clear() automatically destroys a session
 				// variable or even an entire session
-				$this->f3->set('SESSION.user',$_POST['userID']);
+				$this->f3->set('SESSION.user',$_POST['username']);
 				// Return to home page; but now user is logged in
 				$this->f3->reroute('/');
 			}
 			else
-				$this->f3->set('message','Invalid user ID or password');
+				$this->f3->set('message','usuario o contraseña invalido');
 		}
 		// Display the login page again
 		$this->login();
