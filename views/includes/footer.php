@@ -4,7 +4,7 @@
             <div class="col-4">
                 <div class="row d-flex justify-content-center ">
                     <div class="col-12 d-flex justify-content-center">
-                        <img class="imagen " src="{{@BASE }}/public/img/logo1.webp" alt="logo">
+                        <img class="imagen " src="{{@BASE }}/public/img/logo1.webp" alt="logo" loading="lazy">
                     </div>
                     <h2 class="subtitulo">CONTACTANOS:</h2>
                     <p>atencionpsicologica@contigo-voy.com</p>
