@@ -54,11 +54,7 @@
         </li>
         <li class="nav-item mr-1">
           <a href="https://www.instagram.com/centrocontigovoy/" target="_blank" class="nav-link waves-effect waves-light icon-item">
-<<<<<<< HEAD
-              <i class=" fab fa-instagram"></i>
-=======
             <i class=" fab fa-instagram"></i>
->>>>>>> master
           </a>
         </li>
         <li class="nav-item mr-1">
@@ -66,7 +62,6 @@
             <i class="fab fa-facebook"></i>
           </a>
         </li>
-
       </ul>
     </div>
   </div>

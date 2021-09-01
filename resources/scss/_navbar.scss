@@ -1,3 +1,4 @@
+$naranja:rgba(242, 167, 32, 1);
 .navbar .brand, .navbar .nav > li > a {
     font-weight: 600;
     &:hover {
@@ -16,13 +17,13 @@
 
    .navbar-primary .navbar-nav {
     .active > .nav-link {
-      background: rgba(109, 225, 38, 0.749);
+      background: $naranja;
       color: #000;
     }
   
     .nav-link {
       &.show, &.active {
-        background: rgba(109, 225, 38, 0.749);
+        background: $naranja;
         color: #000;
       }
     }
