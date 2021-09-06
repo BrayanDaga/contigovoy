@@ -13,6 +13,9 @@
     <meta name="robots" content="ALL">
     <title>Contigo Voy {{ @title }} </title>
     <link rel="shortcut icon" href="{{ @BASE }}/public/img/logo.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" async>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin async>
+    <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500&family=Fredoka+One&display=swap" rel="stylesheet" async>
     <link rel="stylesheet" href="{{ @BASE }}/public/css/app.css" type="text/css" async>
 
 </head>
@@ -36,7 +39,7 @@
         <!-- Si hay scripts, los incluyo -->
         <include href="{{ 'views/scripts/'.@scripts }}" />
     </f3:check>
-    <script src="{{@BASE }}/public/js/app.min.js" ></script>
+    <script src="{{@BASE }}/public/js/app.min.js"></script>
 </body>
 
 </html>
