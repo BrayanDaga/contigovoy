@@ -19,7 +19,7 @@ class BlogController extends BaseController
 		$this->f3->set('title', '| Blog');
 		$iblog = new Blog($this->f3->DB);
 		// $blogs = $iblog->find();
-		$blogs = $iblog->paginate($pos - 1 ,2);  // Paginar( posicion , cantidad de registro por paginacion)
+		$blogs = $iblog->paginate($pos - 1 ,8);  // Paginar( posicion , cantidad de registro por paginacion)
 		// print_r($blogs);
 		// echo json_encode($blogs);
 	

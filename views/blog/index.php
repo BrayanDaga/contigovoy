@@ -13,11 +13,11 @@
         <div data-cy="blogNewsCards" class="m-auto col-lg-10 mt-lg-n10">
 
             <!-- Section de prueba eliminar cuando ya tengan con base de datos -->
-          
+
             <!-- end section -->
 
             <!-- Section de prueba eliminar cuando ya tengan con base de datos -->
-          
+
             <!-- end section -->
             <repeat group="{{ @blogs.subset  }}" value="{{ @blog }}">
                 <!-- Hace un bucle igual a foreach  -->
@@ -52,21 +52,27 @@
 
             </repeat>
 
-            <b>Page <b>{{ @blogs.pos + 1}}</b> of <b>{{ round(@blogs.total / @blogs.limit) }}</b>
-                <nav aria-label="...">
-                    <ul class="pagination">
-                        <li class="page-item   {{ @blogs.pos  == 0  ?  'disabled' : ''  }} ">
-                            <a class="page-link" href="{{ @BASE }}/blog?p={{ $_GET['p'] -1  ?? 1 }}" tabindex="-1">Previous</a>
-                        </li>
-                        <!-- <li class="page-item"><a class="page-link" href="#">1</a></li>
-                        <li class="page-item active">
-                            <a class="page-link" href="#">2 <span class="sr-only">(current)</span></a>
-                        </li>
-                        <li class="page-item"><a class="page-link" href="#">3</a></li> -->
-                        <li class="page-item">
-                            <a class="page-link"  href="{{ @BASE }}/blog?p={{ $_GET['p'] + 1 }}">Next</a>
-                        </li>
-                    </ul>
-                </nav>
+            <ul>
+
+
+
+                <b>Page <b>{{ @cur =  @blogs.pos + 1}}</b> of <b>{{ round(@blogs.total / @blogs.limit) }}</b>
+                    <nav aria-label="...">
+                        <ul class="pagination">
+                            <li class="page-item   {{ @blogs.pos  == 0  ?  'disabled' : ''  }} ">
+                                <a class="page-link" href="{{ @BASE }}/blog?p={{ $_GET['p'] -1  ?? 1 }}" tabindex="-1">Previous</a>
+                            </li>
+
+                            <!-- loop hace bucle al estilo for  -->
+                            <loop from="{{ @i=1 }}" to="{{ @i <= @blogs.count }}" step="{{ @i++ }}"> 
+                                <li class="page-item {{  @blogs.pos +1   ==  @i ? 'active' : '' }}  "  >
+                                    <a class="page-link" href=" {{@BASE }}/blog?p={{@i}}"> {{ @i   }}</a>
+                                </li>
+                            </loop>
+                            <li class="page-item {{ @blogs.pos+1  >= round(@blogs.total / @blogs.limit)  ?  'disabled' : ''  }}">
+                                <a class="page-link" href="{{ @BASE }}/blog?p={{ $_GET['p'] + 1 }}">Next</a>
+                            </li>
+                        </ul>
+                    </nav>
         </div>
     </div>
