@@ -6,6 +6,9 @@
         $('#fechacita').prop('min', function(){
             return new Date().toJSON().split('T')[0] ;
         });
+        $('#fechacita').prop('max', function(){
+            return new Date().toJSON().split('T')[0]+1 ;
+        });
         $('.nav-tabs > li a[title]').tooltip();
 
         //Wizard
