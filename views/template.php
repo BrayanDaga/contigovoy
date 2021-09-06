@@ -27,7 +27,7 @@
     <f3:check if="{{ @scripts }}">  <!-- Si hay scripts, los incluyo -->
         <include href="{{ 'views/scripts/'.@scripts }}" />
     </f3:check>
-    
+    <include href="views/includes/footer.php" />
 </body>
 
 </html>
