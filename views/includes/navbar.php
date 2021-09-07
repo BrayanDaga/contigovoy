@@ -48,8 +48,8 @@
           </a>
         </li>
         <li class="nav-item mr-1">
-          <a href="mailto:contigovoyperu@gmail.com" target="_blank" class="nav-link waves-effect waves-light icon-item">
-            <i class="fas fa-envelope" title="contigovoyperu@gmail.com"></i>
+          <a href="mailto:atencionpsicologica@contigo-voy.com" target="_blank" class="nav-link waves-effect waves-light icon-item">
+            <i class="fas fa-envelope" title="atencionpsicologica@contigo-voy.com"></i>
           </a>
         </li>
         <li class="nav-item mr-1">

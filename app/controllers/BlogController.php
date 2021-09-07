@@ -15,9 +15,14 @@ class BlogController extends BaseController
 	}
 	public function index(): void
 	{
+		$pos = intval($_GET['p'])  ?? 1;
 		$this->f3->set('title', '| Blog');
 		$iblog = new Blog($this->f3->DB);
-		$blogs = $iblog->find();
+		// $blogs = $iblog->find();
+		$blogs = $iblog->paginate($pos - 1 ,8);  // Paginar( posicion , cantidad de registro por paginacion)
+		// print_r($blogs);
+		// echo json_encode($blogs);
+	
 		$this->f3->set('blogs', $blogs);
 		$this->f3->set('content', 'blog/index.php');
 		$this->renderTemplate();

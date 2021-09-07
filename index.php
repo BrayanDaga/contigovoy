@@ -1,7 +1,10 @@
 <?php
 require 'vendor/autoload.php';
 
+use models\Blog;
 use Dotenv\Dotenv;
+use models\Appointment;
+use models\User;
 
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->safeLoad();
@@ -59,6 +62,17 @@ $f3->route('POST /blog/@slug/delete', 'controllers\BlogController->destroy');
 
 $f3->redirect('GET|HEAD /admin', '/login');
 
+$f3->route('GET /json', function($f3){
+    $iappoint = new Appointment($f3->DB);
+    $appointments = $iappoint->find();
+    $hours = [
+        '11:00 - 12:00',
+        '12:00 - 13:00',
+        '13:00 - 14:00',
+        '14:00 - 15:00',
+    ];
+    echo json_encode($appointments);
+});
 
 $f3->set('ONERROR', function ($f3) {
 	$f3->set('content', '404.html');
