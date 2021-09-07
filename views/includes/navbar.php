@@ -48,9 +48,8 @@
           </a>
         </li>
         <li class="nav-item mr-1">
-          <a href="mailto:
-& # 121; & # 111; & # 117; & # 114; & # 110; & # 097; & # 109; & # 101; & # 064 ; & # 100; & # 111; & # 109; & # 097; & # 105; & # 110; & # 046; & # 099; & # 111; & # 109;" target="_blank" class="nav-link waves-effect waves-light icon-item">
-            <i class="fas fa-envelope" title="& # 121; & # 111 ; & # 117; & # 114; & # 110; & # 097; & # 109; & # 101; & # 064; & # 100; & # 111; & # 109; & # 097; & # 105; & # 110; & # 046; & # 099; & # 111; & # 109;"></i>
+          <a href="mailto:atencionpsicologica@contigo-voy.com" target="_blank" class="nav-link waves-effect waves-light icon-item">
+            <i class="fas fa-envelope" title="atencionpsicologica@contigo-voy.com"></i>
           </a>
         </li>
         <li class="nav-item mr-1">

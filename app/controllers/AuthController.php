@@ -68,7 +68,7 @@ class AuthController extends BaseController {
 				// Fat-Free auto-starts a session when you use F3::set() or
 				// F3::get(). F3::clear() automatically destroys a session
 				// variable or even an entire session
-				$this->f3->set('SESSION.user',$_POST['username']);
+				$this->f3->set('SESSION.user',$user->cast());
 				// Return to home page; but now user is logged in
 				$this->f3->reroute('/');
 			}
