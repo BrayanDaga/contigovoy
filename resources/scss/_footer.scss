@@ -9,3 +9,23 @@
         font-size: 18px;
     }
 }
+
+@media only screen and (max-width: 576px) {
+    .footer{
+        .parrafoFooter{
+            font-size: 13px;
+        }
+        .primeraListaServicios{  
+            padding-left: 24px;
+            margin: 0;
+            li{
+                font-size: 13px;
+            }
+        }
+        .segundaListaServicios{
+            li{
+                font-size: 13px;
+            }
+        }
+    }
+}
