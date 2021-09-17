@@ -1,11 +1,13 @@
 <?php 
 namespace controllers;
 
+use models\Blog;
+use models\User;
 use Carbon\Carbon;
 use models\Appointment;
 use controllers\EmailController;
 
-class CitaController extends EmailController{
+class CitaController extends EmailController {
    
     public function __construct()
     {
@@ -15,8 +17,12 @@ class CitaController extends EmailController{
 
     public function get(): void
     {
+        $instance = new User($this->f3->DB);
+         $instance->reset();
+         $doctors = $instance->find(['role=?','doctor']);    
         $this->f3->set('title', '| Reserva tu Cita');
         $this->f3->set('content', 'reservatucita.php');
+        $this->f3->set('doctors', $doctors);
         $this->renderTemplate();
         $this->f3->clear('SESSION.message');
     }
