@@ -75,8 +75,8 @@
                                         <div class="form-group">
                                             <label>Si no tuviera ninguno asignado selecciona Cualquier médico</label>
                                             <select class="form-control" name="psicologa" id="psicologa">
-                                            <repeat group="{{ @doctors  }}"  key="{{ @ikey }}"  value="{{ @doctor }}">
-                                                <option value="{{ @doctor.id }}">{{ @doctor.name }}</option>
+                                            <repeat group="{{ @doctors  }}" value="{{ @doctor }}">
+                                                <option value="{{ @doctor.id }}"  data-user="{{ @doctor.name }}">{{ @doctor.name }}</option>
                                             </repeat>
                                                 <!-- <option value="Ana Vizcarra Sajami">Ana Vizcarra Sajami</option>
                                                 <option value="Wendy Aylas Martínez">Wendy Aylas Martínez</option> -->                                           </select>

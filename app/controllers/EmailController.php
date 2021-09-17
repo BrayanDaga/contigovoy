@@ -32,7 +32,6 @@ class EmailController extends BaseController
         $this->nombres = $_POST['nombres'] . ' '. $_POST['paterno'] . ' ' . $_POST['materno'];
         $this->correo = $_POST['correo'];
         $this->celular = $_POST['celular'];
-        $user = new User($this->f3->DB);
         $this->psicologa = $user->name;
         $this->fechaCita = $_POST['fechacita'];
         $this->horaCita = $_POST['horacita'];

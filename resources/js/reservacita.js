@@ -54,7 +54,8 @@
 
     function valIni(){
         var psicoSelected = $('#psicologa option:selected');
-		var psicoValue = psicoSelected.val();
+        var psicoValue = psicoSelected.data('user'); 
+        $('#selectPsicologo').val(psicoValue);
         $('#selectPsicologo').val(psicoValue);
         var especialidadSelected = $('#especialidad option:selected');
 		var especialidadValue = especialidadSelected.val();
@@ -62,7 +63,7 @@
     }
     $('#psicologa').change(function () { 
         var psicoSelected = $('#psicologa option:selected');
-		var psicoValue = psicoSelected.val();
+        var psicoValue = psicoSelected.data('user'); 
         $('#selectPsicologo').val(psicoValue);
     });
     $('#especialidad').change(function () { 
