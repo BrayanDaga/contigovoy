@@ -59,20 +59,9 @@ $f3->route('GET /blog/@slug/edit', 'controllers\BlogController->edit');
 $f3->route('POST /blog/@slug/edit', 'controllers\BlogController->update');
 $f3->route('POST /blog/@slug/delete', 'controllers\BlogController->destroy');
 /******************************* fin rutas *****************************************************/
+$f3->route('GET /dias', 'controllers\HorarioController->buscarDias');
 
 $f3->redirect('GET|HEAD /admin', '/login');
-
-$f3->route('GET /json', function($f3){
-    $iappoint = new Appointment($f3->DB);
-    $appointments = $iappoint->find();
-    $hours = [
-        '11:00 - 12:00',
-        '12:00 - 13:00',
-        '13:00 - 14:00',
-        '14:00 - 15:00',
-    ];
-    echo json_encode($appointments);
-});
 
 $f3->set('ONERROR', function ($f3) {
 	$f3->set('content', '404.html');

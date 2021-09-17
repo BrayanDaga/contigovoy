@@ -39,7 +39,7 @@
                             <li role="presentation" class="disabled">
                                 <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab"><span class="round-tab">3</span> <i>Médico y datos del paciente</i></a>
                             </li>
-                      
+
                         </ul>
                     </div>
 
@@ -75,8 +75,10 @@
                                         <div class="form-group">
                                             <label>Si no tuviera ninguno asignado selecciona Cualquier médico</label>
                                             <select class="form-control" name="psicologa" id="psicologa">
-                                                <option value="Ana Vizcarra Sajami">Ana Vizcarra Sajami</option>
-                                                <option value="Wendy Aylas Martínez">Wendy Aylas Martínez</option>
+                                                <!-- <option value="Ana Vizcarra Sajami">Ana Vizcarra Sajami</option>
+                                                <option value="Wendy Aylas Martínez">Wendy Aylas Martínez</option> -->
+                                                <option value="2">Ana Vizcarra Sajami</option>
+                                                <option value="3">Wendy Aylas Martínez</option>
                                             </select>
                                         </div>
                                     </div>
@@ -90,33 +92,28 @@
                                 <h4 class="text-center">Fecha y hora de la cita</h4>
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label>Seleccione la fecha</label> 
-                                            <input  required type="date" name="fechacita" id="fechacita" class="form-control">
+                                    <div class="form-group">
+                                    <label>Fecha de atención</label>
+
+                                        <div class="input-group input-group-alternative">
+                                            <div class="input-group-prepend">
+                                                <span class="input-group-text"><i class="fas fa-calendar-alt"></i></span>
+                                            </div>
+                                            <input class="form-control datepicker" placeholder="Select date" type="text" id="date" name="fechacita" value="{{ date('Y-m-d') }}" data-date-format="yyyy-mm-dd" data-date-start-date="{{ date('Y-m-d') }}" data-date-end-date="+30d" autocomplete="off">
                                         </div>
                                     </div>
-
-                                    <div class="col-md-6">
-                                        <div class="form-group d-flex justify-content-around">
-                                            <label class="p-2 mr-2 bg-danger rounded text-white"> Virtual</label>
-                                        </div>
-                                        <div class="d-flex justify-content-around">
-                                            <select class="horario form-select  rounded p-2 " id="horacita" name="horacita"  aria-label="Default select example">
-                                            <option selected >Elige tu horario</option>
-                                            <option class="l-v" value="11:00">11:00 - 12:00</option>
-                                            <option class="l-v" value="12:00 ">12:00 - 13:00</option>
-                                            <option class="l-v" value="15:00">15:00 - 16:00</option>
-                                            <option class="l-v" value="16:00">16:00 - 17:00</option>
-                                            <option class="l-v" value="17:00">17:00 - 18:00</option>
-                                            <option class="l-v" value="18:00">18:00 - 19:00</option>
-                                            <option class="sábado" value="10:00">10:00 - 11:00</option>
-                                            <option class="sábado" value="11:00">11:00 - 12:00</option>
-                                            <option class="sábado" value="12:00">12:00 - 13:00</option>
-                                            <option class="sábado" value="13:00">13:00 - 14:00</option>
-                                        </select>
-                                        </div>                                         
                                     </div>
                                    
+                                    <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label>Hora de atención</label>
+                                        <div id="hours">
+
+                                        </div>
+                                    </div>
+                                    </div>
+                                    
+
                                 </div>
 
 
@@ -131,7 +128,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Psicologo</label>
-                                            <input  required class="form-control" type="text"  id="selectPsicologo"  readonly>
+                                            <input required class="form-control" type="text" id="selectPsicologo" readonly>
                                         </div>
                                     </div>
                                     <div class="col-md-6">
@@ -143,61 +140,61 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Tipo de documento</label>
-                                            <input  required class="form-control" type="text" name="tipdoc" id="tipdoc" placeholder="">
+                                            <input required class="form-control" type="text" name="tipdoc" id="tipdoc" placeholder="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>N° de documento</label>
-                                            <input  required class="form-control" type="text" id="nrodoc" name="nrodoc"  placeholder="">
+                                            <input required class="form-control" type="text" id="nrodoc" name="nrodoc" placeholder="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Apellido paterno</label>
-                                            <input  required class="form-control" type="text" name="paterno" id="paterno" placeholder="">
+                                            <input required class="form-control" type="text" name="paterno" id="paterno" placeholder="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Apellido materno</label>
-                                            <input  required class="form-control" type="text" name="materno" id="materno" placeholder="">
+                                            <input required class="form-control" type="text" name="materno" id="materno" placeholder="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Nombres</label>
-                                            <input  required class="form-control" type="text" name="nombres" placeholder="">
+                                            <input required class="form-control" type="text" name="nombres" placeholder="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Correo Electroncio</label>
-                                            <input  required class="form-control" type="email" name="correo" id="correo" placeholder="">
+                                            <input required class="form-control" type="email" name="correo" id="correo" placeholder="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Celular</label>
-                                            <input  required class="form-control" type="text" name="celular" id="celular" placeholder="">
+                                            <input required class="form-control" type="text" name="celular" id="celular" placeholder="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Tutor(Menor de edad)</label>
-                                            <input  required class="form-control" type="text" name="tutor" id="tutor" placeholder="">
+                                            <input required class="form-control" type="text" name="tutor" id="tutor" placeholder="">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Fecha de nacimiento</label>
-                                            <input  required class="form-control" type="date" name="fechaNac" id="fechaNac" >
+                                            <input required class="form-control" type="date" name="fechaNac" id="fechaNac">
                                         </div>
                                     </div>
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label>Edad</label>
-                                            <input  required class="form-control" type="number" name="edad" id="edad" readonly>
+                                            <input required class="form-control" type="number" name="edad" id="edad" readonly>
                                         </div>
                                     </div>
                                 </div>
@@ -206,7 +203,7 @@
                                     <li><button type="submmit" class="default-btn next-step">Finalizar</button></li>
                                 </ul>
                             </div>
-                          
+
                             <div class="clearfix"></div>
                         </div>
 

@@ -1,6 +1,7 @@
 <?php
 namespace controllers;
 
+use models\User;
 use PHPMailer\PHPMailer\SMTP;
 use controllers\BaseController;
 use PHPMailer\PHPMailer\Exception;
@@ -26,10 +27,13 @@ class EmailController extends BaseController
     public function __construct()
     {
         parent::__construct();
+        $user = new User($this->f3->DB);
+        $user->load(['id=?', $_POST['psicologa']]);
         $this->nombres = $_POST['nombres'] . ' '. $_POST['paterno'] . ' ' . $_POST['materno'];
         $this->correo = $_POST['correo'];
         $this->celular = $_POST['celular'];
-        $this->psicologa = $_POST['psicologa'];
+        $user = new User($this->f3->DB);
+        $this->psicologa = $user->name;
         $this->fechaCita = $_POST['fechacita'];
         $this->horaCita = $_POST['horacita'];
         $this->edad = $_POST['edad'];
