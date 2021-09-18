@@ -1,4 +1,4 @@
-    <!-- Page Content -->
+    {* Page Content *}
     <div class="container-fluid">
         <h1 class="page-header text-center text-primary font-weight-bold">BLOG</h1>
         <f3:check if="{{ @SESSION.user && @SESSION.user.role != 'paciente' }}">
@@ -12,15 +12,15 @@
         <hr>
         <div data-cy="blogNewsCards" class="m-auto col-lg-10 mt-lg-n10">
 
-            <!-- Section de prueba eliminar cuando ya tengan con base de datos -->
+            {* Section de prueba eliminar cuando ya tengan con base de datos *}
 
-            <!-- end section -->
+            {* end section *}
 
-            <!-- Section de prueba eliminar cuando ya tengan con base de datos -->
+            {* Section de prueba eliminar cuando ya tengan con base de datos *}
 
-            <!-- end section -->
+            {* end section *}
             <repeat group="{{ @blogs.subset  }}" value="{{ @blog }}">
-                <!-- Hace un bucle igual a foreach  -->
+                {* Hace un bucle igual a foreach  *}
                 <section class="card mb-5 shadow ">
                     <div class="card-body p-5">
                         <div class="row">
@@ -63,7 +63,7 @@
                                 <a class="page-link" href="{{ @BASE }}/blog?p={{ $_GET['p'] -1  ?? 1 }}" tabindex="-1">Previous</a>
                             </li>
 
-                            <!-- loop hace bucle al estilo for  -->
+                            {* loop hace bucle al estilo for  *}
                             <loop from="{{ @i=1 }}" to="{{ @i <= @blogs.count }}" step="{{ @i++ }}"> 
                                 <li class="page-item {{  @blogs.pos +1   ==  @i ? 'active' : '' }}  "  >
                                     <a class="page-link" href=" {{@BASE }}/blog?p={{@i}}"> {{ @i   }}</a>

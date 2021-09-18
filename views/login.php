@@ -26,7 +26,7 @@
                 </div>
             </div>
         </form>
-        <!-- <p class="text-center"><a href="#">Create an Account</a></p> -->
+        <p class="text-center"><a href="{{ @BASE. '/register' }}">Crear una cuenta</a></p> 
     </div>
     
 </div>

@@ -1,4 +1,4 @@
-    <!-- Page Content -->
+    {* Page Content *}
     <div class="container-fluid">
         <h1 class="page-header text-center text-primary font-weight-bold">BLOG</h1>
         <hr>
@@ -16,8 +16,8 @@
                                     <img class="img-fluid" src="{{ @BASE }}/{{ @blog->image }}" alt="{{ @blog->title }}">
                                 </div>
                                 <div class="mb-3">
-                                    <!-- <a class="badge text-primary text-capitalize">news</a>
-                                    <a class="badge text-primary text-capitalize">forms</a> -->
+                                    {* <a class="badge text-primary text-capitalize">news</a>
+                                    <a class="badge text-primary text-capitalize">forms</a> *}
                                 </div>
                             </div>
                             <div>

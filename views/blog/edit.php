@@ -18,7 +18,7 @@
                     <input type="text" class="form-control" id="title" name="title" placeholder="Titulo" value="{{ @blog->title }}">
                 </div>
                 <div class="col-6">
-                    <!-- form group file image -->
+                    {* form group file image *}
                     <label for="image">Imagen</label>
                     <div class="custom-file">
                             <input type="file" name="myfile">

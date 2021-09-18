@@ -25,10 +25,6 @@
     <include href="{{ 'views/'.@content }}" />
     <include href="views/includes/footer.php" />
 
-
-
-
-
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
 
     <script
@@ -37,9 +33,9 @@
   crossorigin="anonymous"></script>
       <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-Piv4xVNRyMGpqkS2by6br4gNJ7DXjqk09RmUpJ8jgGtD7zP9yug3goQfGII0yAns" crossorigin="anonymous"></script>
 
-    <!-- f3:check es igual a if -->
+    {* f3:check es igual a if *}
     <f3:check if="{{ @scripts }}">
-        <!-- Si hay scripts, los incluyo -->
+        {* Si hay scripts, los incluyo *}
         <include href="{{ 'views/scripts/'.@scripts }}" />
     </f3:check>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>

@@ -45,10 +45,21 @@ class AuthController extends BaseController {
 
     function login() {
 		// Reset session in case someone else is logged in
-		$this->f3->clear('SESSION');
+		// $this->f3->clear('SESSION');
 		// Render template
         $this->f3->set('title', 'Login');
         $this->f3->set('content', 'login.php');
+        $this->renderTemplate();
+	}
+
+
+	
+    function register() {
+		// Reset session in case someone else is logged in
+		// $this->f3->clear('SESSION');
+		// Render template
+        $this->f3->set('title', 'Login');
+        $this->f3->set('content', 'register.htm');
         $this->renderTemplate();
 	}
 

@@ -10,7 +10,7 @@
                 </div>
             </div>
         </f3:check>
-        <!-- form multipart data enctype files  -->
+        {* form multipart data enctype files  *}
         <form action="{{ @BASE }}/blog/create" method="POST" enctype="multipart/form-data">
             <div class="form-group">
                 <div class="row">
@@ -19,7 +19,7 @@
                         <input type="text" class="form-control" id="title" name="title" placeholder="Titulo" value="{{ @POST.title }}">
                     </div>
                     <div class="col-6">
-                        <!-- form group file image -->
+                        {* form group file image *}
                         <label for="image">Imagen</label>
                         <div class="custom-file">
                             <input type="file" name="myfile">

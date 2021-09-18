@@ -1,12 +1,12 @@
 <nav class="navbar navbar-primary bg-white navbar-expand-md">
-  <!-- @BASE trae la url principal sin prefijos -->
+  {* @BASE trae la url principal sin prefijos *}
   <div class="container-fluid">
     <a class="navbar-brand" href="{{ @BASE  }}/">
       <img src="{{@BASE }}/public/img/logo.webp" width="195" height="70" alt="contigovoyIcon">
     </a>
     <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar"> <span class="sr-only">Toggle navigation</span>
       &#x2630;</button>
-    <!--container-flex-bootstrap-->
+    {*container-flex-bootstrap*}
     <div id="navbar" class="navbar-collapse collapse">
       <ul class="nav navbar-nav ">
 

@@ -78,8 +78,8 @@
                                             <repeat group="{{ @doctors  }}" value="{{ @doctor }}">
                                                 <option value="{{ @doctor.id }}"  data-user="{{ @doctor.name }}">{{ @doctor.name }}</option>
                                             </repeat>
-                                                <!-- <option value="Ana Vizcarra Sajami">Ana Vizcarra Sajami</option>
-                                                <option value="Wendy Aylas Martínez">Wendy Aylas Martínez</option> -->                                           </select>
+                                                {* <option value="Ana Vizcarra Sajami">Ana Vizcarra Sajami</option>
+                                                <option value="Wendy Aylas Martínez">Wendy Aylas Martínez</option> *}                                           </select>
                                         </div>
                                     </div>
 
