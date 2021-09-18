@@ -1,7 +1,7 @@
     <!-- Page Content -->
     <div class="container-fluid">
         <h1 class="page-header text-center text-primary font-weight-bold">BLOG</h1>
-        <f3:check if="{{ @SESSION.user  }}">
+        <f3:check if="{{ @SESSION.user && @SESSION.user.role != 'paciente' }}">
 
             <div class="row">
                 <div class="col-12">
@@ -32,7 +32,7 @@
                                     <div>
                                         <h2 class="mb-0 d-inline"><a href="{{ @BASE }}/blog/{{@blog->slug}}" class="text-danger">{{ @blog->title }}</a></h2>
 
-                                        <check if="{{  @SESSION.user}}">
+                                        <check if="{{  @SESSION.user}} && @SESSION.user.role != 'paciente' ">
                                             <a href="{{ @BASE }}/blog/{{@blog->slug}}/edit"> <span class="badge badge-secondary">Editar</span></a>
 
                                             <form id="delete-form" action="{{ @BASE }}/blog/{{ @blog->slug }}/delete" method="POST" class="d-inline">

@@ -38,7 +38,7 @@ class BlogController extends BaseController
 	}
 	public function create(): void
 	{
-		if ($this->f3->get('SESSION.user')) {
+		if ($this->f3->get('SESSION.user') && $this->f3->get('SESSION.user.role') != 'paciente') {
 			$this->f3->set('title', '| Blog');
 			$this->f3->set('content', 'blog/create.php');
 			$this->f3->set('scripts', 'blogcreate.php');
@@ -50,7 +50,7 @@ class BlogController extends BaseController
 
 	public function store(): void
 	{
-		if ($this->f3->get('SESSION.user')) {
+		if ($this->f3->get('SESSION.user') && $this->f3->get('SESSION.user.role') != 'paciente') {
 			if ($_POST['title'] == "") {
 				$this->f3->set('message', 'El titulo no debe estar en blanco');
 			} elseif ($_POST['body'] == "") {
@@ -98,7 +98,7 @@ class BlogController extends BaseController
 
 	public function edit(): void
 	{
-		if ($this->f3->get('SESSION.user')) {
+		if ($this->f3->get('SESSION.user') && $this->f3->get('SESSION.user.role') != 'paciente') {
 
 			$blog = new Blog($this->f3->DB);
 			$blog->load(['slug=?', $this->f3->get('PARAMS.slug')]);
@@ -120,7 +120,7 @@ class BlogController extends BaseController
 	public function update(): void
 	{
 
-		if ($this->f3->get('SESSION.user')) {
+		if ($this->f3->get('SESSION.user') && $this->f3->get('SESSION.user.role') != 'paciente') {
 			if ($_POST['title'] == "") {
 				$this->f3->set('message', 'El titulo no debe estar en blanco');
 			} elseif ($_POST['body'] == "") {
@@ -166,7 +166,7 @@ class BlogController extends BaseController
 
 	public function destroy(): void
 	{
-		if ($this->f3->get('SESSION.user')) {
+		if ($this->f3->get('SESSION.user') && $this->f3->get('SESSION.user.role') != 'paciente') {
 			$blog = new Blog($this->f3->DB);
 			$blog->load(['slug=?', $this->f3->get('PARAMS.slug')]);
 			if ($blog->dry()) {
