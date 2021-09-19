@@ -102,6 +102,51 @@ class AuthController extends BaseController
 		}
 		$this->register();
 	}
+
+	function changePassword()
+	{
+
+		if ($this->f3->get('SESSION.user') ){
+			$this->f3->set('title', ' | Change Password');
+			$this->f3->set('content', 'changePassword.htm');
+			$this->renderTemplate();
+		}else{
+			$this->f3->reroute('/');
+		}
+			
+	}
+
+	function changePasswordAction()
+	{
+
+		if ($this->f3->get('SESSION.user') ){
+			if (
+				$this->f3->get('POST.password') == '' && $this->f3->get('POST.password2') == ''
+			) {
+				$this->f3->set('message', 'Debe rellenar todo el formulario');
+			} elseif ($this->f3->get('POST.password') != $this->f3->get('POST.password2')) {
+				$this->f3->set('message', 'Las contraseñas no coinciden');
+			} else {
+				try {
+					$user = new User($this->f3->DB);
+					$user->load(array('username=?', $this->f3->get('SESSION.user.username')));
+					
+					$user->password = password_hash($this->f3->get('POST.password'), PASSWORD_DEFAULT); //input
+					$user->update();
+					$this->f3->set('SESSION.user', $user->cast());
+					$this->f3->reroute('/');
+				} catch(PDOException $e) {
+					$err=$e->errorInfo;
+					$this->f3->set('message', $err[2]);
+				}
+			}
+		}else{
+			$this->f3->reroute('/');
+		}		
+		$this->changePassword();
+	}
+
+
 	// User authentication
 	function auth()
 	{

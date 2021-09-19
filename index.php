@@ -50,6 +50,8 @@ $f3->route('GET /register', 'controllers\AuthController->register');
 $f3->route('POST /register', 'controllers\AuthController->createUser');
 $f3->route('POST /login', 'controllers\AuthController->auth');
 $f3->route('POST /logout','controllers\AuthController->logout');
+$f3->route('GET /changepass','controllers\AuthController->changePassword');
+$f3->route('POST /changepass','controllers\AuthController->changePasswordAction');
 
 $f3->route('GET /blog/@slug', 'controllers\BlogController->show');
 $f3->route('GET /blog', 'controllers\BlogController->index');

@@ -26,11 +26,11 @@
           </div>
         </li>
         <f3:check if="{{ !@SESSION.user }}">
-        <li class="nav-item "><a href="{{ @BASE . '/login' }}" class="nav-link  px-2" >Login <i class="fas fa-sign-out-alt"></i></a>
+          <li class="nav-item "><a href="{{ @BASE . '/login' }}" class="nav-link  px-2">Login <i class="fas fa-sign-out-alt"></i></a>
           </li>
-          </f3:check>
+        </f3:check>
         <f3:check if="{{ @SESSION.user }}">
-          <li class="nav-item "><a href="{{ @BASE . '/miscitas' }}" class="nav-link  px-2" >Mis citas</a>
+          <li class="nav-item "><a href="{{ @BASE . '/miscitas' }}" class="nav-link  px-2">Mis citas</a>
           </li>
         </f3:check>
         <f3:check if="{{ @SESSION.user  }}">
@@ -76,23 +76,13 @@
 </nav>
 <f3:check if="{{ @SESSION.user  }}">
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-12">
-        <div class="card">
+        <div class="card border-0">
           <div class="card-body">
-            <div class="row">
-              <div class="col-md-12">
-                <div class="row">
-                  <div class="col-md-12">
-                    <p class="text-right h6">Bienvenido {{ @SESSION.user.name }}</p>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <p class="text-right h6">Bienvenido {{ @SESSION.user.name }}
+              <a href="{{ @BASE . '/changepass' }}  ">Cambiar Pass</a>
+            </p>
           </div>
         </div>
-      </div>
-    </div>
+
   </div>
 </f3:check>
-                        
