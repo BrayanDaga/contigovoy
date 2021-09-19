@@ -1,10 +1,7 @@
 <?php
 require 'vendor/autoload.php';
 
-use models\Blog;
 use Dotenv\Dotenv;
-use models\Appointment;
-use models\User;
 
 $dotenv = Dotenv::createImmutable(__DIR__);
 $dotenv->safeLoad();
@@ -21,8 +18,9 @@ $db=new DB\SQL(
     $_ENV['DB_USERNAME'],
     $_ENV['DB_PASSWORD'],
     [
-        PDO::ATTR_EMULATE_PREPARES => false,
-        PDO::ATTR_STRINGIFY_FETCHES => false,
+        PDO::ATTR_EMULATE_PREPARES => true,
+        PDO::ATTR_STRINGIFY_FETCHES => true,
+        PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
     ]
 );
 
@@ -64,6 +62,8 @@ $f3->route('POST /blog/@slug/delete', 'controllers\BlogController->destroy');
 $f3->route('GET /dias', 'controllers\HorarioController->buscarDias');
 $f3->route('GET /citaslist', 'controllers\AppointmentController->list');
 $f3->route('GET /miscitas', 'controllers\AppointmentController->miscitas');
+$f3->route('PUT /acceptappointment/@id', 'controllers\AppointmentController->accept');
+$f3->route('DELETE /denyappointment/@id', 'controllers\AppointmentController->deny');
 
 $f3->redirect('GET|HEAD /admin', '/login');
 

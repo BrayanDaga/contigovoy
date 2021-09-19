@@ -56,11 +56,9 @@ class AuthController extends BaseController
 		// $this->f3->clear('SESSION');
 		// Render template
 		$this->f3->set('title', '| Login');
-		$this->f3->set('content', 'login.php');
+		$this->f3->set('content', 'login.htm');
 		$this->renderTemplate();
 	}
-
-
 
 	function register()
 	{
@@ -95,7 +93,7 @@ class AuthController extends BaseController
 				$user->save();
 				$this->f3->set('SESSION.user', $user->cast());
 				$this->f3->reroute('/');
-			} catch(\PDOException $e) {
+			} catch(PDOException $e) {
 				$err=$e->errorInfo;
 				// $this->f3->set('message', $err[2]);
 				 $this->f3->set('message', 'El email o usuario ya esta en uso ');

@@ -25,13 +25,16 @@
             <a class="dropdown-item" href="{{ @BASE  }}/blog">Blog</a>
           </div>
         </li>
-        <f3:check if="{{ @SESSION.user }}">
-          <li class="nav-item "><a href="#" class="nav-link  px-2" > MIS CITAS </a>
+        <f3:check if="{{ !@SESSION.user }}">
+        <li class="nav-item "><a href="{{ @BASE . '/login' }}" class="nav-link  px-2" >Login <i class="fas fa-sign-out-alt"></i></a>
           </li>
-
+          </f3:check>
+        <f3:check if="{{ @SESSION.user }}">
+          <li class="nav-item "><a href="{{ @BASE . '/miscitas' }}" class="nav-link  px-2" >Mis citas</a>
+          </li>
         </f3:check>
         <f3:check if="{{ @SESSION.user  }}">
-          <li class="nav-item "><a href="#" class="nav-link  px-2" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">LOGOUT <i class="fas fa-sign-out-alt"></i></a>
+          <li class="nav-item "><a href="#" class="nav-link  px-2" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">Logout <i class="fas fa-sign-out-alt"></i></a>
           </li>
 
         </f3:check>
@@ -71,3 +74,25 @@
     </div>
   </div>
 </nav>
+<f3:check if="{{ @SESSION.user  }}">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="card">
+          <div class="card-body">
+            <div class="row">
+              <div class="col-md-12">
+                <div class="row">
+                  <div class="col-md-12">
+                    <p class="text-right h6">Bienvenido {{ @SESSION.user.name }}</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</f3:check>
+                        

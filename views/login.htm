@@ -16,10 +16,12 @@
             </div>
             <div class="card-body">
                 <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Username"  name="username" id="username" value="{{ @POST.username }}">
+                <label for="username">Username</label>
+                    <input type="text" class="form-control" id="username" name="username" placeholder="Enter username" value="{{ @POST.username }}" >
                 </div>
                 <div class="form-group">
-                    <input type="password" class="form-control" placeholder="Password" name="password" id="password"required="required">
+                <label for="password">Password</label>
+                    <input type="password" class="form-control"  id="password" name="password" placeholder="Enter password" required="required">
                 </div>
                 <div class="form-group">
                     <button type="submit" class="btn btn-primary btn-block">Log in</button>

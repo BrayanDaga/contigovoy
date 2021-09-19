@@ -1,14 +1,20 @@
 <div class="container-fluid">
     <h3>Mis citas</h3>
+
     <hr>
     <table id="myTable" class="table table-striped table-bordered" style="width:100%">
-    <thead>
+        <thead>
             <tr>
                 <th>id</th>
+                    <th>Doctor</th>
                 <th>Paciente</th>
                 <th>Dia.</th>
                 <th>Hora</th>
                 <th>estado</th>
+                <f3:check if="{{ @SESSION.user.role  != 'paciente' }}">
+                <th>Actions</th>
+                </f3:check>
+
             </tr>
         </thead>
     </table>
