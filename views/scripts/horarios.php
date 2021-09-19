@@ -1,3 +1,4 @@
+<script>
 $(document).ready(function () {
     $('.datepicker').datepicker();
     $date = $('#date');
@@ -6,7 +7,6 @@ $(document).ready(function () {
     $date.change(loadHours);
 	$doctor.change(loadHours);
 	loadHours();
-
 
 });
 const noHoursAlert = `<div class="alert alert-danger" role="alert">
@@ -54,3 +54,4 @@ function getRadioIntervalHtml(interval) {
   <label class="custom-control-label" for="interval${iRadio++}">${text}</label>
 </div>`;
 }
+</script>

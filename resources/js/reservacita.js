@@ -35,7 +35,8 @@
 
         });
 
-        valIni();
+        psicoVal();
+        especialidadValue();
         $('.nav-tabs').on('click', 'li', function() {
             $('.nav-tabs li.active').removeClass('active');
             $(this).addClass('active');
@@ -50,26 +51,22 @@
     function prevTab(elem) {
         $(elem).prev().find('a[data-toggle="tab"]').click();
     }
-   
 
-    function valIni(){
+    function psicoVal(){
         var psicoSelected = $('#psicologa option:selected');
         var psicoValue = psicoSelected.data('user'); 
         $('#selectPsicologo').val(psicoValue);
-        $('#selectPsicologo').val(psicoValue);
+    }
+    function especialidadValue(){
         var especialidadSelected = $('#especialidad option:selected');
 		var especialidadValue = especialidadSelected.val();
         $('#terapia').val(especialidadValue);
     }
     $('#psicologa').change(function () { 
-        var psicoSelected = $('#psicologa option:selected');
-        var psicoValue = psicoSelected.data('user'); 
-        $('#selectPsicologo').val(psicoValue);
+        psicoVal();
     });
     $('#especialidad').change(function () { 
-        var especialidadSelected = $('#especialidad option:selected');
-		var especialidadValue = especialidadSelected.val();
-        $('#terapia').val(especialidadValue);
+        especialidadValue();
     });
     $('#fechaNac').change(function () { 
         var fechaNac = $('#fechaNac').val();

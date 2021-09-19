@@ -22,6 +22,7 @@ class CitaController extends EmailController {
          $doctors = $instance->find(['role=?','doctor']);    
         $this->f3->set('title', '| Reserva tu Cita');
         $this->f3->set('content', 'reservatucita.php');
+        $this->f3->set('scripts', 'horarios.php');
         $this->f3->set('doctors', $doctors);
         $this->renderTemplate();
         $this->f3->clear('SESSION.message');
