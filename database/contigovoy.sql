@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: localhost:3306
--- Tiempo de generación: 19-09-2021 a las 01:32:08
+-- Tiempo de generación: 19-09-2021 a las 23:06:40
 -- Versión del servidor: 5.7.24
 -- Versión de PHP: 7.4.15
 
@@ -33,7 +33,7 @@ CREATE TABLE `appointments` (
   `patient_id` int(11) NOT NULL,
   `day` date NOT NULL,
   `hour` time NOT NULL,
-  `status` enum('aceptado','rechazado','pendiente') NOT NULL DEFAULT 'pendiente'
+  `status` enum('aceptado','pendiente') NOT NULL DEFAULT 'pendiente'
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -41,10 +41,28 @@ CREATE TABLE `appointments` (
 --
 
 INSERT INTO `appointments` (`id`, `doctor_id`, `patient_id`, `day`, `hour`, `status`) VALUES
-(1, 2, 10, '2021-09-30', '11:00:00', 'pendiente'),
-(2, 2, 10, '2021-09-30', '12:00:00', 'pendiente'),
-(3, 2, 4, '2021-09-17', '12:00:00', 'pendiente'),
-(4, 2, 4, '2021-09-17', '11:00:00', 'pendiente');
+(1, 2, 10, '2021-09-30', '11:00:00', 'aceptado'),
+(3, 2, 4, '2021-09-17', '12:00:00', 'aceptado'),
+(5, 2, 10, '2021-09-22', '16:00:00', 'pendiente'),
+(6, 3, 10, '2021-09-22', '15:00:00', 'pendiente'),
+(7, 3, 10, '2021-09-24', '16:00:00', 'pendiente');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura Stand-in para la vista `appointmentsusers`
+-- (Véase abajo para la vista actual)
+--
+CREATE TABLE `appointmentsusers` (
+`id` int(11)
+,`day` date
+,`hour` time
+,`status` enum('aceptado','pendiente')
+,`doctor_id` int(11)
+,`patient_id` int(11)
+,`doctor` varchar(50)
+,`patient` varchar(50)
+);
 
 -- --------------------------------------------------------
 
@@ -68,38 +86,6 @@ CREATE TABLE `blogs` (
 
 INSERT INTO `blogs` (`id`, `title`, `slug`, `body`, `excerpt`, `image`, `created_at`) VALUES
 (1, 'Primer ', 'primer-post', 'ASDSADSASASDSADSSADSAD', 'ASDASDSADSSADSAD', 'SADASDASDAS', '2021-09-15 04:40:37');
-
--- --------------------------------------------------------
-
---
--- Estructura Stand-in para la vista `citasdedoctor`
--- (Véase abajo para la vista actual)
---
-CREATE TABLE `citasdedoctor` (
-`id` int(11)
-,`day` date
-,`hour` time
-,`status` enum('aceptado','rechazado','pendiente')
-,`doctor_id` int(11)
-,`patient_id` int(11)
-,`name` varchar(50)
-);
-
--- --------------------------------------------------------
-
---
--- Estructura Stand-in para la vista `citasdepaciente`
--- (Véase abajo para la vista actual)
---
-CREATE TABLE `citasdepaciente` (
-`id` int(11)
-,`day` date
-,`hour` time
-,`status` enum('aceptado','rechazado','pendiente')
-,`doctor_id` int(11)
-,`patient_id` int(11)
-,`name` varchar(50)
-);
 
 -- --------------------------------------------------------
 
@@ -164,20 +150,11 @@ INSERT INTO `workdays` (`id`, `morning_start`, `morning_end`, `afternoon_start`,
 -- --------------------------------------------------------
 
 --
--- Estructura para la vista `citasdedoctor`
+-- Estructura para la vista `appointmentsusers`
 --
-DROP TABLE IF EXISTS `citasdedoctor`;
+DROP TABLE IF EXISTS `appointmentsusers`;
 
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `citasdedoctor`  AS SELECT `app`.`id` AS `id`, `app`.`day` AS `day`, `app`.`hour` AS `hour`, `app`.`status` AS `status`, `app`.`doctor_id` AS `doctor_id`, `app`.`patient_id` AS `patient_id`, `us`.`name` AS `name` FROM (`appointments` `app` left join `users` `us` on((`app`.`patient_id` = `us`.`id`))) ;
-
--- --------------------------------------------------------
-
---
--- Estructura para la vista `citasdepaciente`
---
-DROP TABLE IF EXISTS `citasdepaciente`;
-
-CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `citasdepaciente`  AS SELECT `app`.`id` AS `id`, `app`.`day` AS `day`, `app`.`hour` AS `hour`, `app`.`status` AS `status`, `app`.`doctor_id` AS `doctor_id`, `app`.`patient_id` AS `patient_id`, `us`.`name` AS `name` FROM (`appointments` `app` left join `users` `us` on((`app`.`doctor_id` = `us`.`id`))) ;
+CREATE ALGORITHM=UNDEFINED DEFINER=`root`@`localhost` SQL SECURITY DEFINER VIEW `appointmentsusers`  AS SELECT `app`.`id` AS `id`, `app`.`day` AS `day`, `app`.`hour` AS `hour`, `app`.`status` AS `status`, `app`.`doctor_id` AS `doctor_id`, `app`.`patient_id` AS `patient_id`, `doc`.`name` AS `doctor`, `pat`.`name` AS `patient` FROM ((`appointments` `app` left join `users` `doc` on((`doc`.`id` = `app`.`doctor_id`))) left join `users` `pat` on((`pat`.`id` = `app`.`patient_id`))) ;
 
 --
 -- Índices para tablas volcadas
@@ -219,7 +196,7 @@ ALTER TABLE `workdays`
 -- AUTO_INCREMENT de la tabla `appointments`
 --
 ALTER TABLE `appointments`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT de la tabla `blogs`
@@ -231,7 +208,7 @@ ALTER TABLE `blogs`
 -- AUTO_INCREMENT de la tabla `users`
 --
 ALTER TABLE `users`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 
 --
 -- AUTO_INCREMENT de la tabla `workdays`
