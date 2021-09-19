@@ -25,6 +25,11 @@
             <a class="dropdown-item" href="{{ @BASE  }}/blog">Blog</a>
           </div>
         </li>
+        <f3:check if="{{ @SESSION.user }}">
+          <li class="nav-item "><a href="#" class="nav-link  px-2" > MIS CITAS </a>
+          </li>
+
+        </f3:check>
         <f3:check if="{{ @SESSION.user  }}">
           <li class="nav-item "><a href="#" class="nav-link  px-2" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">LOGOUT <i class="fas fa-sign-out-alt"></i></a>
           </li>
@@ -48,7 +53,7 @@
           </a>
         </li>
         <li class="nav-item mr-1">
-          <a href="mailto:atencionpsicologica@contigo-voy.com" target="_blank" class="nav-link waves-effect waves-light icon-item">
+          <a href="mailto:atencionpsicologica@contigo-voy.com" tarrget="_blank" class="nav-link waves-effect waves-light icon-item">
             <i class="fas fa-envelope" title="atencionpsicologica@contigo-voy.com"></i>
           </a>
         </li>

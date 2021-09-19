@@ -38,11 +38,15 @@
         {* Si hay scripts, los incluyo *}
         <include href="{{ 'views/scripts/'.@scripts }}" />
     </f3:check>
+    
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.standalone.min.css">
 
     <script src="{{@BASE }}/public/js/app.min.js"></script>
+
+    
+    
 </body>
 
 </html>

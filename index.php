@@ -62,6 +62,8 @@ $f3->route('POST /blog/@slug/edit', 'controllers\BlogController->update');
 $f3->route('POST /blog/@slug/delete', 'controllers\BlogController->destroy');
 /******************************* fin rutas *****************************************************/
 $f3->route('GET /dias', 'controllers\HorarioController->buscarDias');
+$f3->route('GET /citaslist', 'controllers\AppointmentController->list');
+$f3->route('GET /miscitas', 'controllers\AppointmentController->miscitas');
 
 $f3->redirect('GET|HEAD /admin', '/login');
 
