@@ -8,7 +8,9 @@ use JsonSerializable;
  */
 class Mapper_Shim extends \Db\SQL\Mapper implements JsonSerializable {
 
+
 	public function jsonSerialize() {
 		return $this->cast();
 	}
 }
+

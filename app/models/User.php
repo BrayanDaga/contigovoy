@@ -5,7 +5,9 @@ use models\Mapper_Shim;
 
 class User extends Mapper_Shim{
     public function __construct(\DB\SQL $DB) {
-		
+// 		$db=new \DB\SQL($dsn,$user,$pwd,array(\PDO::ATTR_ERRMODE=>\PDO::ERRMODE_EXCEPTION));
+// $mytable=new \DB\SQL\Mapper($db,'mytable');
+		$DB->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
 		parent::__construct($DB, 'users');
 
 		// Things you want to happen on insert or on update automatically

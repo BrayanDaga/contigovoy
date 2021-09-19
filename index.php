@@ -49,6 +49,7 @@ $f3->map('/reservacita', 'controllers\CitaController');
 
 $f3->route('GET /login', 'controllers\AuthController->login');
 $f3->route('GET /register', 'controllers\AuthController->register');
+$f3->route('POST /register', 'controllers\AuthController->createUser');
 $f3->route('POST /login', 'controllers\AuthController->auth');
 $f3->route('POST /logout','controllers\AuthController->logout');
 
