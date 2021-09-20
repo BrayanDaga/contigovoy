@@ -2,6 +2,7 @@
 
 <script src="https://cdn.datatables.net/1.11.2/js/jquery.dataTables.min.js"></script>
 <script src="https://cdn.datatables.net/1.11.2/js/dataTables.bootstrap4.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
 
 <f3:check if="{{ @SESSION.user.role  == 'doctor' ||  @SESSION.user.role  == 'admin'  }}">
     <script>
@@ -22,7 +23,9 @@
                     data: 'patient'
                 },
                 {
-                    data: 'day'
+                    render: (d, t, f, m) => {
+                        return moment(f.day).format('DD/MM/YYYY')
+                    }
                 },
                 {
                     data: 'hour'
@@ -103,7 +106,9 @@
                     data: 'patient'
                 },
                 {
-                    data: 'day'
+                    render: (d, t, f, m) => {
+                        return moment(f.day).format('DD/MM/YYYY')
+                    }
                 },
                 {
                     data: 'hour'
